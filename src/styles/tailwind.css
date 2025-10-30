@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --primary-background: #10b981;
+    --primary-foreground: #ffffff;
+    --primary-light: #34d399;
+    --primary-dark: #065f46;
+
+    /* Secondary Colors */
+    --secondary-background: #ffffff;
+    --secondary-foreground: #000000;
+    --secondary-light: #f9fafb;
+    --secondary-dark: #111827;
+
+    /* Accent Colors */
+    --accent-emerald: #169b68;
+    --accent-blue: #0075ff;
+    --accent-purple: #a855f7;
+    --accent-red: #ef4444;
+    --accent-orange: #f97316;
+
+    /* Text Colors */
+    --text-primary: #000000;
+    --text-secondary: #111827;
+    --text-muted: #6b7280;
+    --text-success: #065f46;
+    --text-emerald: #169b68;
+    --text-blue: #1e40af;
+    --text-purple: #6b21a8;
+    --text-red: #b91c1c;
+    --text-orange: #9a3412;
+
+    /* Background Colors */
+    --bg-main: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-success: #ecfdf5;
+    --bg-blue: #eff6ff;
+    --bg-orange: #fff7ed;
+    --bg-purple: #faf5ff;
+    --bg-red: #fef2f2;
+    --bg-yellow: #fefce8;
+    --bg-gray: #f3f4f6;
+    --bg-divider: #adaebc;
+
+    /* Border Colors */
+    --border-primary: #e5e7eb;
+    --border-success: #a7f3d0;
+    --border-emerald: #34d399;
+    --border-blue: #bfdbfe;
+    --border-purple: #e9d5ff;
+    --border-red: #fecaca;
+    --border-dark: #000000;
+
+    /* Typography Variables */
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-base: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 20px;
+    --font-size-2xl: 24px;
+    --font-size-3xl: 30px;
+    --font-size-4xl: 32px;
+    --font-size-5xl: 36px;
+    --font-size-6xl: 48px;
+    --font-size-7xl: 64px;
+
+    /* Font Weight Variables */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    /* Line Height Variables */
+    --line-height-xs: 15px;
+    --line-height-sm: 17px;
+    --line-height-base: 20px;
+    --line-height-lg: 22px;
+    --line-height-xl: 24px;
+    --line-height-2xl: 28px;
+    --line-height-3xl: 29px;
+    --line-height-4xl: 36px;
+    --line-height-5xl: 39px;
+    --line-height-6xl: 44px;
+    --line-height-7xl: 58px;
+    --line-height-8xl: 72px;
+
+    /* Spacing Variables */
+    --spacing-1: 4px;
+    --spacing-2: 8px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-5: 20px;
+    --spacing-6: 24px;
+    --spacing-7: 28px;
+    --spacing-8: 32px;
+    --spacing-10: 40px;
+    --spacing-12: 48px;
+    --spacing-14: 56px;
+    --spacing-16: 64px;
+    --spacing-18: 72px;
+    --spacing-20: 80px;
+
+    /* Border Radius Variables */
+    --radius-xs: 1px;
+    --radius-sm: 4px;
+    --radius-base: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 14px;
+    --radius-2xl: 16px;
+    --radius-3xl: 20px;
+    --radius-4xl: 24px;
+    --radius-5xl: 32px;
+    --radius-6xl: 48px;
+    --radius-full: 50px;
+
+    /* Component-specific Colors */
+    --header-bg: #ffffff;
+    --header-text: #000000;
+    --button-primary-bg: #10b981;
+    --button-primary-text: #ffffff;
+    --button-secondary-bg: #ecfdf5;
+    --button-secondary-text: #065f46;
+    --table-bg: #ffffff;
+    --table-header-bg: #f9fafb;
+    --input-bg: #ecfdf5;
+    --input-text: #065f46;
+    --input-border: #a7f3d0;
+  }
+}
