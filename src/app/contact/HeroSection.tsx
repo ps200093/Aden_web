@@ -1,7 +1,64 @@
 'use client';
+import { useState, useEffect } from 'react';
 import { Building, Smartphone, CircleCheck } from 'lucide-react';
 
 export default function HeroSection() {
+    const [isAdvertiserVisible, setIsAdvertiserVisible] = useState(false);
+    const [isMediaVisible, setIsMediaVisible] = useState(false);
+
+    useEffect(() => {
+        const observerAdvertiser = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting) {
+                    setIsAdvertiserVisible(true);
+                }
+            },
+            { threshold: 0.3 }
+        );
+
+        const observerMedia = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting) {
+                    setIsMediaVisible(true);
+                }
+            },
+            { threshold: 0.3 }
+        );
+
+        const advertiserCard = document.getElementById('advertiser-features');
+        const mediaCard = document.getElementById('media-features');
+
+        if (advertiserCard) {
+            observerAdvertiser.observe(advertiserCard);
+        }
+        if (mediaCard) {
+            observerMedia.observe(mediaCard);
+        }
+
+        return () => {
+            if (advertiserCard) {
+                observerAdvertiser.unobserve(advertiserCard);
+            }
+            if (mediaCard) {
+                observerMedia.unobserve(mediaCard);
+            }
+        };
+    }, []);
+
+    const advertiserFeatures = [
+        '랭킹 부스팅 캠페인',
+        '투명한 매체 지정',
+        '실시간 정산 대시보드',
+        '어뷰징 방지 시스템'
+    ];
+
+    const mediaFeatures = [
+        '브랜드 맞춤 UI/UX',
+        '500만+ 일일 인벤토리',
+        'SDK-less 2주 PoC',
+        'Net-7 빠른 정산'
+    ];
+
     return (
         <section className="w-full bg-gradient-to-br from-[#169B68] from-15% to-[#F5F97F] to-85% relative">
           <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[80px] py-[60px] lg:py-[80px]">
@@ -37,31 +94,19 @@ export default function HeroSection() {
                 </p>
 
                 {/* Features List */}
-                <div className="space-y-[12px] mb-[24px]">
-                  <div className="flex items-center">
-                    <CircleCheck size={16} className="text-[#3B82F6] mr-3 flex-shrink-0" />
-                    <span className="text-[#374151] text-[16px] font-medium leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
-                      랭킹 부스팅 캠페인
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <CircleCheck size={16} className="text-[#3B82F6] mr-3 flex-shrink-0" />
-                    <span className="text-[#374151] text-[16px] font-medium leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
-                      투명한 매체 지정
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <CircleCheck size={16} className="text-[#3B82F6] mr-3 flex-shrink-0" />
-                    <span className="text-[#374151] text-[16px] font-medium leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
-                      실시간 정산 대시보드
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <CircleCheck size={16} className="text-[#3B82F6] mr-3 flex-shrink-0" />
-                    <span className="text-[#374151] text-[16px] font-medium leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
-                      어뷰징 방지 시스템
-                    </span>
-                  </div>
+                <div id="advertiser-features" className="space-y-[12px] mb-[24px]">
+                  {advertiserFeatures.map((feature, index) => (
+                    <div 
+                      key={index}
+                      className={`flex items-center transition-all duration-500 ${isAdvertiserVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+                      style={{ transitionDelay: `${index * 100}ms` }}
+                    >
+                      <CircleCheck size={16} className="text-[#3B82F6] mr-3 flex-shrink-0" />
+                      <span className="text-[#374151] text-[16px] font-medium leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                        {feature}
+                      </span>
+                    </div>
+                  ))}
                 </div>
 
                 {/* CTA Badge */}
@@ -92,31 +137,19 @@ export default function HeroSection() {
                 </p>
 
                 {/* Features List */}
-                <div className="space-y-[12px] mb-[24px]">
-                  <div className="flex items-center">
-                    <CircleCheck size={16} className="text-[#10B981] mr-3 flex-shrink-0" />
-                    <span className="text-[#374151] text-[16px] font-medium leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
-                      브랜드 맞춤 UI/UX
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <CircleCheck size={16} className="text-[#10B981] mr-3 flex-shrink-0" />
-                    <span className="text-[#374151] text-[16px] font-medium leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
-                      500만+ 일일 인벤토리
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <CircleCheck size={16} className="text-[#10B981] mr-3 flex-shrink-0" />
-                    <span className="text-[#374151] text-[16px] font-medium leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
-                      SDK-less 2주 PoC
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <CircleCheck size={16} className="text-[#10B981] mr-3 flex-shrink-0" />
-                    <span className="text-[#374151] text-[16px] font-medium leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
-                      Net-7 빠른 정산
-                    </span>
-                  </div>
+                <div id="media-features" className="space-y-[12px] mb-[24px]">
+                  {mediaFeatures.map((feature, index) => (
+                    <div 
+                      key={index}
+                      className={`flex items-center transition-all duration-500 ${isMediaVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+                      style={{ transitionDelay: `${index * 100}ms` }}
+                    >
+                      <CircleCheck size={16} className="text-[#10B981] mr-3 flex-shrink-0" />
+                      <span className="text-[#374151] text-[16px] font-medium leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                        {feature}
+                      </span>
+                    </div>
+                  ))}
                 </div>
 
                 {/* CTA Badge */}

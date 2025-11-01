@@ -1,7 +1,35 @@
 'use client';
+import { useState, useEffect } from 'react';
 import { X, Check } from 'lucide-react';
 
 export default function ReasonSection() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Intersection Observer로 섹션이 화면에 보일 때 애니메이션 시작
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !isVisible) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    const section = document.getElementById('reason-comparison');
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, [isVisible]);
+
   return (
     <section className="w-full bg-white overflow-hidden py-[40px] sm:py-[60px] md:py-[80px]">
       <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,7 +68,7 @@ export default function ReasonSection() {
           </div>
 
           {/* 비교 컨텐츠 */}
-          <div className="w-full grid grid-cols-1 lg:grid-cols-5 gap-1 lg:gap-1">
+          <div id="reason-comparison" className="w-full grid grid-cols-1 lg:grid-cols-5 gap-1 lg:gap-1">
             {/* 빈칸 1 */}
             <div className="w-full"></div>
             
@@ -51,7 +79,7 @@ export default function ReasonSection() {
             <div className="w-full">
               {/* 제목 */}
               <h3 
-                className="mb-6"
+                className={`mb-6 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
                 style={{
                   fontFamily: 'Noto Sans KR',
                   fontStyle: 'normal',
@@ -67,7 +95,7 @@ export default function ReasonSection() {
               {/* 문제점 리스트 */}
               <div className="space-y-4">
                 {/* 문제점 1 */}
-                <div className="flex items-start gap-4">
+                <div className={`flex items-start gap-4 transition-all duration-500 delay-100 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                   <div 
                     className="flex items-center justify-center flex-shrink-0"
                     style={{
@@ -90,7 +118,7 @@ export default function ReasonSection() {
                 </div>
 
                 {/* 문제점 2 */}
-                <div className="flex items-start gap-4">
+                <div className={`flex items-start gap-4 transition-all duration-500 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                   <div 
                     className="flex items-center justify-center flex-shrink-0"
                     style={{
@@ -113,7 +141,7 @@ export default function ReasonSection() {
                 </div>
 
                 {/* 문제점 3 */}
-                <div className="flex items-start gap-4">
+                <div className={`flex items-start gap-4 transition-all duration-500 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                   <div 
                     className="flex items-center justify-center flex-shrink-0"
                     style={{
@@ -136,7 +164,7 @@ export default function ReasonSection() {
                 </div>
 
                 {/* 문제점 4 */}
-                <div className="flex items-start gap-4">
+                <div className={`flex items-start gap-4 transition-all duration-500 delay-[400ms] ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                   <div 
                     className="flex items-center justify-center flex-shrink-0"
                     style={{
@@ -167,7 +195,7 @@ export default function ReasonSection() {
             <div className="w-full">
               {/* 제목 */}
               <h3 
-                className="mb-6"
+                className={`mb-6 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
                 style={{
                   fontFamily: 'Noto Sans KR',
                   fontStyle: 'normal',
@@ -183,7 +211,7 @@ export default function ReasonSection() {
               {/* 해법 리스트 */}
               <div className="space-y-4">
                 {/* 해법 1 */}
-                <div className="flex items-start gap-4">
+                <div className={`flex items-start gap-4 transition-all duration-500 delay-100 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
                   <div 
                     className="flex items-center justify-center flex-shrink-0"
                     style={{
@@ -206,7 +234,7 @@ export default function ReasonSection() {
                 </div>
 
                 {/* 해법 2 */}
-                <div className="flex items-start gap-4">
+                <div className={`flex items-start gap-4 transition-all duration-500 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
                   <div 
                     className="flex items-center justify-center flex-shrink-0"
                     style={{
@@ -229,7 +257,7 @@ export default function ReasonSection() {
                 </div>
 
                 {/* 해법 3 */}
-                <div className="flex items-start gap-4">
+                <div className={`flex items-start gap-4 transition-all duration-500 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
                   <div 
                     className="flex items-center justify-center flex-shrink-0"
                     style={{
@@ -252,7 +280,7 @@ export default function ReasonSection() {
                 </div>
 
                 {/* 해법 4 */}
-                <div className="flex items-start gap-4">
+                <div className={`flex items-start gap-4 transition-all duration-500 delay-[400ms] ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
                   <div 
                     className="flex items-center justify-center flex-shrink-0"
                     style={{

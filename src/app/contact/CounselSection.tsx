@@ -1,8 +1,31 @@
 'use client';
 import { Building, Smartphone, Send, Headphones } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function CounselSection() {
+  const [isStepsVisible, setIsStepsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsStepsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    const element = document.getElementById('process-steps');
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
+  }, []);
   const [formData, setFormData] = useState({
     inquiryType: 'advertiser', // 'advertiser' or 'publisher'
     companyName: '',
@@ -236,74 +259,33 @@ export default function CounselSection() {
               </div>
 
               {/* Process Steps */}
-              <div className="space-y-[24px] mb-[48px]">
-                {/* Step 1 */}
-                <div className="flex gap-[16px]">
-                  <div className="w-[32px] h-[32px] bg-white rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-[#059669] text-[14px] font-medium" style={{ fontFamily: 'Noto Sans KR' }}>
-                      1
-                    </span>
+              <div id="process-steps" className="space-y-[24px] mb-[48px]">
+                {[
+                  { step: '1', title: '문의 접수', desc: '신청 후 1시간 내 접수 확인' },
+                  { step: '2', title: '전문 상담', desc: '24시간 내 전담 컨설턴트 배정' },
+                  { step: '3', title: '맞춤 제안', desc: '비즈니스에 최적화된 솔루션 제공' },
+                  { step: '4', title: '시작', desc: '2주 내 PoC 시작 또는 캠페인 런칭' }
+                ].map((item, index) => (
+                  <div 
+                    key={index}
+                    className={`flex gap-[16px] transition-all duration-500 ${isStepsVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
+                    style={{ transitionDelay: `${index * 150}ms` }}
+                  >
+                    <div className="w-[32px] h-[32px] bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-[#059669] text-[14px] font-medium" style={{ fontFamily: 'Noto Sans KR' }}>
+                        {item.step}
+                      </span>
+                    </div>
+                    <div>
+                      <h4 className="text-white text-[16px] font-medium leading-[24px] mb-[4px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                        {item.title}
+                      </h4>
+                      <p className="text-[#D1FAE5] text-[14px] font-medium leading-[20px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                        {item.desc}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-white text-[16px] font-medium leading-[24px] mb-[4px]" style={{ fontFamily: 'Noto Sans KR' }}>
-                      문의 접수
-                    </h4>
-                    <p className="text-[#D1FAE5] text-[14px] font-medium leading-[20px]" style={{ fontFamily: 'Noto Sans KR' }}>
-                      신청 후 1시간 내 접수 확인
-                    </p>
-                  </div>
-                </div>
-
-                {/* Step 2 */}
-                <div className="flex gap-[16px]">
-                  <div className="w-[32px] h-[32px] bg-white rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-[#059669] text-[14px] font-medium" style={{ fontFamily: 'Noto Sans KR' }}>
-                      2
-                    </span>
-                  </div>
-                  <div>
-                    <h4 className="text-white text-[16px] font-medium leading-[24px] mb-[4px]" style={{ fontFamily: 'Noto Sans KR' }}>
-                      전문 상담
-                    </h4>
-                    <p className="text-[#D1FAE5] text-[14px] font-medium leading-[20px]" style={{ fontFamily: 'Noto Sans KR' }}>
-                      24시간 내 전담 컨설턴트 배정
-                    </p>
-                  </div>
-                </div>
-
-                {/* Step 3 */}
-                <div className="flex gap-[16px]">
-                  <div className="w-[32px] h-[32px] bg-white rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-[#059669] text-[14px] font-medium" style={{ fontFamily: 'Noto Sans KR' }}>
-                      3
-                    </span>
-                  </div>
-                  <div>
-                    <h4 className="text-white text-[16px] font-medium leading-[24px] mb-[4px]" style={{ fontFamily: 'Noto Sans KR' }}>
-                      맞춤 제안
-                    </h4>
-                    <p className="text-[#D1FAE5] text-[14px] font-medium leading-[20px]" style={{ fontFamily: 'Noto Sans KR' }}>
-                      비즈니스에 최적화된 솔루션 제공
-                    </p>
-                  </div>
-                </div>
-
-                {/* Step 4 */}
-                <div className="flex gap-[16px]">
-                  <div className="w-[32px] h-[32px] bg-white rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-[#059669] text-[14px] font-medium" style={{ fontFamily: 'Noto Sans KR' }}>
-                      4
-                    </span>
-                  </div>
-                  <div>
-                    <h4 className="text-white text-[16px] font-medium leading-[24px] mb-[4px]" style={{ fontFamily: 'Noto Sans KR' }}>
-                      시작
-                    </h4>
-                    <p className="text-[#D1FAE5] text-[14px] font-medium leading-[20px]" style={{ fontFamily: 'Noto Sans KR' }}>
-                      2주 내 PoC 시작 또는 캠페인 런칭
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
 
               {/* Support Info */}

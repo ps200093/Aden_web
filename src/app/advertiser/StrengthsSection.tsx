@@ -1,8 +1,174 @@
 'use client';
+import { useState, useEffect } from 'react';
 import Button from '@/components/ui/Button';
 import { Shield, Check } from 'lucide-react';
 
 export default function StrengthsSection() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isDashboardVisible, setIsDashboardVisible] = useState(false);
+  const [checkedItems, setCheckedItems] = useState([false, false, false]);
+  const [isRealTimeDashboardVisible, setIsRealTimeDashboardVisible] = useState(false);
+  const [participantCount, setParticipantCount] = useState(0);
+  const [completionRate, setCompletionRate] = useState(0);
+  const [validTraffic, setValidTraffic] = useState(0);
+  const [settlementAmount, setSettlementAmount] = useState(0);
+
+  useEffect(() => {
+    // Intersection Observer로 섹션이 화면에 보일 때 애니메이션 시작
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !isVisible) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    const section = document.getElementById('firewall-card');
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, [isVisible]);
+
+  useEffect(() => {
+    // Dashboard 섹션 Intersection Observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !isDashboardVisible) {
+            setIsDashboardVisible(true);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    const dashboard = document.getElementById('dashboard-card');
+    if (dashboard) {
+      observer.observe(dashboard);
+    }
+
+    return () => {
+      if (dashboard) {
+        observer.unobserve(dashboard);
+      }
+    };
+  }, [isDashboardVisible]);
+
+  // 체크박스 순차적으로 체크
+  useEffect(() => {
+    if (!isDashboardVisible) return;
+
+    const timers = [
+      setTimeout(() => setCheckedItems([true, false, false]), 400),
+      setTimeout(() => setCheckedItems([true, true, false]), 800),
+      setTimeout(() => setCheckedItems([true, true, true]), 1200),
+    ];
+
+    return () => timers.forEach(timer => clearTimeout(timer));
+  }, [isDashboardVisible]);
+
+  useEffect(() => {
+    // 실시간 대시보드 Intersection Observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !isRealTimeDashboardVisible) {
+            setIsRealTimeDashboardVisible(true);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    const realTimeDashboard = document.getElementById('realtime-dashboard-card');
+    if (realTimeDashboard) {
+      observer.observe(realTimeDashboard);
+    }
+
+    return () => {
+      if (realTimeDashboard) {
+        observer.unobserve(realTimeDashboard);
+      }
+    };
+  }, [isRealTimeDashboardVisible]);
+
+  // 숫자 카운트업 애니메이션
+  useEffect(() => {
+    if (!isRealTimeDashboardVisible) return;
+
+    // 참여 수 카운트업 (0 -> 1,247)
+    const participantTimer = setTimeout(() => {
+      const interval = setInterval(() => {
+        setParticipantCount((prev) => {
+          if (prev >= 1247) {
+            clearInterval(interval);
+            return 1247;
+          }
+          return prev + 50;
+        });
+      }, 20);
+      return () => clearInterval(interval);
+    }, 200);
+
+    // 완료율 카운트업 (0 -> 87.3)
+    const rateTimer = setTimeout(() => {
+      const interval = setInterval(() => {
+        setCompletionRate((prev) => {
+          if (prev >= 87.3) {
+            clearInterval(interval);
+            return 87.3;
+          }
+          return Math.min(prev + 3.5, 87.3);
+        });
+      }, 20);
+      return () => clearInterval(interval);
+    }, 400);
+
+    // 유효 트래픽 카운트업 (0 -> 94.2)
+    const trafficTimer = setTimeout(() => {
+      const interval = setInterval(() => {
+        setValidTraffic((prev) => {
+          if (prev >= 94.2) {
+            clearInterval(interval);
+            return 94.2;
+          }
+          return Math.min(prev + 3.8, 94.2);
+        });
+      }, 20);
+      return () => clearInterval(interval);
+    }, 600);
+
+    // 정산 금액 카운트업 (0 -> 847,200)
+    const amountTimer = setTimeout(() => {
+      const interval = setInterval(() => {
+        setSettlementAmount((prev) => {
+          if (prev >= 847200) {
+            clearInterval(interval);
+            return 847200;
+          }
+          return prev + 34000;
+        });
+      }, 20);
+      return () => clearInterval(interval);
+    }, 800);
+
+    return () => {
+      clearTimeout(participantTimer);
+      clearTimeout(rateTimer);
+      clearTimeout(trafficTimer);
+      clearTimeout(amountTimer);
+    };
+  }, [isRealTimeDashboardVisible]);
+
   return (
     <section className="w-full bg-background-secondary overflow-hidden">
       <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,7 +225,7 @@ export default function StrengthsSection() {
               >
                 <span className="text-[#059669]">절대 미달이 없는 구조</span><br />
                 <span className="text-black">광고 발주량 이상의 트래픽을 자체적으로 발생시켜 미달을 미연에 방지합니다.</span><br />
-                <span className="text-black">모든 참여 데이터는 실시간 모니터링되며,</span> <br />
+                <span className="text-black">모든 참여 데이터는 실시간 모니터링되며,</span><br />
                 <span className="text-black">부정 유입(Fraud) 및 자동화 트래픽은 방화벽 레벨에서 차단합니다.</span>
               </p>
               <div 
@@ -75,11 +241,11 @@ export default function StrengthsSection() {
             </div>
 
             {/* Right Content - Firewall Card */}
-            <div className="w-full max-w-[592px] flex-1">
-              <div className="w-full bg-white rounded-[16px] p-8" style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1), 0px 10px 15px rgba(0, 0, 0, 0.1)' }}>
+            <div id="firewall-card" className="w-full max-w-[592px] flex-1">
+              <div className="w-full bg-white rounded-[16px] p-8 animate-[fadeInUp_0.8s_ease-out]" style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1), 0px 10px 15px rgba(0, 0, 0, 0.1)' }}>
                 {/* Header with Icon */}
-                <div className="flex flex-col items-center mb-8">
-                  <div className="w-[100.58px] h-[100.58px] rounded-full mb-4" style={{ background: 'linear-gradient(135deg, #EF4444 0%, #DC2626 70.71%)', opacity: 0.99 }}>
+                <div className="flex flex-col items-center mb-8 animate-[fadeIn_0.6s_ease-out_0.2s_both]">
+                  <div className="w-[100.58px] h-[100.58px] rounded-full mb-4 animate-[pulse_2s_ease-in-out_infinite]" style={{ background: 'linear-gradient(135deg, #EF4444 0%, #DC2626 70.71%)', opacity: 0.99 }}>
                     <div className="w-full h-full flex items-center justify-center">
                       <div className="relative w-[31.42px] h-[31.42px]">
                         {/* 전체 테두리 */}
@@ -110,14 +276,14 @@ export default function StrengthsSection() {
                 {/* Status Cards */}
                 <div className="space-y-3">
                   {/* Fraud Traffic */}
-                  <div className="w-full bg-[#FEF2F2] rounded-[8px] px-3 py-[14px] flex items-center justify-between">
+                  <div className={`w-full bg-[#FEF2F2] rounded-[8px] px-3 py-[14px] flex items-center justify-between transition-all duration-500 ${isVisible ? 'animate-[slideInLeft_0.6s_ease-out_0.4s_both]' : 'opacity-0'}`}>
                     <span 
                       className="text-[16px] font-medium leading-[19px] text-[#B91C1C]"
                       style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}
                     >
                       Fraud Traffic
                     </span>
-                    <span className="bg-[#EF4444] rounded-full px-4 py-1.5">
+                    <span className="bg-[#EF4444] rounded-full px-4 py-1.5 min-w-[100px] flex items-center justify-center animate-[pulse_2s_ease-in-out_1s_infinite]">
                       <span 
                         className="text-[14px] font-medium leading-[17px] text-center text-white"
                         style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}
@@ -128,14 +294,14 @@ export default function StrengthsSection() {
                   </div>
 
                   {/* Bot Activity */}
-                  <div className="w-full bg-[#FEF2F2] rounded-[8px] px-3 py-[14px] flex items-center justify-between">
+                  <div className={`w-full bg-[#FEF2F2] rounded-[8px] px-3 py-[14px] flex items-center justify-between transition-all duration-500 ${isVisible ? 'animate-[slideInLeft_0.6s_ease-out_0.6s_both]' : 'opacity-0'}`}>
                     <span 
                       className="text-[16px] font-medium leading-[19px] text-[#B91C1C]"
                       style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}
                     >
                       Bot Activity
                     </span>
-                    <span className="bg-[#EF4444] rounded-full px-4 py-1.5">
+                    <span className="bg-[#EF4444] rounded-full px-4 py-1.5 min-w-[100px] flex items-center justify-center animate-[pulse_2s_ease-in-out_1.2s_infinite]">
                       <span 
                         className="text-[14px] font-medium leading-[17px] text-center text-white"
                         style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}
@@ -146,14 +312,14 @@ export default function StrengthsSection() {
                   </div>
 
                   {/* Valid User */}
-                  <div className="w-full bg-[#ECFDF5] rounded-[8px] px-3 py-[14px] flex items-center justify-between">
+                  <div className={`w-full bg-[#ECFDF5] rounded-[8px] px-3 py-[14px] flex items-center justify-between transition-all duration-500 ${isVisible ? 'animate-[slideInRight_0.6s_ease-out_0.8s_both]' : 'opacity-0'}`}>
                     <span 
                       className="text-[16px] font-medium leading-[19px] text-[#047857]"
                       style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}
                     >
                       Valid User
                     </span>
-                    <span className="bg-[#10B981] rounded-full px-4 py-1.5">
+                    <span className="bg-[#10B981] rounded-full px-4 py-1.5 min-w-[100px] flex items-center justify-center animate-[pulse_2s_ease-in-out_1.4s_infinite]">
                       <span 
                         className="text-[14px] font-medium leading-[17px] text-center text-white"
                         style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}
@@ -170,7 +336,7 @@ export default function StrengthsSection() {
           {/* Strength 2 */}
           <div className="w-full flex flex-col-reverse lg:flex-row gap-8 lg:gap-12 mb-[32px] sm:mb-[48px] md:mb-[64px] items-center">
             {/* Left Content - Dashboard Card */}
-            <div className="w-full max-w-[592px] flex-1">
+            <div id="dashboard-card" className="w-full max-w-[592px] flex-1">
               <div className="w-full bg-white rounded-[16px] p-8" style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1), 0px 10px 15px rgba(0, 0, 0, 0.1)' }}>
                 <h4 
                   className="text-[20px] font-medium leading-[28px] text-center text-[#111827] mb-6"
@@ -183,8 +349,8 @@ export default function StrengthsSection() {
                   {/* Active Media Items */}
                   <div className="w-full border border-[#e5e7eb] rounded-[8px] flex justify-between items-center px-[16px] py-5">
                     <div className="flex items-center gap-[12px]">
-                      <div className="w-[20px] h-[20px] bg-[#3b82f6] rounded-[4px] flex items-center justify-center flex-shrink-0">
-                        <Check className="w-[14px] h-[14px] text-white" strokeWidth={3} />
+                      <div className={`w-[20px] h-[20px] rounded-[4px] flex items-center justify-center flex-shrink-0 transition-all duration-500 ${checkedItems[0] ? 'bg-[#3b82f6] scale-100' : 'bg-white border border-[#e5e7eb] scale-90'}`}>
+                        <Check className={`w-[14px] h-[14px] text-white transition-all duration-300 ${checkedItems[0] ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`} strokeWidth={3} />
                       </div>
                       <span 
                         className="text-[16px] font-medium leading-[20px] text-[#374151]"
@@ -203,8 +369,8 @@ export default function StrengthsSection() {
 
                   <div className="w-full border border-[#e5e7eb] rounded-[8px] flex justify-between items-center px-[16px] py-5">
                     <div className="flex items-center gap-[12px]">
-                      <div className="w-[20px] h-[20px] bg-[#3b82f6] rounded-[4px] flex items-center justify-center flex-shrink-0">
-                        <Check className="w-[14px] h-[14px] text-white" strokeWidth={3} />
+                      <div className={`w-[20px] h-[20px] rounded-[4px] flex items-center justify-center flex-shrink-0 transition-all duration-500 ${checkedItems[1] ? 'bg-[#3b82f6] scale-100' : 'bg-white border border-[#e5e7eb] scale-90'}`}>
+                        <Check className={`w-[14px] h-[14px] text-white transition-all duration-300 ${checkedItems[1] ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`} strokeWidth={3} />
                       </div>
                       <span 
                         className="text-[16px] font-medium leading-[20px] text-[#374151]"
@@ -223,7 +389,7 @@ export default function StrengthsSection() {
 
                   <div className="w-full border border-[#e5e7eb] rounded-[8px] flex justify-between items-center px-[16px] py-5">
                     <div className="flex items-center gap-[12px]">
-                      <div className="w-[20px] h-[20px] bg-white border border-black rounded-[4px] flex-shrink-0"></div>
+                      <div className={`w-[20px] h-[20px] rounded-[4px] flex-shrink-0 transition-all duration-500 ${checkedItems[2] ? 'bg-white border border-black' : 'bg-white border border-[#e5e7eb]'}`}></div>
                       <span 
                         className="text-[16px] font-medium leading-[20px] text-[#374151]"
                         style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}
@@ -313,7 +479,7 @@ export default function StrengthsSection() {
             </div>
 
             {/* Right Content - Dashboard Card */}
-            <div className="w-full max-w-[592px] flex-1">
+            <div id="realtime-dashboard-card" className="w-full max-w-[592px] flex-1">
               <div className="w-full bg-white rounded-[16px] p-8" style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1), 0px 10px 15px rgba(0, 0, 0, 0.1)' }}>
                 <h4 
                   className="text-[20px] font-medium leading-[28px] text-center text-[#111827] mb-6"
@@ -323,17 +489,17 @@ export default function StrengthsSection() {
                 </h4>
 
                 <div className="flex gap-[16px] mb-6">
-                  <div className="flex-1 bg-[#ECFDF5] rounded-[8px] p-[16px]">
+                  <div className={`flex-1 bg-[#ECFDF5] rounded-[8px] p-[16px] transition-all duration-500 ${isRealTimeDashboardVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}>
                     <div className="text-[24px] font-medium leading-[29px] text-[#059669] mb-[8px] text-center" style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}>
-                      1,247
+                      {participantCount.toLocaleString()}
                     </div>
                     <div className="text-[14px] font-medium leading-[17px] text-[#4b5563] text-center" style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}>
                       오늘 참여 수
                     </div>
                   </div>
-                  <div className="flex-1 bg-[#DBEAFE] rounded-[8px] p-[16px]">
+                  <div className={`flex-1 bg-[#DBEAFE] rounded-[8px] p-[16px] transition-all duration-500 delay-200 ${isRealTimeDashboardVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}>
                     <div className="text-[24px] font-medium leading-[29px] text-[#2563eb] mb-[8px] text-center" style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}>
-                      87.3%
+                      {completionRate.toFixed(1)}%
                     </div>
                     <div className="text-[14px] font-medium leading-[17px] text-[#4b5563] text-center" style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}>
                       미션 완료율
@@ -353,7 +519,7 @@ export default function StrengthsSection() {
                       className="text-[16px] font-medium leading-[20px] text-[#059669]"
                       style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}
                     >
-                      94.2%
+                      {validTraffic.toFixed(1)}%
                     </span>
                   </div>
                   <div className="w-full bg-[#F3E8FF] rounded-[8px] border-l-[3px] border-l-[#a855f7] flex justify-between items-center px-[12px] py-[16px]">
@@ -367,7 +533,7 @@ export default function StrengthsSection() {
                       className="text-[16px] font-medium leading-[20px] text-[#9333ea]"
                       style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}
                     >
-                      ₩847,200
+                      ₩ {settlementAmount.toLocaleString()}
                     </span>
                   </div>
                 </div>

@@ -1,8 +1,20 @@
 'use client';
+import { useState, useEffect } from 'react';
 import Button from '@/components/ui/Button';
 import { Handshake, Building2, Smartphone, Users, ArrowRight, ArrowDown } from 'lucide-react';
 
 export default function HeroSection() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // 컴포넌트 마운트 시 애니메이션 시작
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 200);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const handleContactClick = () => {
     // Handle contact form submission
   };
@@ -57,9 +69,9 @@ export default function HeroSection() {
 
           {/* Right Content - Direct Link Structure */}
           <div className="w-full lg:w-[42%] lg:ml-auto">
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-[0px_25px_50px_rgba(0,0,0,0.25)]">
+            <div className={`bg-white rounded-2xl p-6 sm:p-8 shadow-[0px_25px_50px_rgba(0,0,0,0.25)] transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <div className="flex flex-col gap-6">
-                <div className="text-center">
+                <div className={`text-center transition-all duration-500 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
                   <h3 
                     className="text-lg sm:text-xl font-medium leading-6 text-gray-800 mb-2"
                     style={{ fontFamily: 'Noto Sans KR' }}
@@ -76,7 +88,7 @@ export default function HeroSection() {
 
                 <div className="flex flex-col items-center gap-4">
                   {/* Advertiser to ADEN */}
-                  <div className="flex items-center w-full max-w-[400px]">
+                  <div className={`flex items-center w-full max-w-[400px] transition-all duration-500 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                     <div className="flex items-center gap-3" style={{ minWidth: 'fit-content' }}>
                       <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
                         <Building2 className="w-6 h-6 text-white" />
@@ -112,12 +124,12 @@ export default function HeroSection() {
                   </div>
 
                   {/* Arrow Down */}
-                  <div className="flex justify-center py-2">
+                  <div className={`flex justify-center py-2 transition-all duration-500 delay-[400ms] ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`}>
                     <ArrowDown className="w-8 h-8 text-emerald-600" strokeWidth={2.5} />
                   </div>
 
                   {/* Media to User */}
-                  <div className="flex items-center w-full max-w-[400px]">
+                  <div className={`flex items-center w-full max-w-[400px] transition-all duration-500 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                     <div className="flex items-center gap-3" style={{ minWidth: 'fit-content' }}>
                       <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
                         <Smartphone className="w-6 h-6 text-white" />
@@ -148,7 +160,7 @@ export default function HeroSection() {
                   </div>
                 </div>
 
-                <div className="w-full max-w-[506.69px] h-[56px] bg-emerald-50 rounded-lg flex items-center justify-center">
+                <div className={`w-full max-w-[506.69px] h-[56px] bg-emerald-50 rounded-lg flex items-center justify-center transition-all duration-500 delay-[600ms] ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
                   <span 
                     className="font-['Noto_Sans_KR'] font-medium text-base leading-[19px] text-center text-emerald-800"
                   >

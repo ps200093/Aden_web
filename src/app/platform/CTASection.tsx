@@ -1,8 +1,33 @@
 'use client';
+import { useState, useEffect } from 'react';
 import Button from '@/components/ui/Button';
 import { Handshake, Rocket } from 'lucide-react';
 
 export default function CTASection() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    const element = document.getElementById('cta-stats');
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
+  }, []);
+
   const handleContactClick = () => {
     // Handle contact form submission
   };
@@ -43,29 +68,33 @@ export default function CTASection() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center">
             <Button
               text="매체 제휴 문의하기"
-              className="bg-emerald-600 text-slate-800 hover:bg-emerald-700 px-8 py-[18px] rounded-base flex items-center gap-4"
+              className="bg-emerald-600 text-slate-800 hover:bg-emerald-700 border-2 border-emerald-600 px-8 py-4 rounded-base flex items-center justify-center gap-4 min-w-[280px]"
               onClick={handleContactClick}
             >
-              <Handshake className="w-[22px] h-[22px] text-slate-800" strokeWidth={3.0} />
+              <Handshake className="w-7 h-7 text-slate-800" strokeWidth={3.0} />
               매체 제휴 문의하기
             </Button>
             <Button
               text="2주 무료 PoC 신청하기"
-              className="bg-transparent border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-800 px-8 py-[18px] rounded-base flex items-center gap-4"
+              className="bg-transparent border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-800 px-8 py-4 rounded-base flex items-center justify-center gap-4 min-w-[280px]"
               onClick={handlePoCClick}
             >
-              <Rocket className="w-[18px] h-[18px] text-emerald-400" strokeWidth={3.0} />
+              <Rocket className="w-7 h-7 text-emerald-400" strokeWidth={3.0} />
               2주 무료 PoC 신청하기
             </Button>
           </div>
 
           {/* Key Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 w-full max-w-4xl">
+          <div id="cta-stats" className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 w-full max-w-4xl">
             {keyStats.map((stat, index) => (
-              <div key={index} className="flex flex-col items-center gap-2">
+              <div 
+                key={index} 
+                className={`flex flex-col items-center gap-2 transition-all duration-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
                 <div 
                   className="text-xl sm:text-2xl font-medium leading-7 text-emerald-400"
                   style={{ fontFamily: 'Noto Sans KR' }}

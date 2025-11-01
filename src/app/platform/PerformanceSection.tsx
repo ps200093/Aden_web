@@ -1,13 +1,87 @@
 'use client';
+import { useState, useEffect } from 'react';
 import Button from '@/components/ui/Button';
 import type { PerformanceMetric } from '@/types';
 import { ClockPlus, RotateCw, ChartSpline, BanknoteIcon, CircleDollarSign, UserRoundPlus, Shield } from 'lucide-react';
 
 export default function PerformanceSection() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [stayTimeIncrease, setStayTimeIncrease] = useState(0);
+  const [revisitIncrease, setRevisitIncrease] = useState(0);
+  const [revenueIncrease, setRevenueIncrease] = useState(0);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    const element = document.getElementById('performance-metrics');
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isVisible && stayTimeIncrease === 0) {
+      // 체류시간 증가: +41%
+      setTimeout(() => {
+        let current = 0;
+        const timer = setInterval(() => {
+          current += 1;
+          if (current >= 41) {
+            setStayTimeIncrease(41);
+            clearInterval(timer);
+          } else {
+            setStayTimeIncrease(current);
+          }
+        }, 25);
+      }, 100);
+
+      // 재방문율 증가: +27%
+      setTimeout(() => {
+        let current = 0;
+        const timer = setInterval(() => {
+          current += 1;
+          if (current >= 27) {
+            setRevisitIncrease(27);
+            clearInterval(timer);
+          } else {
+            setRevisitIncrease(current);
+          }
+        }, 30);
+      }, 200);
+
+      // 매출 증가: +34%
+      setTimeout(() => {
+        let current = 0;
+        const timer = setInterval(() => {
+          current += 1;
+          if (current >= 34) {
+            setRevenueIncrease(34);
+            clearInterval(timer);
+          } else {
+            setRevenueIncrease(current);
+          }
+        }, 28);
+      }, 300);
+    }
+  }, [isVisible]);
+
   const performanceMetrics = [
     {
       icon: ClockPlus,
-      value: "+41%",
+      value: stayTimeIncrease,
       title: "체류시간 증가",
       description: "DAU 대비 평균 체류시간 향상",
       color: "bg-gradient-to-br from-blue-400 to-blue-600",
@@ -15,7 +89,7 @@ export default function PerformanceSection() {
     },
     {
       icon: RotateCw,
-      value: "+27%",
+      value: revisitIncrease,
       title: "재방문율 증가",
       description: "7일 내 재방문 사용자 비율",
       color: "bg-gradient-to-br from-emerald-400 to-emerald-600",
@@ -23,7 +97,7 @@ export default function PerformanceSection() {
     },
     {
       icon: ChartSpline,
-      value: "+34%",
+      value: revenueIncrease,
       title: "매출 증가",
       description: "오퍼월 관련 부가 수익 상승",
       color: "bg-gradient-to-br from-purple-400 to-purple-600",
@@ -52,7 +126,7 @@ export default function PerformanceSection() {
           </div>
 
           {/* Performance Metrics */}
-          <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-[0px_10px_15px_rgba(0,0,0,0.1)]">
+          <div id="performance-metrics" className="bg-white rounded-2xl p-6 sm:p-8 shadow-[0px_10px_15px_rgba(0,0,0,0.1)]">
             <div className="text-center mb-8">
               <h3 
                 className="text-xl sm:text-2xl font-bold leading-7 text-gray-800 mb-4"
@@ -80,7 +154,7 @@ export default function PerformanceSection() {
                     className={`text-[24px] sm:text-[28px] lg:text-[30px] font-medium leading-[29px] sm:leading-[33px] lg:leading-[36px] ${metric.textColor} mb-2`}
                     style={{ fontFamily: 'Noto Sans KR' }}
                   >
-                    {metric.value}
+                    +{metric.value}%
                   </div>
                   <h4 
                     className="text-base font-medium leading-5 text-gray-800 mb-2"

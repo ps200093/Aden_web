@@ -1,6 +1,30 @@
 'use client';
+import { useState, useEffect } from 'react';
 
 export default function ComparisonSection() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    const element = document.getElementById('comparison-table');
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
+  }, []);
   const comparisonData = [
     {
       category: '수익 구조',
@@ -82,6 +106,7 @@ export default function ComparisonSection() {
 
           {/* Comparison Table */}
           <div 
+            id="comparison-table"
             className="mx-auto rounded-2xl overflow-hidden"
             style={{
               width: '100%',
@@ -172,9 +197,11 @@ export default function ComparisonSection() {
                 {comparisonData.map((row, index) => (
                   <tr 
                     key={index}
+                    className={`transition-all duration-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
                     style={{ 
                       height: '57px',
-                      background: row.bgColor
+                      background: row.bgColor,
+                      transitionDelay: `${index * 100}ms`
                     }}
                   >
                     <td 

@@ -1,9 +1,34 @@
 'use client';
+import { useState, useEffect } from 'react';
 import Button from '@/components/ui/Button';
 import type { IntegrationStep } from '@/types';
 import { Send, Settings, ChartBar, Rocket, Handshake } from 'lucide-react';
 
 export default function PartnershipSection() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    const element = document.getElementById('partnership-steps');
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
+  }, []);
+
   const handleContactClick = () => {
     // Handle contact form submission
   };
@@ -67,10 +92,14 @@ export default function PartnershipSection() {
           </div>
 
           {/* Partnership Steps */}
-          <div className="bg-white rounded-2xl p-8 shadow-[0px_4px_6px_rgba(0,0,0,0.1),0px_10px_15px_rgba(0,0,0,0.1)]">
+          <div id="partnership-steps" className="bg-white rounded-2xl p-8 shadow-[0px_4px_6px_rgba(0,0,0,0.1),0px_10px_15px_rgba(0,0,0,0.1)]">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
               {partnershipSteps.map((step, index) => (
-                <div key={index} className="flex flex-col items-center text-center">
+                <div 
+                  key={index} 
+                  className={`flex flex-col items-center text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                  style={{ transitionDelay: `${index * 150}ms` }}
+                >
                   <div className={`w-16 h-16 ${step.stepColor} rounded-full flex items-center justify-center mb-4`}>
                     <span 
                       className="text-[20px] font-medium leading-[24px] text-white"

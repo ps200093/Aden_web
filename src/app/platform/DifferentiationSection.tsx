@@ -1,9 +1,158 @@
 'use client';
+import { useState, useEffect } from 'react';
 import Button from '@/components/ui/Button';
 import type { DifferentiationPoint, IntegrationStep } from '@/types';
 import { MoveUp, MoveDown, CircleCheck } from 'lucide-react';
 
 export default function DifferentiationSection() {
+  const [isPoint1Visible, setIsPoint1Visible] = useState(false);
+  const [isPoint2Visible, setIsPoint2Visible] = useState(false);
+  const [isPoint3Visible, setIsPoint3Visible] = useState(false);
+  const [isPoint4Visible, setIsPoint4Visible] = useState(false);
+  const [missionCount, setMissionCount] = useState(0);
+  const [largeMediaPercent, setLargeMediaPercent] = useState(0);
+  const [mediumMediaPercent, setMediumMediaPercent] = useState(0);
+  const [smallMediaPercent, setSmallMediaPercent] = useState(0);
+
+  useEffect(() => {
+    if (isPoint2Visible && missionCount === 0) {
+      const targetValue = 5000000;
+      const duration = 2000; // 2초
+      const frameRate = 1000 / 60; // 60fps
+      const totalFrames = Math.round(duration / frameRate);
+      
+      let frame = 0;
+      const timer = setInterval(() => {
+        frame++;
+        const progress = frame / totalFrames;
+        // easeOut 효과: 처음엔 빠르게, 나중엔 천천히
+        const easeProgress = 1 - Math.pow(1 - progress, 3);
+        const currentValue = Math.floor(easeProgress * targetValue);
+        
+        if (frame >= totalFrames) {
+          setMissionCount(targetValue);
+          clearInterval(timer);
+        } else {
+          setMissionCount(currentValue);
+        }
+      }, frameRate);
+
+      return () => clearInterval(timer);
+    }
+  }, [isPoint2Visible]);
+
+  useEffect(() => {
+    if (isPoint2Visible && largeMediaPercent === 0) {
+      // 대형 매체: 85%
+      setTimeout(() => {
+        let current = 0;
+        const timer = setInterval(() => {
+          current += 1;
+          if (current >= 85) {
+            setLargeMediaPercent(85);
+            clearInterval(timer);
+          } else {
+            setLargeMediaPercent(current);
+          }
+        }, 20);
+      }, 300);
+
+      // 중형 매체: 82%
+      setTimeout(() => {
+        let current = 0;
+        const timer = setInterval(() => {
+          current += 1;
+          if (current >= 82) {
+            setMediumMediaPercent(82);
+            clearInterval(timer);
+          } else {
+            setMediumMediaPercent(current);
+          }
+        }, 20);
+      }, 400);
+
+      // 소형 매체: 78%
+      setTimeout(() => {
+        let current = 0;
+        const timer = setInterval(() => {
+          current += 1;
+          if (current >= 78) {
+            setSmallMediaPercent(78);
+            clearInterval(timer);
+          } else {
+            setSmallMediaPercent(current);
+          }
+        }, 20);
+      }, 500);
+    }
+  }, [isPoint2Visible]);
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+
+    const point1Observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsPoint1Visible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    const point2Observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsPoint2Visible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    const point3Observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsPoint3Visible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    const point4Observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsPoint4Visible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    const point1Element = document.getElementById('point-1');
+    const point2Element = document.getElementById('point-2');
+    const point3Element = document.getElementById('point-3');
+    const point4Element = document.getElementById('point-4');
+
+    if (point1Element) {
+      point1Observer.observe(point1Element);
+      observers.push(point1Observer);
+    }
+    if (point2Element) {
+      point2Observer.observe(point2Element);
+      observers.push(point2Observer);
+    }
+    if (point3Element) {
+      point3Observer.observe(point3Element);
+      observers.push(point3Observer);
+    }
+    if (point4Element) {
+      point4Observer.observe(point4Element);
+      observers.push(point4Observer);
+    }
+
+    return () => {
+      observers.forEach(observer => observer.disconnect());
+    };
+  }, []);
+
   const differentiationPoints: DifferentiationPoint[] = [
     {
       id: 1,
@@ -106,7 +255,7 @@ export default function DifferentiationSection() {
           </div>
 
           {/* Point 1 - Brand Customization */}
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+          <div id="point-1" className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-start transition-all duration-700 ${isPoint1Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="w-full lg:w-1/2 flex flex-col gap-6">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
@@ -137,7 +286,11 @@ export default function DifferentiationSection() {
               <div className="bg-blue-50 rounded-base p-4">
                 <div className="flex flex-col gap-2">
                   {differentiationPoints[0].benefits?.map((benefit, index) => (
-                    <div key={index} className="flex items-center gap-2">
+                    <div 
+                      key={index} 
+                      className={`flex items-center gap-2 transition-all duration-500 ${isPoint1Visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+                      style={{ transitionDelay: `${300 + index * 100}ms` }}
+                    >
                       {benefit.includes('↓') ? (
                         <MoveDown className="w-4 h-4 text-red-500" strokeWidth={3.5}/>
                       ) : (
@@ -170,7 +323,7 @@ export default function DifferentiationSection() {
 
             {/* Before/After Comparison */}
             <div className="w-full lg:w-[48%]">
-              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-[0px_10px_15px_rgba(0,0,0,0.1)] max-w-[592px]">
+              <div className={`bg-white rounded-2xl p-6 sm:p-8 shadow-[0px_10px_15px_rgba(0,0,0,0.1)] max-w-[592px] transition-all duration-700 delay-300 ${isPoint1Visible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
                 <div className="text-center mb-6">
                   <h4 
                     className="text-lg sm:text-xl font-medium leading-6 text-gray-800"
@@ -240,15 +393,15 @@ export default function DifferentiationSection() {
           </div>
 
           {/* Point 2 - Inventory */}
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+          <div id="point-2" className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-start transition-all duration-700 ${isPoint2Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="w-full lg:w-1/2">
-              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-[0px_10px_15px_rgba(0,0,0,0.1)] max-w-[592px]">
+              <div className={`bg-white rounded-2xl p-6 sm:p-8 shadow-[0px_10px_15px_rgba(0,0,0,0.1)] max-w-[592px] transition-all duration-700 delay-300 ${isPoint2Visible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
                 <div className="text-center mb-8">
                   <h3 
                     className="text-[28px] sm:text-[32px] lg:text-[36px] font-medium leading-[34px] sm:leading-[38px] lg:leading-[44px] text-emerald-600 mb-2"
                     style={{ fontFamily: 'Noto Sans KR' }}
                   >
-                    5,000,000+
+                    {missionCount.toLocaleString()}+
                   </h3>
                   <p 
                     className="text-lg sm:text-xl font-medium leading-6 text-gray-800 mb-1"
@@ -266,11 +419,14 @@ export default function DifferentiationSection() {
 
                 <div className="flex flex-col gap-4 mb-6">
                   {[
-                    { label: '대형 매체 (100만+ DAU)', percentage: '85%', color: 'emerald' },
-                    { label: '중형 매체 (10만+ DAU)', percentage: '82%', color: 'blue' },
-                    { label: '소형 매체 (1만+ DAU)', percentage: '78%', color: 'purple' }
+                    { label: '대형 매체 (100만+ DAU)', percentage: largeMediaPercent, color: 'emerald' },
+                    { label: '중형 매체 (10만+ DAU)', percentage: mediumMediaPercent, color: 'blue' },
+                    { label: '소형 매체 (1만+ DAU)', percentage: smallMediaPercent, color: 'purple' }
                   ].map((item, index) => (
-                    <div key={index} className={`bg-${item.color === 'emerald' ? 'emerald' : item.color === 'blue' ? 'blue' : 'purple'}-50 rounded-base p-3`}>
+                    <div 
+                      key={index} 
+                      className={`bg-${item.color === 'emerald' ? 'emerald' : item.color === 'blue' ? 'blue' : 'purple'}-50 rounded-base p-3`}
+                    >
                       <div className="flex justify-between items-center">
                         <span 
                           className={`text-sm sm:text-base font-medium text-${item.color === 'emerald' ? 'emerald' : item.color === 'blue' ? 'blue' : 'purple'}-700`}
@@ -281,15 +437,15 @@ export default function DifferentiationSection() {
                         <div className="flex items-center gap-2">
                           <div className="w-20 bg-gray-200 rounded h-2">
                             <div 
-                              className={`h-2 bg-${item.color === 'emerald' ? 'emerald' : item.color === 'blue' ? 'blue' : 'purple'}-600 rounded`}
-                              style={{ width: item.percentage }}
+                              className={`h-2 bg-${item.color === 'emerald' ? 'emerald' : item.color === 'blue' ? 'blue' : 'purple'}-600 rounded transition-all duration-300 ease-out`}
+                              style={{ width: `${item.percentage}%` }}
                             ></div>
                           </div>
                           <span 
                             className={`text-sm font-medium text-${item.color === 'emerald' ? 'emerald' : item.color === 'blue' ? 'blue' : 'purple'}-600`}
                             style={{ fontFamily: 'Noto Sans KR' }}
                           >
-                            {item.percentage}
+                            {item.percentage}%
                           </span>
                         </div>
                       </div>
@@ -344,7 +500,7 @@ export default function DifferentiationSection() {
           </div>
 
           {/* Point 3 - Transparent Settlement */}
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+          <div id="point-3" className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-start transition-all duration-700 ${isPoint3Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="w-full lg:w-1/2 flex flex-col gap-6">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
@@ -390,14 +546,14 @@ export default function DifferentiationSection() {
             </div>
 
             <div className="w-full lg:w-[48%]">
-              <TransparencyFlow />
+              <TransparencyFlow isVisible={isPoint3Visible} />
             </div>
           </div>
 
           {/* Point 4 - Easy Integration */}
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+          <div id="point-4" className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-start transition-all duration-700 ${isPoint4Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="w-full lg:w-1/2">
-              <div className="bg-white rounded-2xl p-8 shadow-[0px_4px_6px_rgba(0,0,0,0.1),0px_10px_15px_rgba(0,0,0,0.1)] max-w-[592px]">
+              <div className={`bg-white rounded-2xl p-8 shadow-[0px_4px_6px_rgba(0,0,0,0.1),0px_10px_15px_rgba(0,0,0,0.1)] max-w-[592px] transition-all duration-700 delay-300 ${isPoint4Visible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
                 <div className="text-center mb-[52px]">
                   <h4 
                     className="font-['Noto_Sans_KR'] font-medium text-[20px] leading-[24px] text-center text-gray-900"
@@ -408,7 +564,11 @@ export default function DifferentiationSection() {
 
                 <div className="flex flex-col gap-4">
                   {integrationSteps.map((step, index) => (
-                    <div key={index} className={`${step.bgColor} rounded-lg p-4 h-[76px] flex items-center`}>
+                    <div 
+                      key={index} 
+                      className={`${step.bgColor} rounded-lg p-4 h-[76px] flex items-center transition-all duration-500 ${isPoint4Visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+                      style={{ transitionDelay: `${400 + index * 100}ms` }}
+                    >
                       <div className="flex items-center gap-4">
                         <div className={`w-8 h-8 ${step.stepColor} rounded-full flex items-center justify-center`}>
                           <span 
@@ -472,7 +632,11 @@ export default function DifferentiationSection() {
 
               <div className="flex flex-col gap-3">
                 {differentiationPoints[3].features?.map((feature, index) => (
-                  <div key={index} className="flex items-start gap-3">
+                  <div 
+                    key={index} 
+                    className={`flex items-start gap-3 transition-all duration-500 ${isPoint4Visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+                    style={{ transitionDelay: `${300 + index * 100}ms` }}
+                  >
                     <div className="w-5 h-5 bg-orange-600 rounded-full flex items-center justify-center mt-1">
                       <CircleCheck className="w-5 h-5 text-white" strokeWidth={2.5} />
                     </div>
@@ -509,12 +673,100 @@ export default function DifferentiationSection() {
 }
 
 // Separate component for Transparency Flow with client-side state
-function TransparencyFlow() {
-  const [dailyRevenue, setDailyRevenue] = useState('₩2,847,200');
-  const [completionRate, setCompletionRate] = useState('94.2%');
+function TransparencyFlow({ isVisible }: { isVisible: boolean }) {
+  const [dailyRevenue, setDailyRevenue] = useState(0);
+  const [completionRate, setCompletionRate] = useState(0);
+  const [validParticipation, setValidParticipation] = useState(0);
+  const [deductions, setDeductions] = useState(0);
+  const [rankingChange, setRankingChange] = useState(0);
+
+  useEffect(() => {
+    if (isVisible && dailyRevenue === 0) {
+      // 오늘 매출: ₩2,847,200
+      const targetRevenue = 2847200;
+      const duration = 1500;
+      const frameRate = 1000 / 60;
+      const totalFrames = Math.round(duration / frameRate);
+      
+      let frame = 0;
+      const timer = setInterval(() => {
+        frame++;
+        const progress = frame / totalFrames;
+        const easeProgress = 1 - Math.pow(1 - progress, 3);
+        const currentValue = Math.floor(easeProgress * targetRevenue);
+        
+        if (frame >= totalFrames) {
+          setDailyRevenue(targetRevenue);
+          clearInterval(timer);
+        } else {
+          setDailyRevenue(currentValue);
+        }
+      }, frameRate);
+    }
+  }, [isVisible]);
+
+  useEffect(() => {
+    if (isVisible && completionRate === 0) {
+      // 완료율: 94.2%
+      setTimeout(() => {
+        let current = 0;
+        const timer = setInterval(() => {
+          current += 0.3;
+          if (current >= 94.2) {
+            setCompletionRate(94.2);
+            clearInterval(timer);
+          } else {
+            setCompletionRate(parseFloat(current.toFixed(1)));
+          }
+        }, 5);
+      }, 5);
+
+      // 유효 참여: 1,247건
+      setTimeout(() => {
+        let current = 0;
+        const timer = setInterval(() => {
+          current += 15;
+          if (current >= 1247) {
+            setValidParticipation(1247);
+            clearInterval(timer);
+          } else {
+            setValidParticipation(current);
+          }
+        }, 15);
+      }, 400);
+
+      // 차감 내역: 23건
+      setTimeout(() => {
+        let current = 0;
+        const timer = setInterval(() => {
+          current += 1;
+          if (current >= 23) {
+            setDeductions(23);
+            clearInterval(timer);
+          } else {
+            setDeductions(current);
+          }
+        }, 30);
+      }, 600);
+
+      // 순위 변화: +6.2%
+      setTimeout(() => {
+        let current = 0;
+        const timer = setInterval(() => {
+          current += 0.2;
+          if (current >= 6.2) {
+            setRankingChange(6.2);
+            clearInterval(timer);
+          } else {
+            setRankingChange(parseFloat(current.toFixed(1)));
+          }
+        }, 25);
+      }, 800);
+    }
+  }, [isVisible]);
 
   return (
-    <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-[0px_10px_15px_rgba(0,0,0,0.1)] max-w-[592px]">
+    <div className={`bg-white rounded-2xl p-6 sm:p-8 shadow-[0px_10px_15px_rgba(0,0,0,0.1)] max-w-[592px] transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
       <div className="text-center mb-6">
         <h4 
           className="text-lg sm:text-xl font-medium leading-6 text-gray-800"
@@ -530,7 +782,7 @@ function TransparencyFlow() {
             className="text-xl sm:text-2xl font-medium text-emerald-600 mb-1"
             style={{ fontFamily: 'Noto Sans KR' }}
           >
-            {dailyRevenue}
+            ₩{dailyRevenue.toLocaleString()}
           </div>
           <div 
             className="text-sm font-medium text-gray-600"
@@ -544,7 +796,7 @@ function TransparencyFlow() {
             className="text-xl sm:text-2xl font-medium text-blue-600 mb-1"
             style={{ fontFamily: 'Noto Sans KR' }}
           >
-            {completionRate}
+            {completionRate.toFixed(1)}%
           </div>
           <div 
             className="text-sm font-medium text-gray-600"
@@ -567,7 +819,7 @@ function TransparencyFlow() {
             className="text-base font-medium text-emerald-600"
             style={{ fontFamily: 'Noto Sans KR' }}
           >
-            1,247건
+            {validParticipation.toLocaleString()}건
           </span>
         </div>
         <div className="bg-red-50 p-3 flex justify-between items-center rounded-lg border-l-3 border-red-600">
@@ -581,7 +833,7 @@ function TransparencyFlow() {
             className="text-base font-medium text-red-600"
             style={{ fontFamily: 'Noto Sans KR' }}
           >
-            23건
+            {deductions}건
           </span>
         </div>
         <div className="bg-purple-50 p-3 flex justify-between items-center rounded-lg border-l-3 border-purple-600">
@@ -595,13 +847,10 @@ function TransparencyFlow() {
             className="text-base font-medium text-purple-600"
             style={{ fontFamily: 'Noto Sans KR' }}
           >
-            +6.2%
+            +{rankingChange.toFixed(1)}%
           </span>
         </div>
       </div>
     </div>
   );
 }
-
-import { useState } from 'react';
-

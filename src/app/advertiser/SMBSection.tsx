@@ -1,8 +1,91 @@
 'use client';
+import { useState, useEffect } from 'react';
 import Button from '@/components/ui/Button';
 import { Store, Scissors, ShoppingBag } from 'lucide-react';
 
 export default function SMBSection() {
+  const [placeExposure, setPlaceExposure] = useState(0);
+  const [shoppingSearch, setShoppingSearch] = useState(0);
+  const [shoppingInflow, setShoppingInflow] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Intersection Observer로 섹션이 화면에 보일 때 애니메이션 시작
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !isVisible) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    const section = document.getElementById('smb-performance-card');
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, [isVisible]);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    // 플레이스 노출 85%
+    const placeTimer = setTimeout(() => {
+      const placeInterval = setInterval(() => {
+        setPlaceExposure((prev) => {
+          if (prev >= 85) {
+            clearInterval(placeInterval);
+            return 85;
+          }
+          return prev + 2;
+        });
+      }, 20);
+      return () => clearInterval(placeInterval);
+    }, 200);
+
+    // 쇼핑 검색 78%
+    const searchTimer = setTimeout(() => {
+      const searchInterval = setInterval(() => {
+        setShoppingSearch((prev) => {
+          if (prev >= 78) {
+            clearInterval(searchInterval);
+            return 78;
+          }
+          return prev + 2;
+        });
+      }, 20);
+      return () => clearInterval(searchInterval);
+    }, 400);
+
+    // 쇼핑 유입 92%
+    const inflowTimer = setTimeout(() => {
+      const inflowInterval = setInterval(() => {
+        setShoppingInflow((prev) => {
+          if (prev >= 92) {
+            clearInterval(inflowInterval);
+            return 92;
+          }
+          return prev + 2;
+        });
+      }, 20);
+      return () => clearInterval(inflowInterval);
+    }, 600);
+
+    return () => {
+      clearTimeout(placeTimer);
+      clearTimeout(searchTimer);
+      clearTimeout(inflowTimer);
+    };
+  }, [isVisible]);
+
   return (
     <section className="w-full bg-white overflow-hidden">
       <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -114,11 +197,11 @@ export default function SMBSection() {
             </div>
 
             {/* Right Content - Performance Card */}
-            <div className="w-full max-w-[592px] flex-shrink-0 lg:mt-[72px]">
-              <div className="w-full bg-white rounded-[16px] shadow-[0px_25px_50px_rgba(0,0,0,0.25)] p-8">
+            <div id="smb-performance-card" className="w-full max-w-[592px] flex-shrink-0 lg:mt-[72px]">
+              <div className="w-full bg-white rounded-[16px] shadow-[0px_25px_50px_rgba(0,0,0,0.25)] p-8 animate-[fadeInUp_0.8s_ease-out]">
                 {/* Header */}
                 <h3 
-                  className="w-full font-medium text-[24px] leading-[29px] text-center text-[#111827] mb-8"
+                  className="w-full font-medium text-[24px] leading-[29px] text-center text-[#111827] mb-8 animate-[fadeIn_0.6s_ease-out]"
                   style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}
                 >
                   한정된 예산으로도
@@ -127,7 +210,7 @@ export default function SMBSection() {
                 {/* Stats Container */}
                 <div className="w-full space-y-6 mb-6">
                   {/* Place Exposure */}
-                  <div className="flex items-center justify-between gap-4">
+                  <div className="flex items-center justify-between gap-4 animate-[fadeIn_0.6s_ease-out_0.2s_both]">
                     <span 
                       className="font-medium text-[16px] leading-[24px] text-[#374151] whitespace-nowrap"
                       style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}
@@ -135,20 +218,23 @@ export default function SMBSection() {
                       플레이스 노출
                     </span>
                     <div className="flex items-center gap-2 flex-1 max-w-[200px]">
-                      <div className="flex-1 h-[8px] bg-[#E5E7EB] rounded-[9999px] relative">
-                        <div className="absolute w-[85%] h-[8px] left-0 top-0 bg-[#10B981] rounded-[9999px]"></div>
+                      <div className="flex-1 h-[8px] bg-[#E5E7EB] rounded-[9999px] relative overflow-hidden">
+                        <div 
+                          className="absolute h-[8px] left-0 top-0 bg-[#10B981] rounded-[9999px] transition-all duration-1000 ease-out"
+                          style={{ width: `${placeExposure}%` }}
+                        ></div>
                       </div>
                       <span 
                         className="font-medium text-[16px] leading-[24px] text-[#059669] whitespace-nowrap"
                         style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}
                       >
-                        85%
+                        {placeExposure}%
                       </span>
                     </div>
                   </div>
 
                   {/* Shopping Search */}
-                  <div className="flex items-center justify-between gap-4">
+                  <div className="flex items-center justify-between gap-4 animate-[fadeIn_0.6s_ease-out_0.4s_both]">
                     <span 
                       className="font-medium text-[16px] leading-[24px] text-[#374151] whitespace-nowrap"
                       style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}
@@ -156,20 +242,23 @@ export default function SMBSection() {
                       쇼핑 검색
                     </span>
                     <div className="flex items-center gap-2 flex-1 max-w-[200px]">
-                      <div className="flex-1 h-[8px] bg-[#E5E7EB] rounded-[9999px] relative">
-                        <div className="absolute w-[78%] h-[8px] left-0 top-0 bg-[#3B82F6] rounded-[9999px]"></div>
+                      <div className="flex-1 h-[8px] bg-[#E5E7EB] rounded-[9999px] relative overflow-hidden">
+                        <div 
+                          className="absolute h-[8px] left-0 top-0 bg-[#3B82F6] rounded-[9999px] transition-all duration-1000 ease-out"
+                          style={{ width: `${shoppingSearch}%` }}
+                        ></div>
                       </div>
                       <span 
                         className="font-medium text-[16px] leading-[24px] text-[#2563EB] whitespace-nowrap"
                         style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}
                       >
-                        78%
+                        {shoppingSearch}%
                       </span>
                     </div>
                   </div>
 
                   {/* Shopping Inflow */}
-                  <div className="flex items-center justify-between gap-4">
+                  <div className="flex items-center justify-between gap-4 animate-[fadeIn_0.6s_ease-out_0.6s_both]">
                     <span 
                       className="font-medium text-[16px] leading-[24px] text-[#374151] whitespace-nowrap"
                       style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}
@@ -177,21 +266,24 @@ export default function SMBSection() {
                       쇼핑 유입
                     </span>
                     <div className="flex items-center gap-2 flex-1 max-w-[200px]">
-                      <div className="flex-1 h-[8px] bg-[#E5E7EB] rounded-[9999px] relative">
-                        <div className="absolute w-[92%] h-[8px] left-0 top-0 bg-[#A855F7] rounded-[9999px]"></div>
+                      <div className="flex-1 h-[8px] bg-[#E5E7EB] rounded-[9999px] relative overflow-hidden">
+                        <div 
+                          className="absolute h-[8px] left-0 top-0 bg-[#A855F7] rounded-[9999px] transition-all duration-1000 ease-out"
+                          style={{ width: `${shoppingInflow}%` }}
+                        ></div>
                       </div>
                       <span 
                         className="font-medium text-[16px] leading-[24px] text-[#9333EA] whitespace-nowrap"
                         style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}
                       >
-                        92%
+                        {shoppingInflow}%
                       </span>
                     </div>
                   </div>
                 </div>
 
-                {/* CTA Button */}
-                <div className="w-full bg-[#ECFDF5] rounded-[8px] p-4">
+                {/* CTA Text */}
+                <div className="w-full bg-[#ECFDF5] rounded-[8px] p-4 animate-[fadeIn_0.6s_ease-out_0.8s_both]">
                   <p 
                     className="w-full font-medium text-[20px] leading-[24px] text-center text-[#065F46]"
                     style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}
