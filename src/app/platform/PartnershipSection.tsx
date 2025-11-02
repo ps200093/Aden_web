@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import Button from '@/components/ui/Button';
 import type { IntegrationStep } from '@/types';
-import { Send, Settings, ChartBar, Rocket, Handshake } from 'lucide-react';
+import { Send, Settings, ChartBar, Rocket, Handshake, ArrowRight, ArrowDown } from 'lucide-react';
 
 export default function PartnershipSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -92,36 +92,192 @@ export default function PartnershipSection() {
           </div>
 
           {/* Partnership Steps */}
-          <div id="partnership-steps" className="bg-white rounded-2xl p-8 shadow-[0px_4px_6px_rgba(0,0,0,0.1),0px_10px_15px_rgba(0,0,0,0.1)]">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div id="partnership-steps" className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-[0px_4px_6px_rgba(0,0,0,0.1),0px_10px_15px_rgba(0,0,0,0.1)]">
+            {/* Mobile Layout (< sm) */}
+            <div className="flex sm:hidden flex-col gap-4 mb-6">
+              {/* Row 1: Steps 1 and 2 */}
+              <div className="flex items-center gap-3">
+                {/* Step 1 */}
+                <div 
+                  className={`flex-1 flex flex-col items-center text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                  style={{ transitionDelay: '0ms' }}
+                >
+                  <div className={`w-12 h-12 ${partnershipSteps[0].stepColor} rounded-full flex items-center justify-center mb-3`}>
+                    <span 
+                      className="text-base font-medium leading-[19px] text-white"
+                      style={{ fontFamily: 'Noto Sans KR' }}
+                    >
+                      {partnershipSteps[0].step}
+                    </span>
+                  </div>
+                  <h3 
+                    className="text-base font-medium leading-[22px] text-[#111827] mb-3 min-h-[22px]"
+                    style={{ fontFamily: 'Noto Sans KR' }}
+                  >
+                    {partnershipSteps[0].title}
+                  </h3>
+                  <div className="flex flex-col items-center gap-2 w-full">
+                    <p 
+                      className="text-xs font-medium leading-[16px] text-[#4B5563] min-h-[32px] flex items-center justify-center"
+                      style={{ fontFamily: 'Noto Sans KR' }}
+                    >
+                      {partnershipSteps[0].description}
+                    </p>
+                    <div className={`${partnershipSteps[0].bgColor} rounded-lg w-full h-10 flex items-center justify-center`}>
+                      <Send className={`w-4 h-5 ${partnershipSteps[0].iconColor}`} strokeWidth={2.5} />
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Arrow */}
+                <div className="flex items-center justify-center pt-20">
+                  <ArrowRight className="w-6 h-6 text-gray-400" strokeWidth={2} />
+                </div>
+                
+                {/* Step 2 */}
+                <div 
+                  className={`flex-1 flex flex-col items-center text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                  style={{ transitionDelay: '150ms' }}
+                >
+                  <div className={`w-12 h-12 ${partnershipSteps[1].stepColor} rounded-full flex items-center justify-center mb-3`}>
+                    <span 
+                      className="text-base font-medium leading-[19px] text-white"
+                      style={{ fontFamily: 'Noto Sans KR' }}
+                    >
+                      {partnershipSteps[1].step}
+                    </span>
+                  </div>
+                  <h3 
+                    className="text-base font-medium leading-[22px] text-[#111827] mb-3 min-h-[22px]"
+                    style={{ fontFamily: 'Noto Sans KR' }}
+                  >
+                    {partnershipSteps[1].title}
+                  </h3>
+                  <div className="flex flex-col items-center gap-2 w-full">
+                    <p 
+                      className="text-xs font-medium leading-[16px] text-[#4B5563] min-h-[32px] flex items-center justify-center"
+                      style={{ fontFamily: 'Noto Sans KR' }}
+                    >
+                      {partnershipSteps[1].description}
+                    </p>
+                    <div className={`${partnershipSteps[1].bgColor} rounded-lg w-full h-10 flex items-center justify-center`}>
+                      <Settings className={`w-4 h-5 ${partnershipSteps[1].iconColor}`} strokeWidth={2.5} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Arrow Down - positioned under step 2 */}
+              <div className="grid grid-cols-2 gap-3">
+                <div></div>
+                <div className="flex justify-center pl-4">
+                  <ArrowDown className="w-6 h-6 text-gray-400" strokeWidth={2} />
+                </div>
+              </div>
+
+              {/* Row 2: Steps 4 and 3 */}
+              <div className="flex items-center gap-3">
+                {/* Step 4 */}
+                <div 
+                  className={`flex-1 flex flex-col items-center text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                  style={{ transitionDelay: '450ms' }}
+                >
+                  <div className={`w-12 h-12 ${partnershipSteps[3].stepColor} rounded-full flex items-center justify-center mb-3`}>
+                    <span 
+                      className="text-base font-medium leading-[19px] text-white"
+                      style={{ fontFamily: 'Noto Sans KR' }}
+                    >
+                      {partnershipSteps[3].step}
+                    </span>
+                  </div>
+                  <h3 
+                    className="text-base font-medium leading-[22px] text-[#111827] mb-3 min-h-[22px]"
+                    style={{ fontFamily: 'Noto Sans KR' }}
+                  >
+                    {partnershipSteps[3].title}
+                  </h3>
+                  <div className="flex flex-col items-center gap-2 w-full">
+                    <p 
+                      className="text-xs font-medium leading-[16px] text-[#4B5563] min-h-[32px] flex items-center justify-center"
+                      style={{ fontFamily: 'Noto Sans KR' }}
+                    >
+                      {partnershipSteps[3].description}
+                    </p>
+                    <div className={`${partnershipSteps[3].bgColor} rounded-lg w-full h-10 flex items-center justify-center`}>
+                      <Rocket className={`w-4 h-5 ${partnershipSteps[3].iconColor}`} strokeWidth={2.5} />
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Arrow */}
+                <div className="flex items-center justify-center pt-20">
+                  <ArrowRight className="w-6 h-6 text-gray-400 transform rotate-180" strokeWidth={2} />
+                </div>
+                
+                {/* Step 3 */}
+                <div 
+                  className={`flex-1 flex flex-col items-center text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                  style={{ transitionDelay: '300ms' }}
+                >
+                  <div className={`w-12 h-12 ${partnershipSteps[2].stepColor} rounded-full flex items-center justify-center mb-3`}>
+                    <span 
+                      className="text-base font-medium leading-[19px] text-white"
+                      style={{ fontFamily: 'Noto Sans KR' }}
+                    >
+                      {partnershipSteps[2].step}
+                    </span>
+                  </div>
+                  <h3 
+                    className="text-base font-medium leading-[22px] text-[#111827] mb-3 min-h-[22px]"
+                    style={{ fontFamily: 'Noto Sans KR' }}
+                  >
+                    {partnershipSteps[2].title}
+                  </h3>
+                  <div className="flex flex-col items-center gap-2 w-full">
+                    <p 
+                      className="text-xs font-medium leading-[16px] text-[#4B5563] min-h-[32px] flex items-center justify-center"
+                      style={{ fontFamily: 'Noto Sans KR' }}
+                    >
+                      {partnershipSteps[2].description}
+                    </p>
+                    <div className={`${partnershipSteps[2].bgColor} rounded-lg w-full h-10 flex items-center justify-center`}>
+                      <ChartBar className={`w-4 h-5 ${partnershipSteps[2].iconColor}`} strokeWidth={2.5} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Tablet and Desktop Layout (>= sm) */}
+            <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
               {partnershipSteps.map((step, index) => (
                 <div 
                   key={index} 
                   className={`flex flex-col items-center text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                   style={{ transitionDelay: `${index * 150}ms` }}
                 >
-                  <div className={`w-16 h-16 ${step.stepColor} rounded-full flex items-center justify-center mb-4`}>
+                  <div className={`w-14 h-14 lg:w-16 lg:h-16 ${step.stepColor} rounded-full flex items-center justify-center mb-4`}>
                     <span 
-                      className="text-[20px] font-medium leading-[24px] text-white"
+                      className="text-lg lg:text-[20px] font-medium leading-[22px] lg:leading-[24px] text-white"
                       style={{ fontFamily: 'Noto Sans KR' }}
                     >
                       {step.step}
                     </span>
                   </div>
                   <h3 
-                    className="text-[18px] font-medium leading-[28px] text-[#111827] mb-5"
+                    className="text-lg lg:text-[18px] font-medium leading-[25px] lg:leading-[28px] text-[#111827] mb-4 lg:mb-5 min-h-[25px] lg:min-h-[28px]"
                     style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     {step.title}
                   </h3>
-                  <div className="flex flex-col items-center gap-[10px]">
+                  <div className="flex flex-col items-center gap-[10px] w-full">
                     <p 
-                      className="text-[14px] font-medium leading-[20px] text-[#4B5563]"
+                      className="text-sm lg:text-[14px] font-medium leading-[18px] lg:leading-[20px] text-[#4B5563] min-h-[36px] lg:min-h-[40px] flex items-center justify-center"
                       style={{ fontFamily: 'Noto Sans KR' }}
                     >
                       {step.description}
                     </p>
-                    <div className={`${step.bgColor} rounded-lg w-[268px] h-[52px] flex items-center justify-center`}>
+                    <div className={`${step.bgColor} rounded-lg w-full max-w-[268px] h-12 lg:h-[52px] flex items-center justify-center`}>
                       <step.icon className={`w-5 h-6 ${step.iconColor}`} strokeWidth={2.5} />
                     </div>
                   </div>
@@ -132,11 +288,11 @@ export default function PartnershipSection() {
             <div className="text-center">
               <button
                 onClick={handleContactClick}
-                className="bg-[#10B981] hover:bg-emerald-700 text-white rounded-lg h-12 px-8 inline-flex items-center justify-center gap-2"
+                className="bg-[#10B981] hover:bg-emerald-700 text-white rounded-lg h-10 sm:h-11 lg:h-12 px-6 sm:px-7 lg:px-8 inline-flex items-center justify-center gap-2"
               >
-                <Handshake className="w-5 h-4 text-white" strokeWidth={2.5} />
+                <Handshake className="w-4 h-4 sm:w-5 sm:h-4 text-white" strokeWidth={2.5} />
                 <span 
-                  className="text-[16px] font-medium leading-[19px]"
+                  className="text-sm sm:text-base lg:text-[16px] font-medium leading-[17px] sm:leading-[19px]"
                   style={{ fontFamily: 'Noto Sans KR' }}
                 >
                   매체 제휴 문의하기

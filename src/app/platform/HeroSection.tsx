@@ -23,7 +23,7 @@ export default function HeroSection() {
       <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[56px] py-[38px] sm:py-[56px] lg:py-[76px]">
         <div className="flex flex-col lg:flex-row justify-start items-center gap-8 lg:gap-0">
           {/* Left Content */}
-          <div className="w-full lg:w-[46%] flex flex-col gap-[15px] sm:gap-[22px] lg:gap-[30px]">
+          <div className="w-full lg:w-[46%] flex flex-col gap-[15px] sm:gap-[22px] lg:gap-[30px] order-2 lg:order-1">
             <div className="flex flex-col gap-[11px] sm:gap-[16px] lg:gap-[22px]">
               <h1 
                 className="text-[32px] sm:text-[48px] lg:text-[64px] font-bold leading-[36px] sm:leading-[54px] lg:leading-[72px] text-white"
@@ -68,7 +68,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right Content - Direct Link Structure */}
-          <div className="w-full lg:w-[42%] lg:ml-auto">
+          <div className="w-full lg:w-[42%] lg:ml-auto order-1 lg:order-2">
             <div className={`bg-white rounded-2xl p-6 sm:p-8 shadow-[0px_25px_50px_rgba(0,0,0,0.25)] transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <div className="flex flex-col gap-6">
                 <div className={`text-center transition-all duration-500 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>

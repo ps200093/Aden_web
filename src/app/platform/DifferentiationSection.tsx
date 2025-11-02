@@ -256,7 +256,7 @@ export default function DifferentiationSection() {
 
           {/* Point 1 - Brand Customization */}
           <div id="point-1" className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-start transition-all duration-700 ${isPoint1Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="w-full lg:w-1/2 flex flex-col gap-6">
+            <div className="w-full lg:w-1/2 flex flex-col gap-6 order-1">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
                   <span 
@@ -322,7 +322,7 @@ export default function DifferentiationSection() {
             </div>
 
             {/* Before/After Comparison */}
-            <div className="w-full lg:w-[48%]">
+            <div className="w-full lg:w-[48%] order-2">
               <div className={`bg-white rounded-2xl p-6 sm:p-8 shadow-[0px_10px_15px_rgba(0,0,0,0.1)] max-w-[592px] transition-all duration-700 delay-300 ${isPoint1Visible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
                 <div className="text-center mb-6">
                   <h4 
@@ -394,7 +394,7 @@ export default function DifferentiationSection() {
 
           {/* Point 2 - Inventory */}
           <div id="point-2" className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-start transition-all duration-700 ${isPoint2Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 order-2 lg:order-1">
               <div className={`bg-white rounded-2xl p-6 sm:p-8 shadow-[0px_10px_15px_rgba(0,0,0,0.1)] max-w-[592px] transition-all duration-700 delay-300 ${isPoint2Visible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
                 <div className="text-center mb-8">
                   <h3 
@@ -464,7 +464,7 @@ export default function DifferentiationSection() {
               </div>
             </div>
 
-            <div className="w-full lg:w-1/2 flex flex-col gap-6">
+            <div className="w-full lg:w-1/2 flex flex-col gap-6 order-1 lg:order-2">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center">
                   <span 
@@ -501,7 +501,7 @@ export default function DifferentiationSection() {
 
           {/* Point 3 - Transparent Settlement */}
           <div id="point-3" className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-start transition-all duration-700 ${isPoint3Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="w-full lg:w-1/2 flex flex-col gap-6">
+            <div className="w-full lg:w-1/2 flex flex-col gap-6 order-1">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
                   <span 
@@ -545,14 +545,14 @@ export default function DifferentiationSection() {
               </div>
             </div>
 
-            <div className="w-full lg:w-[48%]">
+            <div className="w-full lg:w-[48%] order-2">
               <TransparencyFlow isVisible={isPoint3Visible} />
             </div>
           </div>
 
           {/* Point 4 - Easy Integration */}
           <div id="point-4" className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-start transition-all duration-700 ${isPoint4Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 order-2 lg:order-1">
               <div className={`bg-white rounded-2xl p-8 shadow-[0px_4px_6px_rgba(0,0,0,0.1),0px_10px_15px_rgba(0,0,0,0.1)] max-w-[592px] transition-all duration-700 delay-300 ${isPoint4Visible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
                 <div className="text-center mb-[52px]">
                   <h4 
@@ -604,7 +604,7 @@ export default function DifferentiationSection() {
               </div>
             </div>
 
-            <div className="w-full lg:w-1/2 flex flex-col gap-6">
+            <div className="w-full lg:w-1/2 flex flex-col gap-6 order-1 lg:order-2">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center">
                   <span 

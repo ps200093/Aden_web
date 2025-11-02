@@ -142,28 +142,28 @@ export default function PerformanceSection() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div className="grid grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
               {performanceMetrics.map((metric, index) => {
                 const IconComponent = metric.icon;
                 return (
                   <div key={index} className="flex flex-col items-center text-center">
-                    <div className={`w-24 h-24 ${metric.color} rounded-6xl flex items-center justify-center mb-4`}>
-                      <IconComponent className="w-10 h-10 text-white" strokeWidth={2.5} />
+                    <div className={`w-12 h-12 sm:w-20 sm:h-20 lg:w-24 lg:h-24 ${metric.color} rounded-3xl sm:rounded-5xl lg:rounded-6xl flex items-center justify-center mb-2 sm:mb-3 lg:mb-4`}>
+                      <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-white" strokeWidth={2.5} />
                     </div>
                   <div 
-                    className={`text-[24px] sm:text-[28px] lg:text-[30px] font-medium leading-[29px] sm:leading-[33px] lg:leading-[36px] ${metric.textColor} mb-2`}
+                    className={`text-lg sm:text-2xl lg:text-[30px] font-medium leading-[22px] sm:leading-[29px] lg:leading-[36px] ${metric.textColor} mb-1 sm:mb-2`}
                     style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     +{metric.value}%
                   </div>
                   <h4 
-                    className="text-base font-medium leading-5 text-gray-800 mb-2"
+                    className="text-xs sm:text-sm lg:text-base font-medium leading-[14px] sm:leading-[17px] lg:leading-5 text-gray-800 mb-1 sm:mb-2"
                     style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     {metric.title}
                   </h4>
                   <p 
-                    className="text-sm font-medium leading-sm text-gray-600"
+                    className="text-[10px] sm:text-xs lg:text-sm font-medium leading-[12px] sm:leading-[14px] lg:leading-sm text-gray-600"
                     style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     {metric.description}

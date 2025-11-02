@@ -45,22 +45,22 @@ export default function CounselSection() {
   };
 
   return (
-    <section className="w-full bg-[#F9FAFB] py-[80px]">
+    <section className="w-full bg-[#F9FAFB] py-[40px] sm:py-[60px] lg:py-[80px]">
       <div className="w-full max-w-[896px] mx-auto px-4">
         <div className="bg-white rounded-2xl shadow-[0px_25px_50px_rgba(0,0,0,0.25)] overflow-hidden">
           <div className="flex flex-col lg:grid lg:grid-cols-2">
             {/* Left Side - Form */}
-            <div className="p-[48px] bg-white">
-              <div className="mb-[32px]">
-                <h2 className="text-[#111827] text-[30px] font-medium leading-[36px] mb-[16px]" style={{ fontFamily: 'Noto Sans KR' }}>
+            <div className="p-[24px] sm:p-[36px] lg:p-[48px] bg-white order-2 lg:order-1">
+              <div className="mb-[24px] sm:mb-[32px]">
+                <h2 className="text-[#111827] text-[24px] sm:text-[28px] lg:text-[30px] font-medium leading-[28px] sm:leading-[32px] lg:leading-[36px] mb-[12px] sm:mb-[16px]" style={{ fontFamily: 'Noto Sans KR' }}>
                   상담 신청하기
                 </h2>
-                <p className="text-[#4B5563] text-[16px] font-medium leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                <p className="text-[#4B5563] text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[20px] sm:leading-[22px] lg:leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
                   전문 컨설턴트가 맞춤형 솔루션을 제안해드립니다
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-[24px]">
+              <form onSubmit={handleSubmit} className="space-y-[20px] sm:space-y-[24px]">
                 {/* 문의 유형 */}
                 <div>
                   <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[12px]" style={{ fontFamily: 'Noto Sans KR' }}>
@@ -248,18 +248,18 @@ export default function CounselSection() {
             </div>
 
             {/* Right Side - Process Info */}
-            <div className="bg-gradient-to-br from-[#10B981] to-[#059669] p-[48px] lg:rounded-r-2xl h-full">
-              <div className="mb-[32px]">
-                <h3 className="text-white text-[24px] font-medium leading-[32px] mb-[16px]" style={{ fontFamily: 'Noto Sans KR' }}>
+            <div className="bg-gradient-to-br from-[#10B981] to-[#059669] p-[24px] sm:p-[36px] lg:p-[48px] lg:rounded-r-2xl h-full order-1 lg:order-2">
+              <div className="mb-[24px] sm:mb-[32px]">
+                <h3 className="text-white text-[20px] sm:text-[22px] lg:text-[24px] font-medium leading-[28px] sm:leading-[30px] lg:leading-[32px] mb-[12px] sm:mb-[16px]" style={{ fontFamily: 'Noto Sans KR' }}>
                   빠른 상담 프로세스
                 </h3>
-                <p className="text-[#D1FAE5] text-[16px] font-medium leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                <p className="text-[#D1FAE5] text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[20px] sm:leading-[22px] lg:leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
                   전문 컨설턴트가 신속하게 연락드립니다
                 </p>
               </div>
 
               {/* Process Steps */}
-              <div id="process-steps" className="space-y-[24px] mb-[48px]">
+              <div id="process-steps" className="space-y-[16px] sm:space-y-[20px] lg:space-y-[24px] mb-[32px] sm:mb-[40px] lg:mb-[48px]">
                 {[
                   { step: '1', title: '문의 접수', desc: '신청 후 1시간 내 접수 확인' },
                   { step: '2', title: '전문 상담', desc: '24시간 내 전담 컨설턴트 배정' },
@@ -268,19 +268,19 @@ export default function CounselSection() {
                 ].map((item, index) => (
                   <div 
                     key={index}
-                    className={`flex gap-[16px] transition-all duration-500 ${isStepsVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
+                    className={`flex gap-[12px] sm:gap-[16px] transition-all duration-500 ${isStepsVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
                     style={{ transitionDelay: `${index * 150}ms` }}
                   >
-                    <div className="w-[32px] h-[32px] bg-white rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-[#059669] text-[14px] font-medium" style={{ fontFamily: 'Noto Sans KR' }}>
+                    <div className="w-[28px] h-[28px] sm:w-[32px] sm:h-[32px] bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-[#059669] text-[12px] sm:text-[14px] font-medium" style={{ fontFamily: 'Noto Sans KR' }}>
                         {item.step}
                       </span>
                     </div>
                     <div>
-                      <h4 className="text-white text-[16px] font-medium leading-[24px] mb-[4px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                      <h4 className="text-white text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[20px] sm:leading-[22px] lg:leading-[24px] mb-[2px] sm:mb-[4px]" style={{ fontFamily: 'Noto Sans KR' }}>
                         {item.title}
                       </h4>
-                      <p className="text-[#D1FAE5] text-[14px] font-medium leading-[20px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                      <p className="text-[#D1FAE5] text-[12px] sm:text-[13px] lg:text-[14px] font-medium leading-[18px] sm:leading-[19px] lg:leading-[20px]" style={{ fontFamily: 'Noto Sans KR' }}>
                         {item.desc}
                       </p>
                     </div>
@@ -289,10 +289,10 @@ export default function CounselSection() {
               </div>
 
               {/* Support Info */}
-              <div className="bg-white/10 rounded-lg p-[16px]">
+              <div className="bg-white/10 rounded-lg p-[12px] sm:p-[16px]">
                 <div className="flex flex-col items-center text-center">
-                  <Headphones size={24} className="text-white mb-[8px]" />
-                  <p className="text-white text-[16px] font-medium leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                  <Headphones size={20} className="text-white mb-[6px] sm:mb-[8px] sm:w-6 sm:h-6" />
+                  <p className="text-white text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[20px] sm:leading-[22px] lg:leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
                     고객 지원
                   </p>
                 </div>

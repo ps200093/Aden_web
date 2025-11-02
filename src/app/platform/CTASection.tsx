@@ -68,41 +68,41 @@ export default function CTASection() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center">
+          <div className="flex flex-row gap-2 sm:gap-4 lg:gap-6 items-center justify-center w-full max-w-4xl">
             <Button
               text="매체 제휴 문의하기"
-              className="bg-emerald-600 text-slate-800 hover:bg-emerald-700 border-2 border-emerald-600 px-8 py-4 rounded-base flex items-center justify-center gap-4 min-w-[280px]"
+              className="bg-emerald-600 text-slate-800 hover:bg-emerald-700 border-2 border-emerald-600 px-3 py-3 sm:px-6 sm:py-4 lg:px-8 rounded-base flex items-center justify-center gap-2 sm:gap-3 lg:gap-4 flex-1 sm:flex-initial sm:min-w-[280px]"
               onClick={handleContactClick}
             >
-              <Handshake className="w-7 h-7 text-slate-800" strokeWidth={3.0} />
-              매체 제휴 문의하기
+              <Handshake className="w-4 h-4 sm:w-6 sm:h-6 lg:w-7 lg:h-7 text-slate-800" strokeWidth={3.0} />
+              <span className="text-xs sm:text-sm lg:text-base">매체 제휴 문의하기</span>
             </Button>
             <Button
               text="2주 무료 PoC 신청하기"
-              className="bg-transparent border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-800 px-8 py-4 rounded-base flex items-center justify-center gap-4 min-w-[280px]"
+              className="bg-transparent border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-800 px-3 py-3 sm:px-6 sm:py-4 lg:px-8 rounded-base flex items-center justify-center gap-2 sm:gap-3 lg:gap-4 flex-1 sm:flex-initial sm:min-w-[280px]"
               onClick={handlePoCClick}
             >
-              <Rocket className="w-7 h-7 text-emerald-400" strokeWidth={3.0} />
-              2주 무료 PoC 신청하기
+              <Rocket className="w-4 h-4 sm:w-6 sm:h-6 lg:w-7 lg:h-7 text-emerald-400" strokeWidth={3.0} />
+              <span className="text-xs sm:text-sm lg:text-base">2주 무료 PoC 신청하기</span>
             </Button>
           </div>
 
           {/* Key Stats */}
-          <div id="cta-stats" className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 w-full max-w-4xl">
+          <div id="cta-stats" className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 w-full max-w-4xl">
             {keyStats.map((stat, index) => (
               <div 
                 key={index} 
-                className={`flex flex-col items-center gap-2 transition-all duration-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}
+                className={`flex flex-col items-center gap-1 sm:gap-2 transition-all duration-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div 
-                  className="text-xl sm:text-2xl font-medium leading-7 text-emerald-400"
+                  className="text-base sm:text-xl lg:text-2xl font-medium leading-[19px] sm:leading-6 lg:leading-7 text-emerald-400"
                   style={{ fontFamily: 'Noto Sans KR' }}
                 >
                   {stat.value}
                 </div>
                 <div 
-                  className="text-base font-medium leading-5 text-gray-300"
+                  className="text-xs sm:text-sm lg:text-base font-medium leading-[14px] sm:leading-[17px] lg:leading-5 text-gray-300"
                   style={{ fontFamily: 'Noto Sans KR' }}
                 >
                   {stat.label}

@@ -51,7 +51,7 @@ export default function HeroSection() {
           <div className="flex flex-col lg:flex-row justify-start items-center gap-[20px] lg:gap-[40px]">
             {/* Left Content */}
             <div className="w-full lg:w-[60%] flex flex-col gap-[20px] sm:gap-[30px] md:gap-[40px] items-center lg:items-start text-center lg:text-left">
-              <div className="w-full lg:w-[92%] flex flex-col gap-[11px] sm:gap-[16px] md:gap-[22px] items-center lg:items-start">
+              <div className="w-full lg:w-[92%] flex flex-col gap-[18px] sm:gap-[16px] md:gap-[22px] items-center lg:items-start">
                 <h1 
                   className="w-full font-bold text-white mt-[32px] lg:mt-0"
                   style={{ 

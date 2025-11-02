@@ -63,7 +63,7 @@ export default function ReasonSection() {
                 color: '#4B5563'
               }}
             >
-              기존 오퍼월은 광고의 '양'에 집중했습니다. 에덴은 광고의 '의미'에 집중합니다.
+              기존 오퍼월은 광고의 '양'에 집중했습니다.<br className="md:hidden" /> 에덴은 광고의 '의미'에 집중합니다.
             </p>
           </div>
 

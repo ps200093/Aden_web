@@ -137,12 +137,9 @@ export default function ComparisonSection() {
                     }}
                   >
                     <div 
+                      className="text-base sm:text-lg lg:text-2xl font-medium leading-[19px] sm:leading-[22px] lg:leading-[29px] text-center"
                       style={{
                         fontFamily: 'Noto Sans KR',
-                        fontWeight: 500,
-                        fontSize: '24px',
-                        lineHeight: '29px',
-                        textAlign: 'center',
                         color: '#111827'
                       }}
                     >
@@ -157,12 +154,9 @@ export default function ComparisonSection() {
                     }}
                   >
                     <div 
+                      className="text-base sm:text-lg lg:text-2xl font-medium leading-[19px] sm:leading-[22px] lg:leading-[29px] text-center"
                       style={{
                         fontFamily: 'Noto Sans KR',
-                        fontWeight: 500,
-                        fontSize: '24px',
-                        lineHeight: '29px',
-                        textAlign: 'center',
                         color: '#4B5563'
                       }}
                     >
@@ -177,12 +171,9 @@ export default function ComparisonSection() {
                     }}
                   >
                     <div 
+                      className="text-base sm:text-lg lg:text-2xl font-medium leading-[19px] sm:leading-[22px] lg:leading-[29px] text-center"
                       style={{
                         fontFamily: 'Noto Sans KR',
-                        fontWeight: 500,
-                        fontSize: '24px',
-                        lineHeight: '29px',
-                        textAlign: 'center',
                         color: '#059669'
                       }}
                     >
@@ -212,12 +203,9 @@ export default function ComparisonSection() {
                       }}
                     >
                       <div 
+                        className="text-xs sm:text-sm lg:text-base font-medium leading-[14px] sm:leading-[17px] lg:leading-[19px] text-center"
                         style={{
                           fontFamily: 'Noto Sans KR',
-                          fontWeight: 500,
-                          fontSize: '16px',
-                          lineHeight: '19px',
-                          textAlign: 'center',
                           color: '#111827'
                         }}
                       >
@@ -228,16 +216,13 @@ export default function ComparisonSection() {
                       style={{ 
                         width: '37.9%',
                         height: '57px',
-                        padding: '18px 0'
+                        padding: '18px 4px'
                       }}
                     >
                       <div 
+                        className="text-xs sm:text-sm lg:text-base font-medium leading-[14px] sm:leading-[17px] lg:leading-[19px] text-center"
                         style={{
                           fontFamily: 'Noto Sans KR',
-                          fontWeight: 500,
-                          fontSize: '16px',
-                          lineHeight: '19px',
-                          textAlign: 'center',
                           color: row.competitorColor
                         }}
                       >
@@ -248,16 +233,13 @@ export default function ComparisonSection() {
                       style={{ 
                         width: '43.9%',
                         height: '57px',
-                        padding: '18px 0'
+                        padding: '18px 4px'
                       }}
                     >
                       <div 
+                        className="text-xs sm:text-sm lg:text-base font-medium leading-[14px] sm:leading-[17px] lg:leading-[19px] text-center"
                         style={{
                           fontFamily: 'Noto Sans KR',
-                          fontWeight: 500,
-                          fontSize: '16px',
-                          lineHeight: '19px',
-                          textAlign: 'center',
                           color: row.adenColor
                         }}
                       >
