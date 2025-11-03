@@ -283,7 +283,7 @@ export default function ArchitectureSection() {
                     color: '#374151'
                   }}
                 >
-                  에덴은 단순히 광고를 나열하지 않습니다. <br />
+                  Aden은 단순히 광고를 나열하지 않습니다. <br />
                   다양한 데일리 미션 구조로 피로도를 줄이고, 유저의 하루 루틴 속으로 광고를 녹여냅니다.
                 </p>
 
@@ -299,7 +299,7 @@ export default function ArchitectureSection() {
                   }}
                 >
                   어렵지 않은 미션이라는 일관성, 투명한 정산 구조로 <br />
-                  광고주, 매체사, 그리고 에덴이 함께 성장합니다.
+                  광고주, 매체사, 그리고 Aden이 함께 성장합니다.
                 </p>
               </div>
             </div>

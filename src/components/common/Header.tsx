@@ -31,6 +31,7 @@ const Header = ({ className, ...props }: HeaderProps) => {
         'w-full bg-header-background relative',
         'px-4 sm:px-6 md:px-8 lg:px-[38px]',
         'py-4 sm:py-5 md:py-[22px]',
+        'border-b-[3px] border-gray-500',
         className
       )}
       {...props}

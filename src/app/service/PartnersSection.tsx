@@ -48,7 +48,7 @@ export default function PartnersSection() {
                   color: '#FFFFFF'
                 }}
               >
-                이미 수많은 브랜드가 에덴과 함께하고 있습니다.
+                이미 수많은 브랜드가 Aden과 함께하고 있습니다.
               </p>
             </div>
 

@@ -34,7 +34,7 @@ export default function ArchitectureSection() {
                   color: '#4B5563'
                 }}
               >
-                에덴은 유저의 특성에 맞춘 개인화된 미션을 통해 브랜드와 소비자를 연결하는 리워드 광고 네트워크입니다.
+                Aden은 유저의 특성에 맞춘 개인화된 미션을 통해 브랜드와 소비자를 연결하는 리워드 광고 네트워크입니다.
               </p>
             </div>
           </div>

@@ -40,9 +40,9 @@ export default function IntroSection() {
     const userTimer = setTimeout(() => {
       const interval = setInterval(() => {
         setUserCount((prev) => {
-          if (prev >= 300) {
+          if (prev >= 500) {
             clearInterval(interval);
-            return 300;
+            return 500;
           }
           return prev + 12;
         });
@@ -68,9 +68,9 @@ export default function IntroSection() {
     const participationTimer = setTimeout(() => {
       const interval = setInterval(() => {
         setParticipationCount((prev) => {
-          if (prev >= 9) {
+          if (prev >= 8) {
             clearInterval(interval);
-            return 9;
+            return 8;
           }
           return prev + 1;
         });
@@ -119,7 +119,7 @@ export default function IntroSection() {
                   color: '#4B5563'
                 }}
               >
-                에덴은 유저의 특성에 맞춘 개인화된 미션을 통해 브랜드와 소비자를 연결하는 리워드 광고 네트워크입니다.
+                Aden은 유저의 특성에 맞춘 개인화된 미션을 통해 브랜드와 소비자를 연결하는 리워드 광고 네트워크입니다.
               </p>
             </div>
 
@@ -202,7 +202,7 @@ export default function IntroSection() {
                       color: '#4B5563'
                     }}
                   >
-                    매일 300만명의 활성 사용자
+                    매일 500만명의 활성 사용자
                   </p>
                 </div>
               </div>
@@ -289,7 +289,7 @@ export default function IntroSection() {
                 </div>
               </div>
 
-              {/* 카드 3: 9회 참여 */}
+              {/* 카드 3: 8회 참여 */}
               <div 
                 className="w-full min-h-[220px] sm:min-h-[240px] lg:h-[244px] rounded-[12px] sm:rounded-[16px] flex flex-col items-center justify-between py-[24px] sm:py-[28px] lg:py-[32px] px-[24px] sm:px-[28px] lg:px-[32px] sm:col-span-2 lg:col-span-1"
                 style={{
@@ -308,7 +308,7 @@ export default function IntroSection() {
                       stroke="#E5E7EB"
                       strokeWidth="6.4"
                     />
-                    {/* 진행 원 (9회) */}
+                    {/* 진행 원 (8회) */}
                     <circle
                       cx="48"
                       cy="48"
@@ -385,7 +385,7 @@ export default function IntroSection() {
                   color: '#4B5563'
                 }}
               >
-                "개인화된 미션으로 광고의 피로가 아닌 새로운 재미를 선사합니다"
+                "개인화된 미션으로 <span style={{ color: '#10B981' }}>광고의 피로</span>가 아닌 <span style={{ color: '#10B981' }}>새로운 재미</span>를 선사합니다"
               </p>
             </div>
           </div>
