@@ -2,12 +2,12 @@ import React from 'react';
 
 export default function ContactSection() {
   return (
-    <section className="w-full bg-white py-[40px] sm:py-[60px] lg:py-20">
+    <section id="contact-section" className="w-full bg-white py-[40px] sm:py-[60px] lg:py-20">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-20">
         {/* 헤더 */}
         <div className="mb-[32px] sm:mb-[48px] lg:mb-16">
           <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] font-medium text-gray-900 text-center mb-3 sm:mb-4 leading-[28px] sm:leading-[36px] lg:leading-[40px]">
-            다른 방법으로 연락하기
+            즉시 문의하기
           </h2>
           <p className="text-base sm:text-lg lg:text-xl font-medium text-gray-600 text-center leading-6 sm:leading-7">
             다양한 채널로 ADEN에 문의하실 수 있습니다

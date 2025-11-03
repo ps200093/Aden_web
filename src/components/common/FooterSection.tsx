@@ -70,7 +70,7 @@ export default function FooterSection() {
                 className="text-[14px] sm:text-[16px] font-medium leading-[17px] sm:leading-[20px] text-accent-emerald -ml-16 sm:-ml-20"
                 style={{ fontFamily: 'Noto Sans KR' }}
               >
-                (주)인포플래닛
+                powered by InfoPlanet
               </span>
             </div>
             <div className="flex items-center gap-2">

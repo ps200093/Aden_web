@@ -33,7 +33,7 @@ export default function PartnersSection() {
                   color: '#FFFFFF'
                 }}
               >
-                파트너스
+                Our Partners
               </h2>
               
               {/* 설명 */}
@@ -199,7 +199,7 @@ export default function PartnersSection() {
                   color: '#FFFFFF'
                 }}
               >
-                ADEN은 지금 이 순간에도 <br className="md:hidden" />새로운 파트너를 맞이하고 있습니다.
+                "ADEN은 지금 이 순간에도 <br className="md:hidden" />새로운 파트너를 맞이하고 있습니다."
               </p>
             </div>
           </div>

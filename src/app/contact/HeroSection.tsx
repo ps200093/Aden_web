@@ -56,7 +56,7 @@ export default function HeroSection() {
         '브랜드 맞춤 UI/UX',
         '500만+ 일일 인벤토리',
         'SDK-less 2주 PoC',
-        'Net-7 빠른 정산'
+        '빠른 정산'
     ];
 
     return (

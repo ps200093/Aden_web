@@ -142,7 +142,7 @@ export default function PerformanceSection() {
               </p>
             </div>
 
-            <div className="grid grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
+            <div className="grid grid-cols-3 gap-3 sm:gap-6 lg:gap-8 mb-12">
               {performanceMetrics.map((metric, index) => {
                 const IconComponent = metric.icon;
                 return (
@@ -171,18 +171,6 @@ export default function PerformanceSection() {
                 </div>
               );
               })}
-            </div>
-          </div>
-
-          {/* Media Benefits */}
-          <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-[0px_10px_15px_rgba(0,0,0,0.1)]">
-            <div className="text-center mb-8">
-              <h3 
-                className="text-xl sm:text-2xl font-medium leading-7 text-gray-800"
-                style={{ fontFamily: 'Noto Sans KR' }}
-              >
-                매체가 얻는 효과
-              </h3>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -271,7 +259,7 @@ export default function PerformanceSection() {
                       className="text-lg font-medium leading-lg text-gray-800 mb-2"
                       style={{ fontFamily: 'Noto Sans KR' }}
                     >
-                      브랜드 신뢰 상승
+                      브랜드 신뢰 유지
                     </h4>
                     <p 
                       className="text-base font-medium leading-5 text-gray-600"

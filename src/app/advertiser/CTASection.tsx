@@ -1,10 +1,13 @@
 'use client';
 import Button from '@/components/ui/Button';
 import { Phone, ArrowUpFromLine } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 export default function CTASection() {
+  const router = useRouter();
+  
   const handleInquiry = () => {
-    // Handle inquiry action
+    router.push('/contact');
   }
 
   const handlePhoneConsult = () => {
@@ -39,7 +42,7 @@ export default function CTASection() {
                     lineHeight: '28px'
                   }}
                 >
-                  참여가 매출로 이어지는 CPA 광고를 지금 시작하세요.
+                  실유저 참여가 매출로 이어지는 CPA 광고를 지금 시작하세요.
                 </p>
                 <h3 
                   className="w-full font-medium text-center text-[#6EE7B7]"

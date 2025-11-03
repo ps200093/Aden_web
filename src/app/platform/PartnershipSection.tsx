@@ -63,7 +63,7 @@ export default function PartnershipSection() {
     {
       step: "4",
       title: "정식 런칭",
-      description: "SDK/웹앱 전환, Net-7 정산 개시",
+      description: "SDK/웹앱 전환, 정산 개시",
       bgColor: "bg-[#FAF5FF]", 
       stepColor: "bg-[#A855F7]",
       iconColor: "text-[#A855F7]",

@@ -36,14 +36,14 @@ export default function HeroSection() {
                 className="text-base sm:text-lg lg:text-xl font-medium leading-[22px] sm:leading-[25px] lg:leading-[28px] text-white"
                 style={{ fontFamily: 'Noto Sans KR' }}
               >
-                ADEN 오퍼월은 '매체 중심'으로 설계된 새로운 수익 구조입니다.<br />
+                ADEN 오퍼월은 '매체 중심'으로 설계된 새로운 광고 수익 구조입니다.<br />
                 광고주까지 직접 공급·관리하여 불필요한 중간 마진을 없애고,<br />
                 매체사의 성장과 유저 경험 개선에 집중합니다.
               </p>
               
               <div className="relative w-full max-w-[570.69px] h-[58px] bg-emerald-50 border border-emerald-200 rounded-lg">
                 <p className="absolute left-[17px] top-[17px] font-['Noto_Sans_KR'] font-medium text-base leading-[19px] text-emerald-800">
-                  Zero Margin, Full Transparency.
+                  Less Margin, Full Transparency.
                 </p>
               </div>
               
@@ -111,7 +111,7 @@ export default function HeroSection() {
                           className="text-lg font-bold text-white"
                           style={{ fontFamily: 'Noto Sans KR' }}
                         >
-                          E
+                          A
                         </span>
                       </div>
                       <span 

@@ -264,7 +264,7 @@ export default function CounselSection() {
                   { step: '1', title: '문의 접수', desc: '신청 후 1시간 내 접수 확인' },
                   { step: '2', title: '전문 상담', desc: '24시간 내 전담 컨설턴트 배정' },
                   { step: '3', title: '맞춤 제안', desc: '비즈니스에 최적화된 솔루션 제공' },
-                  { step: '4', title: '시작', desc: '2주 내 PoC 시작 또는 캠페인 런칭' }
+                  { step: '4', title: '서비스 게시', desc: '2주 내 PoC 시작 또는 캠페인 런칭' }
                 ].map((item, index) => (
                   <div 
                     key={index}
@@ -289,14 +289,22 @@ export default function CounselSection() {
               </div>
 
               {/* Support Info */}
-              <div className="bg-white/10 rounded-lg p-[12px] sm:p-[16px]">
+              <button 
+                onClick={() => {
+                  const contactSection = document.getElementById('contact-section');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }}
+                className="w-full bg-white/10 rounded-lg p-[12px] sm:p-[16px] hover:bg-white/20 transition-colors cursor-pointer"
+              >
                 <div className="flex flex-col items-center text-center">
                   <Headphones size={20} className="text-white mb-[6px] sm:mb-[8px] sm:w-6 sm:h-6" />
                   <p className="text-white text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[20px] sm:leading-[22px] lg:leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
                     고객 지원
                   </p>
                 </div>
-              </div>
+              </button>
             </div>
           </div>
         </div>

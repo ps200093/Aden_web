@@ -38,7 +38,7 @@ export default function CTASection() {
   const keyStats = [
     { value: '2주', label: '빠른 PoC 완료' },
     { value: '500만+', label: '일일 미션 물량' },
-    { value: 'Net-7', label: '빠른 정산 주기' }
+    { value: 'Net-n/a', label: '빠른 정산 주기' }
   ];
 
   return (
@@ -63,7 +63,7 @@ export default function CTASection() {
               className="text-[24px] sm:text-[27px] lg:text-[30px] font-medium leading-[29px] sm:leading-[32px] lg:leading-[36px] text-emerald-400"
               style={{ fontFamily: 'Noto Sans KR' }}
             >
-              Ad Ends. And Begins.
+              Ad Ends. And Fairly Begins.
             </p>
           </div>
 

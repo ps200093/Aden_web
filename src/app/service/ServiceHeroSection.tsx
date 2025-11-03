@@ -18,12 +18,12 @@ export default function ServiceHeroSection() {
   return (
     <section className="w-full bg-gradient-to-br from-[#169B68] from-15% to-[#F5F97F] to-85% relative overflow-hidden min-h-[600px] lg:min-h-[400px]">
       {/* Background Image - 이미지만 배경으로 배치 */}
-      <div className="hidden lg:block absolute -right-[16%] xl:-right-[16.5%] 2xl:-right-[15%] top-[45%] xl:top-[43.5%] 2xl:top-[43%] -translate-y-1/2 w-[70%] xl:w-[75%] h-full pointer-events-none z-0">
+      <div className="hidden lg:block absolute -right-[16%] xl:-right-[16.5%] 2xl:-right-[15%] top-[45%] xl:top-[43.5%] 2xl:top-[47%] 3xl:-right-[7%] 3xl:top-[47%] 4xl:-right-[0%] 4xl:top-[47%] -translate-y-1/2 w-[70%] xl:w-[75%] h-full pointer-events-none z-0">
         <div className="relative w-full h-full flex items-center justify-end">
           <img 
             src="/images/service_phone.png" 
             alt="Service Phone Mockup" 
-            className="relative z-[5] w-full max-w-[650px] xl:max-w-[800px] 2xl:max-w-[1500px] h-auto animate-[float_3s_ease-in-out_infinite]"
+            className="relative z-[5] w-full max-w-[650px] xl:max-w-[800px] 2xl:max-w-[900px] 3xl:max-w-[1000px] 4xl:max-w-[1100px] h-auto animate-[float_3s_ease-in-out_infinite]"
           />
         </div>
       </div>
@@ -152,128 +152,14 @@ export default function ServiceHeroSection() {
                   className="relative z-[5] w-full h-auto animate-[float_3s_ease-in-out_infinite]"
                 />
               </div>
-              {/* 데스크톱용 - Ellipse와 Rectangle만 표시 */}
-              {/* <div className="hidden lg:block relative w-full max-w-[600px] xl:max-w-[700px]"> */}
-                {/* Ellipse 3 - Outer blur */}
-                {/* <div 
-                  className="absolute rounded-full pointer-events-none z-0"
-                  style={{
-                    width: '60%',
-                    paddingBottom: '60%',
-                    left: '-25%',
-                    top: '-10%',
-                    background: 'rgba(113, 255, 189, 0.24)',
-                    filter: 'blur(7.15px)'
-                  }}
-                /> */}
-                
-                {/* Ellipse 1 - Middle blur */}
-                {/* <div 
-                  className="absolute rounded-full pointer-events-none z-0"
-                  style={{
-                    width: '43%',
-                    paddingBottom: '43%',
-                    left: '-16.5%',
-                    top: '22%',
-                    background: 'rgba(101, 255, 194, 0.24)',
-                    filter: 'blur(3.8px)'
-                  }}
-                /> */}
-                
-                {/* Ellipse 2 - Inner gradient */}
-                {/* <div 
-                  className="absolute rounded-full flex items-center justify-center pointer-events-none z-10"
-                  style={{
-                    width: '29%',
-                    paddingBottom: '29%',
-                    left: '-9%',
-                    top: '30.3%',
-                    background: 'linear-gradient(147.53deg, #6EE7B7 -4.14%, #169B68 89.48%)',
-                    boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'
-                  }}
-                >
-                  <img 
-                    src="/images/img_service_logo.svg" 
-                    alt="SADEN Logo" 
-                    className="absolute w-[60%] h-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                  />
-                </div> */}
-                
-                {/* Rectangle 4 - 광고주 */}
-                {/* <div 
-                  className="absolute rounded-[32px] flex items-center justify-center pointer-events-none z-10"
-                  style={{
-                    minWidth: '80px',
-                    height: '40px',
-                    left: '-2%',
-                    top: '7%',
-                    background: 'linear-gradient(180deg, #20C173 0%, #0F5B36 100%)',
-                    boxShadow: '4px 4px 4px rgba(0, 0, 0, 0.25)',
-                    padding: '0 12px'
-                  }}
-                >
-                  <span 
-                    className="font-bold text-center text-white whitespace-nowrap"
-                    style={{ 
-                      fontFamily: 'Noto Sans KR',
-                      fontSize: '15px',
-                      lineHeight: '1.2'
-                    }}
-                  >
-                    광고주
-                  </span>
-                </div> */}
-                
-                {/* Rectangle 5 - 매체 */}
-                {/* <div 
-                  className="absolute rounded-[32px] flex items-center justify-center pointer-events-none z-10"
-                  style={{
-                    minWidth: '75px',
-                    height: '40px',
-                    left: '-24%',
-                    top: '40%',
-                    background: 'linear-gradient(180deg, #20C173 0%, #0F5B36 100%)',
-                    boxShadow: '4px 4px 4px rgba(0, 0, 0, 0.25)',
-                    padding: '0 12px'
-                  }}
-                >
-                  <span 
-                    className="font-bold text-center text-white whitespace-nowrap"
-                    style={{ 
-                      fontFamily: 'Noto Sans KR',
-                      fontSize: '15px',
-                      lineHeight: '1.2'
-                    }}
-                  >
-                    매체
-                  </span>
-                </div> */}
-                
-                {/* Rectangle 6 - 사용자 */}
-                {/* <div 
-                  className="absolute rounded-[32px] flex items-center justify-center pointer-events-none z-10"
-                  style={{
-                    minWidth: '80px',
-                    height: '40px',
-                    left: '17%',
-                    bottom: '15%',
-                    background: 'linear-gradient(180deg, #20C173 0%, #0F5B36 100%)',
-                    boxShadow: '4px 4px 4px rgba(0, 0, 0, 0.25)',
-                    padding: '0 12px'
-                  }}
-                >
-                  <span 
-                    className="font-bold text-center text-white whitespace-nowrap"
-                    style={{ 
-                      fontFamily: 'Noto Sans KR',
-                      fontSize: '15px',
-                      lineHeight: '1.2'
-                    }}
-                  >
-                  사용자
-                </span>
-              </div>
-            </div> */} 
+              {/* 데스크톱용 - Hero Image SVG */}
+              <div className="hidden lg:block absolute lg:-right-[-30%] lg:top-[17%] xl:-right-[-27%] xl:top-[9%] 2xl:-right-[-20%] 2xl:top-[10%] w-full max-w-[450px] xl:max-w-[500px] 2xl:max-w-[500px]">
+                <img 
+                  src="/images/Hero_image.svg" 
+                  alt="ADEN Service" 
+                  className="w-full h-auto"
+                />
+              </div> 
           </div>
           </div>
           {/* Bottom Text */}

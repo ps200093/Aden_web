@@ -175,7 +175,7 @@ export default function DifferentiationSection() {
       id: 3,
       title: "투명한 정산 구조",
       description: "ADEN은 CPA 미션만 과금합니다. 클릭·노출·앱유입형 광고 등은 과금되지 않습니다. 또한 랭킹상승형 미션 분배표를 사전 공개하고, 차감 로그(규칙ID / 타임스탬프 / 패턴)를 매체 전용 대시보드에서 실시간으로 열람할 수 있습니다. 매체 수익 = 광고주의 실성과 1:1로 연결.",
-      quote: "정산의 모든 단계가 열려 있습니다."
+      quote: "Transparent Settlement"
     },
     {
       id: 4,
@@ -184,7 +184,7 @@ export default function DifferentiationSection() {
       features: [
         {
           title: "SDK-less PoC",
-          description: "인앱 WebView / 유니버설 링크 방식 → 앱 업데이트 불필요"
+          description: "인앱 WebView / SDK 방식 → 앱 업데이트 불필요"
         },
         {
           title: "경량 SDK",
@@ -195,7 +195,7 @@ export default function DifferentiationSection() {
           description: "모든 형태의 매체에서 즉시 탑재 가능"
         }
       ],
-      conclusion: "매체는 단 2주 만에 PoC 결과를 확인하고 즉시 정산까지 진행할 수 있습니다."
+      conclusion: "매체는 단 2주 만에 PoC 결과를 확인하고 즉시 도입까지 진행할 수 있습니다."
     }
   ];
 
@@ -210,8 +210,8 @@ export default function DifferentiationSection() {
     },
     {
       step: "2", 
-      title: "링크 연동",
-      description: "WebView/유니버설 링크",
+      title: "오퍼월 연동",
+      description: "WebView/SDK",
       bgColor: "bg-green-50",
       stepColor: "bg-green-500",
       iconColor: "bg-green-200"
@@ -219,7 +219,7 @@ export default function DifferentiationSection() {
     {
       step: "3",
       title: "실트래픽 테스트", 
-      description: "14일간 성과 검증",
+      description: "성과 검증",
       bgColor: "bg-yellow-50",
       stepColor: "bg-yellow-500",
       iconColor: "bg-yellow-200"
@@ -227,7 +227,7 @@ export default function DifferentiationSection() {
     {
       step: "4",
       title: "정산 완료",
-      description: "Net-7 정산 개시",
+      description: "Net 정산 개시",
       bgColor: "bg-purple-50",
       stepColor: "bg-purple-500",
       iconColor: "bg-purple-200"
@@ -311,12 +311,13 @@ export default function DifferentiationSection() {
                 className="text-base sm:text-lg lg:text-xl font-medium leading-[22px] sm:leading-[25px] lg:leading-[28px] text-blue-600"
                 style={{ fontFamily: 'Noto Sans KR' }}
               >
-                매체의 브랜드 아이덴티티에 완벽히 녹아드는 커스터마이징. ADEN의 오퍼월은 유저의 하루 루틴 안으로 자연스럽게 스며듭니다.
+                매체의 브랜드 아이덴티티에 완벽히 녹아드는 커스터마이징.<br/>
+                ADEN의 오퍼월은 유저의 하루 루틴 안으로 자연스럽게 스며듭니다.
               </p>
 
               <div className="w-full max-w-[592px] h-[58px] bg-blue-50 border border-blue-200 rounded-lg flex items-center justify-center">
                 <p className="font-['Noto_Sans_KR'] font-medium text-[20px] leading-[24px] text-center text-blue-800">
-                  "Ad looks like your brand."
+                  "AD is embedded in your platform"
                 </p>
               </div>
             </div>
@@ -452,15 +453,6 @@ export default function DifferentiationSection() {
                     </div>
                   ))}
                 </div>
-
-                <div className="bg-emerald-50 rounded-base p-4 text-center">
-                  <span 
-                    className="text-lg sm:text-xl font-medium text-emerald-700"
-                    style={{ fontFamily: 'Noto Sans KR' }}
-                  >
-                    모든 제휴 매체 균등 분배
-                  </span>
-                </div>
               </div>
             </div>
 
@@ -496,6 +488,12 @@ export default function DifferentiationSection() {
               >
                 대형 매체에만 집중되는 기존 관행을 탈피해, 모든 제휴 매체가 균등하게 참여할 수 있도록 설계되었습니다.
               </p>
+
+              <div className="w-full max-w-[592px] h-[58px] bg-emerald-50 border border-emerald-200 rounded-lg flex items-center justify-center">
+                <p className="font-['Noto_Sans_KR'] font-medium text-[20px] leading-[24px] text-center text-emerald-800">
+                  "Fair Distribution"
+                </p>
+              </div>
             </div>
           </div>
 
@@ -593,14 +591,6 @@ export default function DifferentiationSection() {
                     </div>
                   ))}
                 </div>
-
-                <div className="mt-6">
-                  <div className="w-full h-[56px] bg-orange-50 rounded-lg flex items-center justify-center">
-                    <p className="font-['Noto_Sans_KR'] font-medium text-[20px] leading-[24px] text-center text-orange-900">
-                      "매체 내부 리소스 투입 최소화"
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -664,6 +654,12 @@ export default function DifferentiationSection() {
               >
                 매체는 단 2주 만에 PoC 결과를 확인하고 즉시 정산까지 진행할 수 있습니다.
               </p>
+
+              <div className="w-full max-w-[592px] h-[58px] bg-orange-50 border border-orange-200 rounded-lg flex items-center justify-center">
+                <p className="font-['Noto_Sans_KR'] font-medium text-[20px] leading-[24px] text-center text-orange-800">
+                  "No Man-Hour for Platform"
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -841,7 +837,7 @@ function TransparencyFlow({ isVisible }: { isVisible: boolean }) {
             className="text-sm font-medium text-purple-700"
             style={{ fontFamily: 'Noto Sans KR' }}
           >
-            순위 변화
+            유저 유입률 변화
           </span>
           <span 
             className="text-base font-medium text-purple-600"
