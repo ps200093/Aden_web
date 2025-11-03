@@ -111,7 +111,6 @@ export default function CounselSection() {
                       onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
                       placeholder="회사명을 입력하세요"
                       className="w-full h-[50px] px-[16px] border border-[#D1D5DB] rounded-lg text-[12px] placeholder:text-[#ADAEBC]"
-                      style={{ fontFamily: 'Inter' }}
                     />
                   </div>
                   <div className="flex-1">
@@ -125,7 +124,6 @@ export default function CounselSection() {
                       onChange={(e) => setFormData({ ...formData, contactName: e.target.value })}
                       placeholder="담당자명을 입력하세요"
                       className="w-full h-[50px] px-[16px] border border-[#D1D5DB] rounded-lg text-[12px] placeholder:text-[#ADAEBC]"
-                      style={{ fontFamily: 'Inter' }}
                     />
                   </div>
                 </div>
@@ -143,7 +141,6 @@ export default function CounselSection() {
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="contact@company.com"
                       className="w-full h-[50px] px-[16px] border border-[#D1D5DB] rounded-lg text-[12px] placeholder:text-[#ADAEBC]"
-                      style={{ fontFamily: 'Inter' }}
                     />
                   </div>
                   <div className="flex-1">
@@ -157,7 +154,6 @@ export default function CounselSection() {
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="010-0000-0000"
                       className="w-full h-[50px] px-[16px] border border-[#D1D5DB] rounded-lg text-[12px] placeholder:text-[#ADAEBC]"
-                      style={{ fontFamily: 'Inter' }}
                     />
                   </div>
                 </div>
@@ -172,7 +168,6 @@ export default function CounselSection() {
                       value={formData.monthlyBudget}
                       onChange={(e) => setFormData({ ...formData, monthlyBudget: e.target.value })}
                       className="w-full h-[48px] px-[12px] border border-[#D1D5DB] rounded-lg text-[12px] appearance-none bg-white"
-                      style={{ fontFamily: 'Inter' }}
                     >
                       <option value="">선택해주세요</option>
                       <option value="under-1000">100만원 미만</option>
@@ -190,7 +185,6 @@ export default function CounselSection() {
                       value={formData.dau}
                       onChange={(e) => setFormData({ ...formData, dau: e.target.value })}
                       className="w-full h-[48px] px-[12px] border border-[#D1D5DB] rounded-lg text-[12px] appearance-none bg-white"
-                      style={{ fontFamily: 'Inter' }}
                     >
                       <option value="">선택해주세요</option>
                       <option value="under-10k">1만 미만</option>
