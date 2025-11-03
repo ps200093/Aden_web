@@ -96,7 +96,6 @@ export default function IntroSection() {
               <h2 
                 className="w-full text-center mb-[12px] sm:mb-[14px] lg:mb-[16px]"
                 style={{
-                  fontFamily: 'Noto Sans KR',
                   fontStyle: 'normal',
                   fontWeight: 500,
                   fontSize: 'clamp(24px, 3.5vw, 36px)',
@@ -111,7 +110,6 @@ export default function IntroSection() {
               <p 
                 className="w-full text-center px-4"
                 style={{
-                  fontFamily: 'Noto Sans KR',
                   fontStyle: 'normal',
                   fontWeight: 500,
                   fontSize: 'clamp(16px, 2vw, 24px)',
@@ -165,7 +163,6 @@ export default function IntroSection() {
                       y="56"
                       textAnchor="middle"
                       style={{
-                        fontFamily: 'Noto Sans KR',
                         fontWeight: 500,
                         fontSize: 'clamp(20px, 4vw, 24px)',
                         fill: '#059669'
@@ -181,7 +178,6 @@ export default function IntroSection() {
                   <p
                     className="text-[18px] sm:text-[19px] lg:text-[20px]"
                     style={{
-                      fontFamily: 'Noto Sans KR',
                       fontStyle: 'normal',
                       fontWeight: 500,
                       lineHeight: '28px',
@@ -195,7 +191,6 @@ export default function IntroSection() {
                   <p
                     className="text-[16px] sm:text-[18px] lg:text-[20px]"
                     style={{
-                      fontFamily: 'Noto Sans KR',
                       fontStyle: 'normal',
                       fontWeight: 500,
                       lineHeight: '24px',
@@ -247,7 +242,6 @@ export default function IntroSection() {
                       y="56"
                       textAnchor="middle"
                       style={{
-                        fontFamily: 'Noto Sans KR',
                         fontWeight: 500,
                         fontSize: 'clamp(20px, 4vw, 24px)',
                         fill: '#2563EB'
@@ -263,7 +257,6 @@ export default function IntroSection() {
                   <p
                     className="text-[18px] sm:text-[19px] lg:text-[20px]"
                     style={{
-                      fontFamily: 'Noto Sans KR',
                       fontStyle: 'normal',
                       fontWeight: 500,
                       lineHeight: '28px',
@@ -277,7 +270,6 @@ export default function IntroSection() {
                   <p
                     className="text-[16px] sm:text-[18px] lg:text-[20px]"
                     style={{
-                      fontFamily: 'Noto Sans KR',
                       fontStyle: 'normal',
                       fontWeight: 500,
                       lineHeight: '24px',
@@ -329,7 +321,6 @@ export default function IntroSection() {
                       y="56"
                       textAnchor="middle"
                       style={{
-                        fontFamily: 'Noto Sans KR',
                         fontWeight: 500,
                         fontSize: 'clamp(20px, 4vw, 24px)',
                         fill: '#9333EA'
@@ -345,7 +336,6 @@ export default function IntroSection() {
                   <p
                     className="text-[18px] sm:text-[19px] lg:text-[20px]"
                     style={{
-                      fontFamily: 'Noto Sans KR',
                       fontStyle: 'normal',
                       fontWeight: 500,
                       lineHeight: '28px',
@@ -359,7 +349,6 @@ export default function IntroSection() {
                   <p
                     className="text-[16px] sm:text-[18px] lg:text-[20px]"
                     style={{
-                      fontFamily: 'Noto Sans KR',
                       fontStyle: 'normal',
                       fontWeight: 500,
                       lineHeight: '24px',
@@ -377,7 +366,6 @@ export default function IntroSection() {
               <p
                 className="w-full text-center px-4"
                 style={{
-                  fontFamily: 'Noto Sans KR',
                   fontStyle: 'normal',
                   fontWeight: 500,
                   fontSize: 'clamp(18px, 2.5vw, 32px)',

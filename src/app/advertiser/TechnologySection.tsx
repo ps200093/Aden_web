@@ -11,7 +11,6 @@ export default function TechnologySection() {
             <h2 
               className="w-full font-medium text-center text-[#111827] mb-4"
               style={{ 
-                fontFamily: 'Noto Sans KR', 
                 fontStyle: 'normal',
                 fontSize: 'clamp(24px, 3.5vw, 36px)',
                 lineHeight: '1.2'
@@ -22,7 +21,6 @@ export default function TechnologySection() {
             <p 
               className="w-full font-medium text-center text-[#4B5563]"
               style={{ 
-                fontFamily: 'Noto Sans KR', 
                 fontStyle: 'normal',
                 fontSize: 'clamp(16px, 2vw, 20px)',
                 lineHeight: '28px'
@@ -42,14 +40,12 @@ export default function TechnologySection() {
                 </div>
                 <h3 
                   className="text-[18px] sm:text-[20px] font-medium leading-[22px] sm:leading-[24px] text-center text-[#111827]"
-                  style={{ fontFamily: 'Noto Sans KR' }}
                 >
                   어뷰징 차단
                 </h3>
               </div>
               <p 
                 className="text-[14px] sm:text-[16px] font-medium leading-[20px] sm:leading-[28px] text-left text-[#374151] w-full"
-                style={{ fontFamily: 'Noto Sans KR' }}
               >
                 리워드 광고의 고질적 문제인 부정 참여 및 중복 클 릭을 ADEN의 전용 방화벽 시스템으로 원천 차단
                 비정상 IP, 매크로 탐지, 행동 패턴 분석까지
@@ -64,14 +60,12 @@ export default function TechnologySection() {
                 </div>
                 <h3 
                   className="text-[18px] sm:text-[20px] font-medium leading-[22px] sm:leading-[24px] text-center text-[#111827]"
-                  style={{ fontFamily: 'Noto Sans KR' }}
                 >
                   체리피커 선별
                 </h3>
               </div>
               <p 
                 className="text-[14px] sm:text-[16px] font-medium leading-[20px] sm:leading-[28px] text-left text-[#374151] w-full mb-[20px]"
-                style={{ fontFamily: 'Noto Sans KR' }}
               >
                 반복적으로 리워드만 취득하는 체리피커는 AI 행동 분석을 통해 실시간 필터링
                 광고 예산이 "진짜 유저"에게만 집행
@@ -86,14 +80,12 @@ export default function TechnologySection() {
                 </div>
                 <h3 
                   className="text-[18px] sm:text-[20px] font-medium leading-[22px] sm:leading-[24px] text-center text-[#111827]"
-                  style={{ fontFamily: 'Noto Sans KR' }}
                 >
                   게이미피케이션
                 </h3>
               </div>
               <p 
                 className="text-[14px] sm:text-[16px] font-medium leading-[20px] sm:leading-[28px] text-left text-[#374151] w-full"
-                style={{ fontFamily: 'Noto Sans KR' }}
               >
                 빙고·룰렛·보물찾기 등 간단한 게임형 미션으로 참여율과 재미를 함께 향상
                 오퍼월 자체 비용으로 추가 리워드 제공

@@ -103,7 +103,6 @@ const Header = ({ className, ...props }: HeaderProps) => {
                         ? 'text-accent-emerald font-bold' : 'text-header-text'
                     )}
                     style={{ 
-                      fontFamily: 'Noto Sans KR',
                       fontSize: 'clamp(18px, 1.8vw + 2px, 24px)',
                       lineHeight: 'clamp(1.3, 1.25 + 0.05vw, 1.4)'
                     }}
@@ -141,7 +140,6 @@ const Header = ({ className, ...props }: HeaderProps) => {
                         ? 'text-accent-emerald font-bold bg-background-success' : 'text-header-text'
                     )}
                     style={{ 
-                      fontFamily: 'Noto Sans KR',
                       fontSize: 'clamp(15px, 2vw + 2px, 16px)',
                       lineHeight: 'clamp(1.3, 1.25 + 0.05vw, 1.4)',
                       padding: 'clamp(8px, 1.5vw, 10px) clamp(12px, 2vw, 16px)'

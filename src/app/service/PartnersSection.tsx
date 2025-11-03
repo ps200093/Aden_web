@@ -25,7 +25,6 @@ export default function PartnersSection() {
               <h2 
                 className="w-full h-[44px] text-center"
                 style={{
-                  fontFamily: 'Noto Sans KR',
                   fontStyle: 'normal',
                   fontWeight: 500,
                   fontSize: 'clamp(32px, 5vw, 64px)',
@@ -40,7 +39,6 @@ export default function PartnersSection() {
               <p 
                 className="w-full h-[28px] mt-[18px] text-center"
                 style={{
-                  fontFamily: 'Noto Sans KR',
                   fontStyle: 'normal',
                   fontWeight: 500,
                   fontSize: 'clamp(16px, 2vw, 20px)',
@@ -105,7 +103,6 @@ export default function PartnersSection() {
                         height: '28px',
                         left: 'calc(50% - 179px/2)',
                         top: '107px',
-                        fontFamily: 'Noto Sans KR',
                         fontStyle: 'normal',
                         fontWeight: 700,
                         fontSize: '24px',
@@ -155,7 +152,6 @@ export default function PartnersSection() {
                         height: '28px',
                         left: 'calc(50% - 179px/2)',
                         top: '107px',
-                        fontFamily: 'Noto Sans KR',
                         fontStyle: 'normal',
                         fontWeight: 700,
                         fontSize: '24px',
@@ -175,7 +171,6 @@ export default function PartnersSection() {
             <div
               className="w-full h-[28px] text-center mb-[46px]"
               style={{
-                fontFamily: 'Noto Sans KR',
                 fontStyle: 'normal',
                 fontWeight: 700,
                 fontSize: 'clamp(24px, 3vw, 32px)',
@@ -191,7 +186,6 @@ export default function PartnersSection() {
               <p
                 className="w-full h-[28px] text-center"
                 style={{
-                  fontFamily: 'Noto Sans KR',
                   fontStyle: 'normal',
                   fontWeight: 500,
                   fontSize: 'clamp(18px, 2.5vw, 24px)',

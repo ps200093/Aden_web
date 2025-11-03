@@ -89,10 +89,10 @@ export default function QuestionSection() {
         <div className="max-w-[896px] mx-auto">
           {/* 헤더 */}
           <div className="mb-[64px] text-center">
-            <h2 className="font-['Noto_Sans_KR'] font-medium text-[36px] leading-[40px] text-[#111827] mb-4">
+            <h2 className="font-medium text-[36px] leading-[40px] text-[#111827] mb-4">
               자주 묻는 질문
             </h2>
-            <p className="font-['Noto_Sans_KR'] font-medium text-[20px] leading-[28px] text-[#4B5563]">
+            <p className="font-medium text-[20px] leading-[28px] text-[#4B5563]">
               궁금한 점을 빠르게 확인해보세요
             </p>
           </div>
@@ -113,7 +113,7 @@ export default function QuestionSection() {
               
               {/* 버튼들 */}
               <div
-                className={`relative z-10 px-8 py-2.5 rounded-md font-['Noto_Sans_KR'] font-semibold text-[15px] leading-[20px] transition-all duration-300 pointer-events-none ${
+                className={`relative z-10 px-8 py-2.5 rounded-md font-semibold text-[15px] leading-[20px] transition-all duration-300 pointer-events-none ${
                   userType === '매체사'
                     ? 'text-[#2563EB] scale-105'
                     : 'text-[#9CA3AF]'
@@ -122,7 +122,7 @@ export default function QuestionSection() {
                 매체사
               </div>
               <div
-                className={`relative z-10 px-8 py-2.5 rounded-md font-['Noto_Sans_KR'] font-semibold text-[15px] leading-[20px] transition-all duration-300 pointer-events-none ${
+                className={`relative z-10 px-8 py-2.5 rounded-md font-semibold text-[15px] leading-[20px] transition-all duration-300 pointer-events-none ${
                   userType === '광고주'
                     ? 'text-[#2563EB] scale-105'
                     : 'text-[#9CA3AF]'
@@ -144,7 +144,7 @@ export default function QuestionSection() {
                   onClick={() => toggleAccordion(index)}
                   className="w-full h-[56px] px-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
                 >
-                  <span className="font-['Noto_Sans_KR'] font-medium text-[16px] leading-[24px] text-[#111827]">
+                  <span className="font-medium text-[16px] leading-[24px] text-[#111827]">
                     {faq.question}
                   </span>
                   <div className="flex items-center justify-center w-4 h-4 transition-transform duration-300" 
@@ -177,7 +177,7 @@ export default function QuestionSection() {
                 >
                   <div className="px-6 py-4 border-t border-gray-100">
                     <p 
-                      className="font-['Noto_Sans_KR'] text-[14px] leading-[22px] text-[#6B7280]"
+                      className="text-[14px] leading-[22px] text-[#6B7280]"
                       dangerouslySetInnerHTML={{ __html: faq.answer }}
                     />
                   </div>

@@ -64,10 +64,10 @@ export default function HeroSection() {
           <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[80px] py-[40px] sm:py-[60px] lg:py-[80px]">
             {/* Header */}
             <div className="text-center mb-[32px] sm:mb-[48px] lg:mb-[64px]">
-              <h1 className="text-white text-[32px] sm:text-[48px] lg:text-[64px] font-bold leading-[38px] sm:leading-[54px] lg:leading-[72px] mb-[16px] sm:mb-[24px] lg:mb-[34px]" style={{ fontFamily: 'Noto Sans KR' }}>
+              <h1 className="text-white text-[32px] sm:text-[48px] lg:text-[64px] font-bold leading-[38px] sm:leading-[54px] lg:leading-[72px] mb-[16px] sm:mb-[24px] lg:mb-[34px]">
                 어떤 도움이 필요하신가요?
               </h1>
-              <p className="text-white text-[20px] sm:text-[28px] lg:text-[36px] font-medium leading-[24px] sm:leading-[33px] lg:leading-[43px]" style={{ fontFamily: 'Noto Sans KR' }}>
+              <p className="text-white text-[20px] sm:text-[28px] lg:text-[36px] font-medium leading-[24px] sm:leading-[33px] lg:leading-[43px]">
                 목적에 맞는 상담을 받아보세요
               </p>
             </div>
@@ -86,12 +86,12 @@ export default function HeroSection() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-[#111827] text-[20px] sm:text-[22px] lg:text-[24px] font-medium leading-[24px] sm:leading-[26px] lg:leading-[29px] text-center mb-[12px] sm:mb-[14px] lg:mb-[16px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                <h3 className="text-[#111827] text-[20px] sm:text-[22px] lg:text-[24px] font-medium leading-[24px] sm:leading-[26px] lg:leading-[29px] text-center mb-[12px] sm:mb-[14px] lg:mb-[16px]">
                   광고주
                 </h3>
 
                 {/* Description */}
-                <p className="text-[#4B5563] text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[17px] sm:leading-[18px] lg:leading-[19px] text-center mb-[16px] sm:mb-[20px] lg:mb-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                <p className="text-[#4B5563] text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[17px] sm:leading-[18px] lg:leading-[19px] text-center mb-[16px] sm:mb-[20px] lg:mb-[24px]">
                   성과 기반 CPA 광고로 확실한 ROI를 경험하세요
                 </p>
 
@@ -104,7 +104,7 @@ export default function HeroSection() {
                       style={{ transitionDelay: `${index * 100}ms` }}
                     >
                       <CircleCheck size={14} className="text-[#3B82F6] mr-2 sm:mr-3 flex-shrink-0 sm:w-4 sm:h-4" />
-                      <span className="text-[#374151] text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[20px] sm:leading-[22px] lg:leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                      <span className="text-[#374151] text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[20px] sm:leading-[22px] lg:leading-[24px]">
                         {feature}
                       </span>
                     </div>
@@ -113,7 +113,7 @@ export default function HeroSection() {
 
                 {/* CTA Badge */}
                 <div className="w-full h-[48px] sm:h-[52px] lg:h-[56px] bg-[#169B68] rounded-lg flex items-center justify-center">
-                  <p className="text-white text-[14px] sm:text-[15px] lg:text-[16px] font-bold leading-[17px] sm:leading-[18px] lg:leading-[19px] text-center" style={{ fontFamily: 'Noto Sans KR' }}>
+                  <p className="text-white text-[14px] sm:text-[15px] lg:text-[16px] font-bold leading-[17px] sm:leading-[18px] lg:leading-[19px] text-center">
                     "성과로 증명되는 광고"
                   </p>
                 </div>
@@ -131,12 +131,12 @@ export default function HeroSection() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-[#111827] text-[20px] sm:text-[22px] lg:text-[24px] font-medium leading-[24px] sm:leading-[26px] lg:leading-[29px] text-center mb-[12px] sm:mb-[14px] lg:mb-[16px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                <h3 className="text-[#111827] text-[20px] sm:text-[22px] lg:text-[24px] font-medium leading-[24px] sm:leading-[26px] lg:leading-[29px] text-center mb-[12px] sm:mb-[14px] lg:mb-[16px]">
                   매체 파트너
                 </h3>
 
                 {/* Description */}
-                <p className="text-[#4B5563] text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[17px] sm:leading-[18px] lg:leading-[19px] text-center mb-[16px] sm:mb-[20px] lg:mb-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                <p className="text-[#4B5563] text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[17px] sm:leading-[18px] lg:leading-[19px] text-center mb-[16px] sm:mb-[20px] lg:mb-[24px]">
                   매체 중심의 새로운 수익 생태계에 참여하세요
                 </p>
 
@@ -149,7 +149,7 @@ export default function HeroSection() {
                       style={{ transitionDelay: `${index * 100}ms` }}
                     >
                       <CircleCheck size={14} className="text-[#10B981] mr-2 sm:mr-3 flex-shrink-0 sm:w-4 sm:h-4" />
-                      <span className="text-[#374151] text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[20px] sm:leading-[22px] lg:leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                      <span className="text-[#374151] text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[20px] sm:leading-[22px] lg:leading-[24px]">
                         {feature}
                       </span>
                     </div>
@@ -158,7 +158,7 @@ export default function HeroSection() {
 
                 {/* CTA Badge */}
                 <div className="w-full h-[48px] sm:h-[52px] lg:h-[56px] bg-[#169B68] rounded-lg flex items-center justify-center">
-                  <p className="text-white text-[14px] sm:text-[15px] lg:text-[16px] font-bold leading-[17px] sm:leading-[18px] lg:leading-[19px] text-center" style={{ fontFamily: 'Noto Sans KR' }}>
+                  <p className="text-white text-[14px] sm:text-[15px] lg:text-[16px] font-bold leading-[17px] sm:leading-[18px] lg:leading-[19px] text-center">
                     "매체와 함께 성장하는 파트너십"
                   </p>
                 </div>

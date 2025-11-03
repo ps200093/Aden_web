@@ -12,7 +12,6 @@ export default function ArchitectureSection() {
             <h2 
               className="w-full text-center mb-[16px]"
               style={{
-                fontFamily: 'Noto Sans KR',
                 fontStyle: 'normal',
                 fontWeight: 500,
                 fontSize: 'clamp(24px, 3.5vw, 36px)',
@@ -27,7 +26,6 @@ export default function ArchitectureSection() {
             <div 
               className="w-full flex flex-wrap items-center justify-center gap-2 md:gap-4 px-4"
               style={{
-                fontFamily: 'Noto Sans KR',
                 fontStyle: 'normal',
                 fontWeight: 500,
                 fontSize: 'clamp(16px, 2.5vw, 32px)',
@@ -73,7 +71,6 @@ export default function ArchitectureSection() {
                 <div
                   className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                   style={{
-                    fontFamily: 'Noto Sans KR',
                     fontStyle: 'normal',
                     fontWeight: 700,
                     fontSize: 'clamp(28px, 4vw, 40px)',
@@ -97,7 +94,6 @@ export default function ArchitectureSection() {
                 >
                   <span
                     style={{
-                      fontFamily: 'Noto Sans KR',
                       fontStyle: 'normal',
                       fontWeight: 500,
                       fontSize: '14px',
@@ -124,7 +120,6 @@ export default function ArchitectureSection() {
                 >
                   <span
                     style={{
-                      fontFamily: 'Noto Sans KR',
                       fontStyle: 'normal',
                       fontWeight: 500,
                       fontSize: '14px',
@@ -151,7 +146,6 @@ export default function ArchitectureSection() {
                 >
                   <span
                     style={{
-                      fontFamily: 'Noto Sans KR',
                       fontStyle: 'normal',
                       fontWeight: 500,
                       fontSize: '14px',
@@ -177,7 +171,6 @@ export default function ArchitectureSection() {
                 >
                   <span
                     style={{
-                      fontFamily: 'Noto Sans KR',
                       fontStyle: 'normal',
                       fontWeight: 500,
                       fontSize: '14px',
@@ -204,7 +197,6 @@ export default function ArchitectureSection() {
                 >
                   <span
                     style={{
-                      fontFamily: 'Noto Sans KR',
                       fontStyle: 'normal',
                       fontWeight: 500,
                       fontSize: '14px',
@@ -231,7 +223,6 @@ export default function ArchitectureSection() {
                 >
                   <span
                     style={{
-                      fontFamily: 'Noto Sans KR',
                       fontStyle: 'normal',
                       fontWeight: 500,
                       fontSize: '14px',
@@ -259,7 +250,6 @@ export default function ArchitectureSection() {
               <h3 
                 className="mb-6"
                 style={{
-                  fontFamily: 'Noto Sans KR',
                   fontStyle: 'normal',
                   fontWeight: 500,
                   fontSize: 'clamp(20px, 2.5vw, 24px)',
@@ -275,7 +265,6 @@ export default function ArchitectureSection() {
                 {/* 첫 번째 문단 */}
                 <p
                   style={{
-                    fontFamily: 'Noto Sans KR',
                     fontStyle: 'normal',
                     fontWeight: 500,
                     fontSize: 'clamp(16px, 2vw, 20px)',
@@ -290,7 +279,6 @@ export default function ArchitectureSection() {
                 {/* 두 번째 문단 */}
                 <p
                   style={{
-                    fontFamily: 'Noto Sans KR',
                     fontStyle: 'normal',
                     fontWeight: 500,
                     fontSize: 'clamp(16px, 2vw, 20px)',

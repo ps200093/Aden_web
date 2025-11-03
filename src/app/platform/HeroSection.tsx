@@ -29,14 +29,12 @@ export default function HeroSection() {
             <div className="flex flex-col gap-[11px] sm:gap-[16px] lg:gap-[22px]">
               <h1 
                 className="text-[32px] sm:text-[48px] lg:text-[64px] font-bold leading-[36px] sm:leading-[54px] lg:leading-[72px] text-white"
-                style={{ fontFamily: 'Noto Sans KR' }}
               >
                 매체의 새롭고 투명한 <br />수익 생태계
               </h1>
               
               <p 
                 className="text-base sm:text-lg lg:text-xl font-medium leading-[22px] sm:leading-[25px] lg:leading-[28px] text-white"
-                style={{ fontFamily: 'Noto Sans KR' }}
               >
                 ADEN 오퍼월은 '매체 중심'으로 설계된 새로운 광고 수익 구조입니다.<br />
                 광고주까지 직접 공급·관리하여 불필요한 중간 마진을 없애고,<br />
@@ -44,14 +42,13 @@ export default function HeroSection() {
               </p>
               
               <div className="relative w-full max-w-[570.69px] h-[58px] bg-emerald-50 border border-emerald-200 rounded-lg">
-                <p className="absolute left-[17px] top-[17px] font-['Noto_Sans_KR'] font-medium text-base leading-[19px] text-emerald-800">
+                <p className="absolute left-[17px] top-[17px] font-medium text-base leading-[19px] text-emerald-800">
                   Less Margin, Full Transparency.
                 </p>
               </div>
               
               <p 
                 className="text-sm sm:text-base lg:text-lg font-medium leading-[20px] sm:leading-[25px] lg:leading-[28px] text-white mt-4"
-                style={{ fontFamily: 'Noto Sans KR' }}
               >
                 기존 오퍼월은 네트워크 수익이 커질수록 매체의 몫은 줄어드는 구조였습니다.<br /><br />
                 ADEN은 광고주–매체–유저 간 직접 연결(Direct Link) 방식을 통해<br />
@@ -76,13 +73,11 @@ export default function HeroSection() {
                 <div className={`text-center transition-all duration-500 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
                   <h3 
                     className="text-lg sm:text-xl font-medium leading-6 text-gray-800 mb-2"
-                    style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     Direct Link 수익 구조
                   </h3>
                   <p 
                     className="text-sm sm:text-base font-medium leading-5 text-gray-600"
-                    style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     중간 단계 제거 → 매체 순마진 증가
                   </p>
@@ -97,7 +92,6 @@ export default function HeroSection() {
                       </div>
                       <span 
                         className="text-base font-medium text-gray-700"
-                        style={{ fontFamily: 'Noto Sans KR' }}
                       >
                         광고주
                       </span>
@@ -111,14 +105,12 @@ export default function HeroSection() {
                       <div className="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center">
                         <span 
                           className="text-lg font-bold text-white"
-                          style={{ fontFamily: 'Noto Sans KR' }}
                         >
                           A
                         </span>
                       </div>
                       <span 
                         className="text-base font-medium text-gray-700"
-                        style={{ fontFamily: 'Noto Sans KR' }}
                       >
                         ADEN
                       </span>
@@ -138,7 +130,6 @@ export default function HeroSection() {
                       </div>
                       <span 
                         className="text-base font-medium text-gray-700"
-                        style={{ fontFamily: 'Noto Sans KR' }}
                       >
                         매체
                       </span>
@@ -154,7 +145,6 @@ export default function HeroSection() {
                       </div>
                       <span 
                         className="text-base font-medium text-gray-700"
-                        style={{ fontFamily: 'Noto Sans KR' }}
                       >
                         유저
                       </span>
@@ -164,7 +154,7 @@ export default function HeroSection() {
 
                 <div className={`w-full max-w-[506.69px] h-[56px] bg-emerald-50 rounded-lg flex items-center justify-center transition-all duration-500 delay-[600ms] ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
                   <span 
-                    className="font-['Noto_Sans_KR'] font-medium text-base leading-[19px] text-center text-emerald-800"
+                    className="font-medium text-base leading-[19px] text-center text-emerald-800"
                   >
                     중간 마진 최소화로 매체 수익 극대화
                   </span>

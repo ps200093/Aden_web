@@ -185,7 +185,6 @@ export default function StrengthsSection() {
             <h2 
               className="w-full font-medium text-center text-[#111827]"
               style={{ 
-                fontFamily: 'Noto Sans KR', 
                 fontStyle: 'normal',
                 fontSize: 'clamp(26px, 2.5vw + 8px, 36px)',
                 lineHeight: 'clamp(1.2, 1.2 + 0.05vw, 1.3)',
@@ -197,7 +196,6 @@ export default function StrengthsSection() {
             <p 
               className="w-full font-medium text-center text-[#4B5563]"
               style={{ 
-                fontFamily: 'Noto Sans KR', 
                 fontStyle: 'normal',
                 fontSize: 'clamp(15px, 1.2vw + 6px, 20px)',
                 lineHeight: 'clamp(1.5, 1.4 + 0.1vw, 1.6)'
@@ -231,7 +229,6 @@ export default function StrengthsSection() {
                   <span 
                     className="font-medium text-white"
                     style={{ 
-                      fontFamily: 'Noto Sans KR',
                       fontSize: 'clamp(16px, 2vw, 18px)',
                       lineHeight: '1.2'
                     }}
@@ -242,7 +239,6 @@ export default function StrengthsSection() {
                 <h3 
                   className="font-medium text-[#111827]"
                   style={{ 
-                    fontFamily: 'Noto Sans KR', 
                     fontStyle: 'normal',
                     fontSize: 'clamp(20px, 2vw + 4px, 24px)',
                     lineHeight: 'clamp(1.3, 1.33 + 0.05vw, 1.4)'
@@ -254,7 +250,6 @@ export default function StrengthsSection() {
               <p 
                 className="font-medium"
                 style={{ 
-                  fontFamily: 'Noto Sans KR', 
                   fontStyle: 'normal',
                   fontSize: 'clamp(16px, 1.5vw + 4px, 20px)',
                   lineHeight: 'clamp(1.5, 1.5 + 0.05vw, 1.6)',
@@ -275,7 +270,6 @@ export default function StrengthsSection() {
                 <p 
                   className="font-medium text-center text-[#065F46]"
                   style={{ 
-                    fontFamily: 'Noto Sans KR', 
                     fontStyle: 'normal',
                     fontSize: 'clamp(14px, 1.2vw + 3px, 16px)',
                     lineHeight: '1.3'
@@ -336,7 +330,6 @@ export default function StrengthsSection() {
                   <h4 
                     className="font-medium text-center text-[#111827]"
                     style={{ 
-                      fontFamily: 'Noto Sans KR', 
                       fontStyle: 'normal',
                       fontSize: 'clamp(17px, 1.5vw + 4px, 20px)',
                       lineHeight: 'clamp(1.3, 1.4 + 0.05vw, 1.45)'
@@ -357,7 +350,6 @@ export default function StrengthsSection() {
                     <span 
                       className="font-medium text-[#B91C1C]"
                       style={{ 
-                        fontFamily: 'Noto Sans KR', 
                         fontStyle: 'normal',
                         fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
                         lineHeight: '1.3'
@@ -374,7 +366,6 @@ export default function StrengthsSection() {
                       <span 
                         className="font-medium text-center text-white"
                         style={{ 
-                          fontFamily: 'Noto Sans KR', 
                           fontStyle: 'normal',
                           fontSize: 'clamp(12px, 1vw + 2px, 14px)',
                           lineHeight: '1.2'
@@ -394,7 +385,6 @@ export default function StrengthsSection() {
                     <span 
                       className="font-medium text-[#B91C1C]"
                       style={{ 
-                        fontFamily: 'Noto Sans KR', 
                         fontStyle: 'normal',
                         fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
                         lineHeight: '1.3'
@@ -411,7 +401,6 @@ export default function StrengthsSection() {
                       <span 
                         className="font-medium text-center text-white"
                         style={{ 
-                          fontFamily: 'Noto Sans KR', 
                           fontStyle: 'normal',
                           fontSize: 'clamp(12px, 1vw + 2px, 14px)',
                           lineHeight: '1.2'
@@ -431,7 +420,6 @@ export default function StrengthsSection() {
                     <span 
                       className="font-medium text-[#047857]"
                       style={{ 
-                        fontFamily: 'Noto Sans KR', 
                         fontStyle: 'normal',
                         fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
                         lineHeight: '1.3'
@@ -448,7 +436,6 @@ export default function StrengthsSection() {
                       <span 
                         className="font-medium text-center text-white"
                         style={{ 
-                          fontFamily: 'Noto Sans KR', 
                           fontStyle: 'normal',
                           fontSize: 'clamp(12px, 1vw + 2px, 14px)',
                           lineHeight: '1.2'
@@ -481,7 +468,6 @@ export default function StrengthsSection() {
                 <h4 
                   className="font-medium text-center text-[#111827]"
                   style={{ 
-                    fontFamily: 'Noto Sans KR', 
                     fontStyle: 'normal',
                     fontSize: 'clamp(17px, 1.5vw + 4px, 20px)',
                     lineHeight: 'clamp(1.3, 1.4 + 0.05vw, 1.45)',
@@ -518,7 +504,6 @@ export default function StrengthsSection() {
                       <span 
                         className="font-medium text-[#374151]"
                         style={{ 
-                          fontFamily: 'Noto Sans KR', 
                           fontStyle: 'normal',
                           fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
                           lineHeight: '1.3'
@@ -530,7 +515,6 @@ export default function StrengthsSection() {
                     <span 
                       className="font-medium text-[#6b7280] whitespace-nowrap"
                       style={{ 
-                        fontFamily: 'Noto Sans KR', 
                         fontStyle: 'normal',
                         fontSize: 'clamp(12px, 1vw + 2px, 14px)',
                         lineHeight: '1.2'
@@ -565,7 +549,6 @@ export default function StrengthsSection() {
                       <span 
                         className="font-medium text-[#374151]"
                         style={{ 
-                          fontFamily: 'Noto Sans KR', 
                           fontStyle: 'normal',
                           fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
                           lineHeight: '1.3'
@@ -577,7 +560,6 @@ export default function StrengthsSection() {
                     <span 
                       className="font-medium text-[#6b7280] whitespace-nowrap"
                       style={{ 
-                        fontFamily: 'Noto Sans KR', 
                         fontStyle: 'normal',
                         fontSize: 'clamp(12px, 1vw + 2px, 14px)',
                         lineHeight: '1.2'
@@ -604,7 +586,6 @@ export default function StrengthsSection() {
                       <span 
                         className="font-medium text-[#374151]"
                         style={{ 
-                          fontFamily: 'Noto Sans KR', 
                           fontStyle: 'normal',
                           fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
                           lineHeight: '1.3'
@@ -616,7 +597,6 @@ export default function StrengthsSection() {
                     <span 
                       className="font-medium text-[#6b7280] whitespace-nowrap"
                       style={{ 
-                        fontFamily: 'Noto Sans KR', 
                         fontStyle: 'normal',
                         fontSize: 'clamp(12px, 1vw + 2px, 14px)',
                         lineHeight: '1.2'
@@ -646,7 +626,6 @@ export default function StrengthsSection() {
                   <span 
                     className="font-medium text-white"
                     style={{ 
-                      fontFamily: 'Noto Sans KR',
                       fontSize: 'clamp(16px, 2vw, 18px)',
                       lineHeight: '1.2'
                     }}
@@ -657,7 +636,6 @@ export default function StrengthsSection() {
                 <h3 
                   className="font-medium text-[#111827]"
                   style={{ 
-                    fontFamily: 'Noto Sans KR', 
                     fontStyle: 'normal',
                     fontSize: 'clamp(20px, 2vw + 4px, 24px)',
                     lineHeight: 'clamp(1.3, 1.33 + 0.05vw, 1.4)'
@@ -669,7 +647,6 @@ export default function StrengthsSection() {
               <p 
                 className="font-medium"
                 style={{ 
-                  fontFamily: 'Noto Sans KR', 
                   fontStyle: 'normal',
                   fontSize: 'clamp(16px, 1.5vw + 4px, 20px)',
                   lineHeight: 'clamp(1.5, 1.5 + 0.05vw, 1.6)',
@@ -689,7 +666,6 @@ export default function StrengthsSection() {
                   <span 
                     className="font-medium text-center text-[#1e40af]"
                     style={{ 
-                      fontFamily: 'Noto Sans KR', 
                       fontStyle: 'normal',
                       fontSize: 'clamp(14px, 1.2vw + 3px, 16px)',
                       lineHeight: '1.3'
@@ -725,7 +701,6 @@ export default function StrengthsSection() {
                   <span 
                     className="font-medium text-white"
                     style={{ 
-                      fontFamily: 'Noto Sans KR',
                       fontSize: 'clamp(16px, 2vw, 18px)',
                       lineHeight: '1.2'
                     }}
@@ -736,7 +711,6 @@ export default function StrengthsSection() {
                 <h3 
                   className="font-medium text-[#111827]"
                   style={{ 
-                    fontFamily: 'Noto Sans KR', 
                     fontStyle: 'normal',
                     fontSize: 'clamp(20px, 2vw + 4px, 24px)',
                     lineHeight: 'clamp(1.3, 1.33 + 0.05vw, 1.4)'
@@ -748,7 +722,6 @@ export default function StrengthsSection() {
               <p 
                 className="font-medium"
                 style={{ 
-                  fontFamily: 'Noto Sans KR', 
                   fontStyle: 'normal',
                   fontSize: 'clamp(16px, 1.5vw + 4px, 20px)',
                   lineHeight: 'clamp(1.5, 1.5 + 0.05vw, 1.6)',
@@ -768,7 +741,6 @@ export default function StrengthsSection() {
                   <span 
                     className="font-medium text-center text-[#7e22ce]"
                     style={{ 
-                      fontFamily: 'Noto Sans KR', 
                       fontStyle: 'normal',
                       fontSize: 'clamp(14px, 1.2vw + 3px, 16px)',
                       lineHeight: '1.3'
@@ -791,7 +763,6 @@ export default function StrengthsSection() {
                 <h4 
                   className="font-medium text-center text-[#111827]"
                   style={{ 
-                    fontFamily: 'Noto Sans KR', 
                     fontStyle: 'normal',
                     fontSize: 'clamp(17px, 1.5vw + 4px, 20px)',
                     lineHeight: 'clamp(1.3, 1.4 + 0.05vw, 1.45)',
@@ -814,7 +785,6 @@ export default function StrengthsSection() {
                   >
                     <div className="font-medium text-[#059669] text-center" 
                       style={{ 
-                        fontFamily: 'Noto Sans KR', 
                         fontStyle: 'normal',
                         fontSize: 'clamp(20px, 2.5vw + 4px, 24px)',
                         lineHeight: '1.2',
@@ -825,7 +795,6 @@ export default function StrengthsSection() {
                     </div>
                     <div className="font-medium text-[#4b5563] text-center" 
                       style={{ 
-                        fontFamily: 'Noto Sans KR', 
                         fontStyle: 'normal',
                         fontSize: 'clamp(12px, 1vw + 2px, 14px)',
                         lineHeight: '1.2'
@@ -841,7 +810,6 @@ export default function StrengthsSection() {
                   >
                     <div className="font-medium text-[#2563eb] text-center" 
                       style={{ 
-                        fontFamily: 'Noto Sans KR', 
                         fontStyle: 'normal',
                         fontSize: 'clamp(20px, 2.5vw + 4px, 24px)',
                         lineHeight: '1.2',
@@ -852,7 +820,6 @@ export default function StrengthsSection() {
                     </div>
                     <div className="font-medium text-[#4b5563] text-center" 
                       style={{ 
-                        fontFamily: 'Noto Sans KR', 
                         fontStyle: 'normal',
                         fontSize: 'clamp(12px, 1vw + 2px, 14px)',
                         lineHeight: '1.2'
@@ -872,7 +839,6 @@ export default function StrengthsSection() {
                     <span 
                       className="font-medium text-[#047857]"
                       style={{ 
-                        fontFamily: 'Noto Sans KR', 
                         fontStyle: 'normal',
                         fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
                         lineHeight: '1.3'
@@ -883,7 +849,6 @@ export default function StrengthsSection() {
                     <span 
                       className="font-medium text-[#059669]"
                       style={{ 
-                        fontFamily: 'Noto Sans KR', 
                         fontStyle: 'normal',
                         fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
                         lineHeight: '1.3'
@@ -900,7 +865,6 @@ export default function StrengthsSection() {
                     <span 
                       className="font-medium text-[#7e22ce]"
                       style={{ 
-                        fontFamily: 'Noto Sans KR', 
                         fontStyle: 'normal',
                         fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
                         lineHeight: '1.3'
@@ -911,7 +875,6 @@ export default function StrengthsSection() {
                     <span 
                       className="font-medium text-[#9333ea]"
                       style={{ 
-                        fontFamily: 'Noto Sans KR', 
                         fontStyle: 'normal',
                         fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
                         lineHeight: '1.3'

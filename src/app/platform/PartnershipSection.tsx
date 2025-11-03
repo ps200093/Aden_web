@@ -1,11 +1,13 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Button from '@/components/ui/Button';
 import type { IntegrationStep } from '@/types';
 import { Send, Settings, ChartBar, Rocket, Handshake, ArrowRight, ArrowDown } from 'lucide-react';
 
 export default function PartnershipSection() {
   const [isVisible, setIsVisible] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -30,7 +32,7 @@ export default function PartnershipSection() {
   }, []);
 
   const handleContactClick = () => {
-    // Handle contact form submission
+    router.push('/contact');
   };
   const partnershipSteps = [
     {
@@ -79,13 +81,11 @@ export default function PartnershipSection() {
           <div className="text-center">
             <h2 
               className="text-[28px] sm:text-[32px] lg:text-[36px] font-medium leading-[34px] sm:leading-[38px] lg:leading-[44px] text-gray-800 mb-3"
-              style={{ fontFamily: 'Noto Sans KR' }}
             >
               매체 제휴 프로세스
             </h2>
             <p 
               className="text-base sm:text-lg lg:text-xl font-medium leading-6 text-gray-600"
-              style={{ fontFamily: 'Noto Sans KR' }}
             >
               ADEN 오퍼월 도입은 단 4단계면 충분합니다
             </p>
@@ -105,21 +105,18 @@ export default function PartnershipSection() {
                   <div className={`w-12 h-12 ${partnershipSteps[0].stepColor} rounded-full flex items-center justify-center mb-3`}>
                     <span 
                       className="text-base font-medium leading-[19px] text-white"
-                      style={{ fontFamily: 'Noto Sans KR' }}
                     >
                       {partnershipSteps[0].step}
                     </span>
                   </div>
                   <h3 
                     className="text-base font-medium leading-[22px] text-[#111827] mb-3 min-h-[22px]"
-                    style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     {partnershipSteps[0].title}
                   </h3>
                   <div className="flex flex-col items-center gap-2 w-full">
                     <p 
                       className="text-xs font-medium leading-[16px] text-[#4B5563] min-h-[32px] flex items-center justify-center"
-                      style={{ fontFamily: 'Noto Sans KR' }}
                     >
                       {partnershipSteps[0].description}
                     </p>
@@ -142,21 +139,18 @@ export default function PartnershipSection() {
                   <div className={`w-12 h-12 ${partnershipSteps[1].stepColor} rounded-full flex items-center justify-center mb-3`}>
                     <span 
                       className="text-base font-medium leading-[19px] text-white"
-                      style={{ fontFamily: 'Noto Sans KR' }}
                     >
                       {partnershipSteps[1].step}
                     </span>
                   </div>
                   <h3 
                     className="text-base font-medium leading-[22px] text-[#111827] mb-3 min-h-[22px]"
-                    style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     {partnershipSteps[1].title}
                   </h3>
                   <div className="flex flex-col items-center gap-2 w-full">
                     <p 
                       className="text-xs font-medium leading-[16px] text-[#4B5563] min-h-[32px] flex items-center justify-center"
-                      style={{ fontFamily: 'Noto Sans KR' }}
                     >
                       {partnershipSteps[1].description}
                     </p>
@@ -185,21 +179,18 @@ export default function PartnershipSection() {
                   <div className={`w-12 h-12 ${partnershipSteps[3].stepColor} rounded-full flex items-center justify-center mb-3`}>
                     <span 
                       className="text-base font-medium leading-[19px] text-white"
-                      style={{ fontFamily: 'Noto Sans KR' }}
                     >
                       {partnershipSteps[3].step}
                     </span>
                   </div>
                   <h3 
                     className="text-base font-medium leading-[22px] text-[#111827] mb-3 min-h-[22px]"
-                    style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     {partnershipSteps[3].title}
                   </h3>
                   <div className="flex flex-col items-center gap-2 w-full">
                     <p 
                       className="text-xs font-medium leading-[16px] text-[#4B5563] min-h-[32px] flex items-center justify-center"
-                      style={{ fontFamily: 'Noto Sans KR' }}
                     >
                       {partnershipSteps[3].description}
                     </p>
@@ -222,21 +213,18 @@ export default function PartnershipSection() {
                   <div className={`w-12 h-12 ${partnershipSteps[2].stepColor} rounded-full flex items-center justify-center mb-3`}>
                     <span 
                       className="text-base font-medium leading-[19px] text-white"
-                      style={{ fontFamily: 'Noto Sans KR' }}
                     >
                       {partnershipSteps[2].step}
                     </span>
                   </div>
                   <h3 
                     className="text-base font-medium leading-[22px] text-[#111827] mb-3 min-h-[22px]"
-                    style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     {partnershipSteps[2].title}
                   </h3>
                   <div className="flex flex-col items-center gap-2 w-full">
                     <p 
                       className="text-xs font-medium leading-[16px] text-[#4B5563] min-h-[32px] flex items-center justify-center"
-                      style={{ fontFamily: 'Noto Sans KR' }}
                     >
                       {partnershipSteps[2].description}
                     </p>
@@ -259,21 +247,18 @@ export default function PartnershipSection() {
                   <div className={`w-14 h-14 lg:w-16 lg:h-16 ${step.stepColor} rounded-full flex items-center justify-center mb-4`}>
                     <span 
                       className="text-lg lg:text-[20px] font-medium leading-[22px] lg:leading-[24px] text-white"
-                      style={{ fontFamily: 'Noto Sans KR' }}
                     >
                       {step.step}
                     </span>
                   </div>
                   <h3 
                     className="text-lg lg:text-[18px] font-medium leading-[25px] lg:leading-[28px] text-[#111827] mb-4 lg:mb-5 min-h-[25px] lg:min-h-[28px]"
-                    style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     {step.title}
                   </h3>
                   <div className="flex flex-col items-center gap-[10px] w-full">
                     <p 
                       className="text-sm lg:text-[14px] font-medium leading-[18px] lg:leading-[20px] text-[#4B5563] min-h-[36px] lg:min-h-[40px] flex items-center justify-center"
-                      style={{ fontFamily: 'Noto Sans KR' }}
                     >
                       {step.description}
                     </p>
@@ -293,7 +278,6 @@ export default function PartnershipSection() {
                 <Handshake className="w-4 h-4 sm:w-5 sm:h-4 text-white" strokeWidth={2.5} />
                 <span 
                   className="text-sm sm:text-base lg:text-[16px] font-medium leading-[17px] sm:leading-[19px]"
-                  style={{ fontFamily: 'Noto Sans KR' }}
                 >
                   매체 제휴 문의하기
                 </span>

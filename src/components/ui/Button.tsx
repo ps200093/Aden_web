@@ -49,7 +49,7 @@ const Button = ({
   // Required parameters with defaults
   text = "",
   text_font_size = "text-lg",
-  text_font_family = "Noto Sans KR",
+  text_font_family,
   text_font_weight = "font-medium",
   text_line_height = "leading-lg",
   text_text_align = "center",

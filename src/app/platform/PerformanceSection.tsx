@@ -113,13 +113,11 @@ export default function PerformanceSection() {
           <div className="text-center">
             <h2 
               className="text-[28px] sm:text-[32px] lg:text-[36px] font-bold leading-[34px] sm:leading-[38px] lg:leading-[44px] text-gray-800 mb-4"
-              style={{ fontFamily: 'Noto Sans KR' }}
             >
               매체 성과 개선 사례
             </h2>
             <p 
               className="text-[24px] sm:text-[28px] lg:text-[32px] font-medium leading-[29px] sm:leading-[33px] lg:leading-[39px] text-gray-600"
-              style={{ fontFamily: 'Noto Sans KR' }}
             >
               EDEN 오퍼월 도입 후 실제 성과 향상 지표
             </p>
@@ -130,13 +128,11 @@ export default function PerformanceSection() {
             <div className="text-center mb-8">
               <h3 
                 className="text-xl sm:text-2xl font-bold leading-7 text-gray-800 mb-4"
-                style={{ fontFamily: 'Noto Sans KR' }}
               >
                 더 오래, 더 자주, 더 많이.
               </h3>
               <p 
                 className="text-base sm:text-lg font-medium leading-lg text-gray-600"
-                style={{ fontFamily: 'Noto Sans KR' }}
               >
                 매체 고유의 UI로 녹아든 오퍼월은 광고 피로감을 낮추고 유저 만족도를 높입니다.
               </p>
@@ -152,19 +148,16 @@ export default function PerformanceSection() {
                     </div>
                   <div 
                     className={`text-lg sm:text-2xl lg:text-[30px] font-medium leading-[22px] sm:leading-[29px] lg:leading-[36px] ${metric.textColor} mb-1 sm:mb-2`}
-                    style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     +{metric.value}%
                   </div>
                   <h4 
                     className="text-xs sm:text-sm lg:text-base font-medium leading-[14px] sm:leading-[17px] lg:leading-5 text-gray-800 mb-1 sm:mb-2"
-                    style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     {metric.title}
                   </h4>
                   <p 
                     className="text-[10px] sm:text-xs lg:text-sm font-medium leading-[12px] sm:leading-[14px] lg:leading-sm text-gray-600"
-                    style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     {metric.description}
                   </p>
@@ -182,13 +175,11 @@ export default function PerformanceSection() {
                   <div className="flex-1">
                     <h4 
                       className="text-lg font-medium leading-lg text-gray-800 mb-2"
-                      style={{ fontFamily: 'Noto Sans KR' }}
                     >
                       유료 결제율 상승
                     </h4>
                     <p 
                       className="text-base font-medium leading-5 text-gray-600"
-                      style={{ fontFamily: 'Noto Sans KR' }}
                     >
                       무료 포인트로 구매 전환 유도, 결제 퍼널 개선
                     </p>
@@ -202,13 +193,11 @@ export default function PerformanceSection() {
                   <div className="flex-1">
                     <h4 
                       className="text-lg font-medium leading-lg text-gray-800 mb-2"
-                      style={{ fontFamily: 'Noto Sans KR' }}
                     >
                       서비스 재활성화
                     </h4>
                     <p 
                       className="text-base font-medium leading-5 text-gray-600"
-                      style={{ fontFamily: 'Noto Sans KR' }}
                     >
                       미션 참여로 휴면 유저 복귀 유도
                     </p>
@@ -224,13 +213,11 @@ export default function PerformanceSection() {
                   <div className="flex-1">
                     <h4 
                       className="text-lg font-medium leading-lg text-gray-800 mb-2"
-                      style={{ fontFamily: 'Noto Sans KR' }}
                     >
                       광고 부가수익 확보
                     </h4>
                     <p 
                       className="text-base font-medium leading-5 text-gray-600"
-                      style={{ fontFamily: 'Noto Sans KR' }}
                     >
                       리워드 기반 광고로 안정적인 부가수익 창출
                     </p>
@@ -257,13 +244,11 @@ export default function PerformanceSection() {
                   <div className="flex-1">
                     <h4 
                       className="text-lg font-medium leading-lg text-gray-800 mb-2"
-                      style={{ fontFamily: 'Noto Sans KR' }}
                     >
                       브랜드 신뢰 유지
                     </h4>
                     <p 
                       className="text-base font-medium leading-5 text-gray-600"
-                      style={{ fontFamily: 'Noto Sans KR' }}
                     >
                       광고 피로도 최소화, 자연스러운 노출로 이미지 보호
                     </p>
@@ -274,7 +259,7 @@ export default function PerformanceSection() {
 
             <div className="mt-8">
               <div className="w-full h-[76px] bg-emerald-50 rounded-lg flex items-center justify-center px-6">
-                <p className="font-['Noto_Sans_KR'] font-medium text-[20px] leading-[24px] text-center text-emerald-800">
+                <p className="font-medium text-[20px] leading-[24px] text-center text-emerald-800">
                   "비용 투자 없는 매체 활성화가 가능합니다."
                 </p>
               </div>

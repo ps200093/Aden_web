@@ -57,7 +57,6 @@ export default function HeroSection() {
                 <h1 
                   className="w-full font-bold text-white mt-[24px] sm:mt-[28px] md:mt-[32px] lg:mt-0"
                   style={{ 
-                    fontFamily: 'Noto Sans KR',
                     fontSize: 'clamp(32px, 5vw + 8px, 64px)',
                     lineHeight: 'clamp(1.2, 1.125 + 0.05vw, 1.3)',
                     letterSpacing: '-0.02em'
@@ -68,7 +67,6 @@ export default function HeroSection() {
                 <p 
                   className="w-full font-medium text-white"
                   style={{ 
-                    fontFamily: 'Noto Sans KR',
                     fontSize: 'clamp(15px, 1.5vw + 6px, 20px)',
                     lineHeight: 'clamp(1.5, 1.4 + 0.1vw, 1.6)',
                     marginBottom: 'clamp(12px, 1.5vw + 8px, 24px)'
@@ -84,7 +82,6 @@ export default function HeroSection() {
                   <p 
                     className="font-medium text-[#065F46]"
                     style={{ 
-                      fontFamily: 'Noto Sans KR',
                       fontSize: 'clamp(13px, 1.2vw + 4px, 16px)',
                       lineHeight: 'clamp(1.3, 1.2 + 0.1vw, 1.4)'
                     }}
@@ -97,7 +94,6 @@ export default function HeroSection() {
                 onClick={handleStartCampaign}
                 className="flex items-center justify-center w-full sm:w-auto min-w-[280px] sm:min-w-[300px] lg:min-w-[324px] bg-[#169B68] hover:bg-[#138558] transition-colors rounded-[6px] sm:rounded-[8px] text-white font-medium"
                 style={{ 
-                  fontFamily: 'Noto Sans KR',
                   fontSize: 'clamp(15px, 1.2vw + 6px, 18px)',
                   lineHeight: '1.3',
                   height: 'clamp(50px, 8vw, 60px)',
@@ -144,7 +140,6 @@ export default function HeroSection() {
                   <h3 
                     className="font-medium text-center text-[#111827]"
                     style={{ 
-                      fontFamily: 'Noto Sans KR',
                       fontSize: 'clamp(17px, 1.5vw + 4px, 20px)',
                       lineHeight: 'clamp(1.2, 1.2 + 0.05vw, 1.3)'
                     }}
@@ -154,7 +149,6 @@ export default function HeroSection() {
                   <p 
                     className="font-medium text-center text-[#4b5563]"
                     style={{ 
-                      fontFamily: 'Noto Sans KR',
                       fontSize: 'clamp(13px, 1.2vw + 3px, 16px)',
                       lineHeight: 'clamp(1.3, 1.25 + 0.05vw, 1.35)'
                     }}
@@ -189,7 +183,6 @@ export default function HeroSection() {
                         <span 
                           className="font-medium text-white"
                           style={{ 
-                            fontFamily: 'Noto Sans KR',
                             fontSize: 'clamp(13px, 1.2vw + 2px, 16px)',
                             lineHeight: '1.2'
                           }}
@@ -200,7 +193,6 @@ export default function HeroSection() {
                       <span 
                         className="font-medium text-[#374151]"
                         style={{ 
-                          fontFamily: 'Noto Sans KR',
                           fontSize: 'clamp(13px, 1.2vw + 2px, 16px)',
                           lineHeight: '1.3'
                         }}
@@ -258,7 +250,6 @@ export default function HeroSection() {
                         <span 
                           className="font-medium text-white"
                           style={{ 
-                            fontFamily: 'Noto Sans KR',
                             fontSize: 'clamp(13px, 1.2vw + 2px, 16px)',
                             lineHeight: '1.2'
                           }}
@@ -269,7 +260,6 @@ export default function HeroSection() {
                       <span 
                         className="font-medium text-[#374151]"
                         style={{ 
-                          fontFamily: 'Noto Sans KR',
                           fontSize: 'clamp(13px, 1.2vw + 2px, 16px)',
                           lineHeight: '1.3'
                         }}
@@ -301,7 +291,6 @@ export default function HeroSection() {
                   <span 
                     className="font-medium text-[#059669]"
                     style={{ 
-                      fontFamily: 'Noto Sans KR',
                       fontSize: 'clamp(17px, 2vw + 4px, 24px)',
                       lineHeight: '1.3'
                     }}
@@ -322,7 +311,6 @@ export default function HeroSection() {
             <p 
               className="w-full max-w-[1010px] font-medium text-[#065F46]"
               style={{ 
-                fontFamily: 'Noto Sans KR',
                 fontSize: 'clamp(14px, 1.2vw + 5px, 18px)',
                 lineHeight: 'clamp(1.5, 1.55 + 0.05vw, 1.65)'
               }}

@@ -103,7 +103,6 @@ export default function SMBSection() {
             <h2 
               className="w-full font-medium text-center text-[#111827]"
               style={{ 
-                fontFamily: 'Noto Sans KR', 
                 fontStyle: 'normal',
                 fontSize: 'clamp(26px, 2.5vw + 8px, 36px)',
                 lineHeight: 'clamp(1.2, 1.2 + 0.05vw, 1.3)'
@@ -114,7 +113,6 @@ export default function SMBSection() {
             <p 
               className="w-full max-w-[690px] font-medium text-center text-[#4B5563] px-4"
               style={{ 
-                fontFamily: 'Noto Sans KR', 
                 fontStyle: 'normal',
                 fontSize: 'clamp(15px, 1.2vw + 6px, 20px)',
                 lineHeight: 'clamp(1.5, 1.4 + 0.1vw, 1.6)'
@@ -159,7 +157,6 @@ export default function SMBSection() {
                   <h3   
                     className="font-medium text-[#111827]"
                     style={{ 
-                      fontFamily: 'Noto Sans KR', 
                       fontStyle: 'normal',
                       fontSize: 'clamp(18px, 1.8vw + 4px, 20px)',
                       lineHeight: 'clamp(1.3, 1.4 + 0.05vw, 1.45)'
@@ -171,7 +168,6 @@ export default function SMBSection() {
                 <p 
                   className="font-medium text-[#000000]"
                   style={{ 
-                    fontFamily: 'Noto Sans KR', 
                     fontStyle: 'normal',
                     fontSize: 'clamp(16px, 1.5vw + 4px, 20px)',
                     lineHeight: 'clamp(1.3, 1.2 + 0.1vw, 1.4)'
@@ -206,7 +202,6 @@ export default function SMBSection() {
                   <h3 
                     className="font-medium text-[#111827]"
                     style={{ 
-                      fontFamily: 'Noto Sans KR', 
                       fontStyle: 'normal',
                       fontSize: 'clamp(18px, 1.8vw + 4px, 20px)',
                       lineHeight: 'clamp(1.3, 1.4 + 0.05vw, 1.45)'
@@ -218,7 +213,6 @@ export default function SMBSection() {
                 <p 
                   className="font-medium text-[#000000]"
                   style={{ 
-                    fontFamily: 'Noto Sans KR', 
                     fontStyle: 'normal',
                     fontSize: 'clamp(16px, 1.5vw + 4px, 20px)',
                     lineHeight: 'clamp(1.3, 1.2 + 0.1vw, 1.4)'
@@ -253,7 +247,6 @@ export default function SMBSection() {
                   <h3 
                     className="font-medium text-[#111827]"
                     style={{ 
-                      fontFamily: 'Noto Sans KR', 
                       fontStyle: 'normal',
                       fontSize: 'clamp(18px, 1.8vw + 4px, 20px)',
                       lineHeight: 'clamp(1.3, 1.4 + 0.05vw, 1.45)'
@@ -265,7 +258,6 @@ export default function SMBSection() {
                 <p 
                   className="font-medium text-[#000000]"
                   style={{ 
-                    fontFamily: 'Noto Sans KR', 
                     fontStyle: 'normal',
                     fontSize: 'clamp(16px, 1.5vw + 4px, 20px)',
                     lineHeight: 'clamp(1.3, 1.2 + 0.1vw, 1.4)'
@@ -283,7 +275,6 @@ export default function SMBSection() {
               >
                 <div className="text-center text-[#169B68]" 
                   style={{ 
-                    fontFamily: 'Noto Sans KR', 
                     fontStyle: 'normal', 
                     lineHeight: 'clamp(1.3, 1.4 + 0.05vw, 1.45)'
                   }}
@@ -322,7 +313,6 @@ export default function SMBSection() {
                 <h3 
                   className="w-full font-medium text-center text-[#111827] animate-[fadeIn_0.6s_ease-out]"
                   style={{ 
-                    fontFamily: 'Noto Sans KR', 
                     fontStyle: 'normal',
                     fontSize: 'clamp(20px, 2.5vw + 4px, 24px)',
                     lineHeight: 'clamp(1.2, 1.21 + 0.05vw, 1.3)',
@@ -348,7 +338,6 @@ export default function SMBSection() {
                     <span 
                       className="font-medium text-[#374151] whitespace-nowrap"
                       style={{ 
-                        fontFamily: 'Noto Sans KR', 
                         fontStyle: 'normal',
                         fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
                         lineHeight: 'clamp(1.3, 1.5 + 0.05vw, 1.6)'
@@ -378,7 +367,6 @@ export default function SMBSection() {
                       <span 
                         className="font-medium text-[#059669] whitespace-nowrap"
                         style={{ 
-                          fontFamily: 'Noto Sans KR', 
                           fontStyle: 'normal',
                           fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
                           lineHeight: 'clamp(1.3, 1.5 + 0.05vw, 1.6)'
@@ -396,7 +384,6 @@ export default function SMBSection() {
                     <span 
                       className="font-medium text-[#374151] whitespace-nowrap"
                       style={{ 
-                        fontFamily: 'Noto Sans KR', 
                         fontStyle: 'normal',
                         fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
                         lineHeight: 'clamp(1.3, 1.5 + 0.05vw, 1.6)'
@@ -426,7 +413,6 @@ export default function SMBSection() {
                       <span 
                         className="font-medium text-[#2563EB] whitespace-nowrap"
                         style={{ 
-                          fontFamily: 'Noto Sans KR', 
                           fontStyle: 'normal',
                           fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
                           lineHeight: 'clamp(1.3, 1.5 + 0.05vw, 1.6)'
@@ -444,7 +430,6 @@ export default function SMBSection() {
                     <span 
                       className="font-medium text-[#374151] whitespace-nowrap"
                       style={{ 
-                        fontFamily: 'Noto Sans KR', 
                         fontStyle: 'normal',
                         fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
                         lineHeight: 'clamp(1.3, 1.5 + 0.05vw, 1.6)'
@@ -474,7 +459,6 @@ export default function SMBSection() {
                       <span 
                         className="font-medium text-[#9333EA] whitespace-nowrap"
                         style={{ 
-                          fontFamily: 'Noto Sans KR', 
                           fontStyle: 'normal',
                           fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
                           lineHeight: 'clamp(1.3, 1.5 + 0.05vw, 1.6)'
@@ -495,7 +479,6 @@ export default function SMBSection() {
                   <p 
                     className="w-full font-medium text-center text-[#065F46]"
                     style={{ 
-                      fontFamily: 'Noto Sans KR', 
                       fontStyle: 'normal',
                       fontSize: 'clamp(16px, 1.5vw + 4px, 20px)',
                       lineHeight: 'clamp(1.3, 1.2 + 0.1vw, 1.4)'

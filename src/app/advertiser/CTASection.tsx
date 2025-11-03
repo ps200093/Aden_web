@@ -25,7 +25,6 @@ export default function CTASection() {
                 <h2 
                   className="w-full font-medium text-center text-white"
                   style={{ 
-                    fontFamily: 'Noto Sans KR', 
                     fontStyle: 'normal',
                     fontSize: 'clamp(32px, 5vw, 48px)',
                     lineHeight: '1.2'
@@ -36,7 +35,6 @@ export default function CTASection() {
                 <p 
                   className="w-full font-medium text-center text-[#D1FAE5]"
                   style={{ 
-                    fontFamily: 'Noto Sans KR', 
                     fontStyle: 'normal',
                     fontSize: 'clamp(16px, 2vw, 20px)',
                     lineHeight: '28px'
@@ -47,7 +45,6 @@ export default function CTASection() {
                 <h3 
                   className="w-full font-medium text-center text-[#6EE7B7]"
                   style={{ 
-                    fontFamily: 'Noto Sans KR', 
                     fontStyle: 'normal',
                     fontSize: 'clamp(24px, 3vw, 30px)',
                     lineHeight: '36px'
@@ -76,7 +73,7 @@ export default function CTASection() {
                   </svg>
                   <span 
                     className="text-[18px] font-medium leading-[22px] text-center text-[#10182B] whitespace-nowrap"
-                    style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}
+                    style={{ fontStyle: 'normal' }}
                   >
                     ADEN 광고 집행 문의하기
                   </span>
@@ -90,7 +87,7 @@ export default function CTASection() {
                   <Phone className="w-[18px] h-[18px] text-[#10B981] fill-[#10B981]" />
                   <span 
                     className="text-[18px] font-medium leading-[22px] text-center text-[#10B981] whitespace-nowrap"
-                    style={{ fontFamily: 'Noto Sans KR', fontStyle: 'normal' }}
+                    style={{ fontStyle: 'normal' }}
                   >
                     전화 상담 요청
                   </span>

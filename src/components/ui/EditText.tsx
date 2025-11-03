@@ -45,7 +45,7 @@ const EditText = forwardRef<HTMLInputElement, EditTextProps>(({
   // Required parameters with defaults
   placeholder = "ADEN은 광고주의 \"전환율\"만으로 평가받습니다.",
   text_font_size = "text-base",
-  text_font_family = "Noto Sans KR",
+  text_font_family,
   text_font_weight = "font-medium",
   text_line_height = "leading-base",
   text_text_align = "left",

@@ -1,10 +1,12 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Button from '@/components/ui/Button';
 import { Handshake, Rocket } from 'lucide-react';
 
 export default function CTASection() {
   const [isVisible, setIsVisible] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -29,11 +31,11 @@ export default function CTASection() {
   }, []);
 
   const handleContactClick = () => {
-    // Handle contact form submission
+    router.push('/contact');
   };
 
   const handlePoCClick = () => {
-    // Handle PoC application
+    router.push('/contact');
   };
   const keyStats = [
     { value: '2주', label: '빠른 PoC 완료' },
@@ -49,19 +51,16 @@ export default function CTASection() {
           <div className="flex flex-col items-center">
             <h2 
               className="text-[32px] sm:text-[40px] lg:text-[48px] font-medium leading-[38px] sm:leading-[48px] lg:leading-[58px] text-white mb-[30px] sm:mb-[45px] lg:mb-[60px]"
-              style={{ fontFamily: 'Noto Sans KR' }}
             >
               지금, ADEN과 함께 새로운 수익 생태계를 만드세요
             </h2>
             <p 
               className="text-base sm:text-lg lg:text-xl font-medium leading-6 text-gray-300 mb-[15px] sm:mb-[22px] lg:mb-[30px]"
-              style={{ fontFamily: 'Noto Sans KR' }}
             >
               매체 중심으로 설계된 투명하고 공정한 광고 플랫폼
             </p>
             <p 
               className="text-[24px] sm:text-[27px] lg:text-[30px] font-medium leading-[29px] sm:leading-[32px] lg:leading-[36px] text-emerald-400"
-              style={{ fontFamily: 'Noto Sans KR' }}
             >
               Ad Ends. And Fairly Begins.
             </p>
@@ -97,13 +96,11 @@ export default function CTASection() {
               >
                 <div 
                   className="text-base sm:text-xl lg:text-2xl font-medium leading-[19px] sm:leading-6 lg:leading-7 text-emerald-400"
-                  style={{ fontFamily: 'Noto Sans KR' }}
                 >
                   {stat.value}
                 </div>
                 <div 
                   className="text-xs sm:text-sm lg:text-base font-medium leading-[14px] sm:leading-[17px] lg:leading-5 text-gray-300"
-                  style={{ fontFamily: 'Noto Sans KR' }}
                 >
                   {stat.label}
                 </div>

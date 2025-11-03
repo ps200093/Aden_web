@@ -37,7 +37,6 @@ export default function ServiceHeroSection() {
                 <h1 
                   className="w-full max-w-full lg:max-w-[512px] font-bold text-white text-[clamp(32px,6vw,64px)] lg:!text-[42px] xl:!text-[56px] 2xl:!text-[68px] leading-[1.15]"
                   style={{ 
-                    fontFamily: 'Noto Sans KR'
                   }}
                 >
                   ADEN은 광고의 <br />유토피아 입니다
@@ -49,7 +48,6 @@ export default function ServiceHeroSection() {
                   <span 
                     className="font-medium text-white text-[clamp(18px,2.8vw,24px)] lg:!text-[20px] xl:!text-[24px] 2xl:!text-[28px] leading-[1.3]"
                     style={{ 
-                      fontFamily: 'Noto Sans KR'
                     }}
                   >
                     Ad-End
@@ -67,7 +65,6 @@ export default function ServiceHeroSection() {
                   <span 
                     className="font-medium text-white text-[clamp(18px,2.8vw,24px)] lg:!text-[20px] xl:!text-[24px] 2xl:!text-[28px] leading-[1.3]"
                     style={{ 
-                      fontFamily: 'Noto Sans KR'
                     }}
                   >
                     Ad-And
@@ -78,7 +75,6 @@ export default function ServiceHeroSection() {
                 <p 
                   className="w-full max-w-full lg:max-w-[504px] font-medium text-white text-[clamp(16px,2.5vw,24px)] lg:!text-[20px] xl:!text-[20px] 2xl:!text-[24px] leading-[1.4]"
                   style={{ 
-                    fontFamily: 'Noto Sans KR'
                   }}
                 >
                   불합리한 구조를 끝내고, <br className="hidden lg:block xl:hidden" />모두의 만족을 실현합니다
@@ -105,7 +101,6 @@ export default function ServiceHeroSection() {
                     <span 
                       className="font-medium text-white text-[14px] sm:text-[15px] lg:text-[15px] xl:text-[17px] leading-[1.3]"
                       style={{ 
-                        fontFamily: 'Noto Sans KR'
                       }}
                     >
                       운영사 소개서 다운로드
@@ -131,7 +126,6 @@ export default function ServiceHeroSection() {
                     <span 
                       className="font-medium text-white text-[14px] sm:text-[15px] lg:text-[15px] xl:text-[17px] leading-[1.3]"
                       style={{ 
-                        fontFamily: 'Noto Sans KR'
                       }}
                     >
                       매체 제휴 제안서 다운로드
@@ -167,7 +161,6 @@ export default function ServiceHeroSection() {
             <p 
               className="w-full max-w-full sm:max-w-[650px] lg:max-w-[750px] font-medium text-center px-4"
               style={{ 
-                fontFamily: 'Noto Sans KR',
                 color: '#065F46',
                 fontSize: 'clamp(14px, 1.8vw, 16px)',
                 lineHeight: '1.75'

@@ -92,13 +92,13 @@ export default function ComparisonSection() {
           <div className="text-center">
             <h2 
               className="text-[28px] sm:text-[32px] lg:text-[36px] font-medium leading-[34px] sm:leading-[38px] lg:leading-[44px] mb-3"
-              style={{ fontFamily: 'Noto Sans KR', color: '#111827' }}
+              style={{ color: '#111827' }}
             >
               왜 ADEN인가?
             </h2>
             <p 
               className="text-base sm:text-lg lg:text-xl font-medium leading-6"
-              style={{ fontFamily: 'Noto Sans KR', color: '#6B7280' }}
+              style={{ color: '#6B7280' }}
             >
               기존 업계 대비 ADEN의 차별화된 장점
             </p>
@@ -139,7 +139,6 @@ export default function ComparisonSection() {
                     <div 
                       className="text-base sm:text-lg lg:text-2xl font-medium leading-[19px] sm:leading-[22px] lg:leading-[29px] text-center"
                       style={{
-                        fontFamily: 'Noto Sans KR',
                         color: '#111827'
                       }}
                     >
@@ -156,7 +155,6 @@ export default function ComparisonSection() {
                     <div 
                       className="text-base sm:text-lg lg:text-2xl font-medium leading-[19px] sm:leading-[22px] lg:leading-[29px] text-center"
                       style={{
-                        fontFamily: 'Noto Sans KR',
                         color: '#4B5563'
                       }}
                     >
@@ -173,7 +171,6 @@ export default function ComparisonSection() {
                     <div 
                       className="text-base sm:text-lg lg:text-2xl font-medium leading-[19px] sm:leading-[22px] lg:leading-[29px] text-center"
                       style={{
-                        fontFamily: 'Noto Sans KR',
                         color: '#059669'
                       }}
                     >
@@ -205,7 +202,6 @@ export default function ComparisonSection() {
                       <div 
                         className="text-xs sm:text-sm lg:text-base font-medium leading-[14px] sm:leading-[17px] lg:leading-[19px] text-center"
                         style={{
-                          fontFamily: 'Noto Sans KR',
                           color: '#111827'
                         }}
                       >
@@ -222,7 +218,6 @@ export default function ComparisonSection() {
                       <div 
                         className="text-xs sm:text-sm lg:text-base font-medium leading-[14px] sm:leading-[17px] lg:leading-[19px] text-center"
                         style={{
-                          fontFamily: 'Noto Sans KR',
                           color: row.competitorColor
                         }}
                       >
@@ -239,7 +234,6 @@ export default function ComparisonSection() {
                       <div 
                         className="text-xs sm:text-sm lg:text-base font-medium leading-[14px] sm:leading-[17px] lg:leading-[19px] text-center"
                         style={{
-                          fontFamily: 'Noto Sans KR',
                           color: row.adenColor
                         }}
                       >

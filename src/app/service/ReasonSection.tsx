@@ -40,7 +40,6 @@ export default function ReasonSection() {
             <h2 
               className="w-full text-center mb-[16px]"
               style={{
-                fontFamily: 'Noto Sans KR',
                 fontStyle: 'normal',
                 fontWeight: 500,
                 fontSize: 'clamp(24px, 3.5vw, 36px)',
@@ -55,7 +54,6 @@ export default function ReasonSection() {
             <p 
               className="w-full text-center px-4"
               style={{
-                fontFamily: 'Noto Sans KR',
                 fontStyle: 'normal',
                 fontWeight: 500,
                 fontSize: 'clamp(16px, 2vw, 20px)',
@@ -81,7 +79,6 @@ export default function ReasonSection() {
               <h3 
                 className={`mb-6 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
                 style={{
-                  fontFamily: 'Noto Sans KR',
                   fontStyle: 'normal',
                   fontWeight: 500,
                   fontSize: 'clamp(20px, 2.5vw, 24px)',
@@ -108,10 +105,10 @@ export default function ReasonSection() {
                     <X size={16} color="#C33131" strokeWidth={3} />
                   </div>
                   <div>
-                    <p style={{ fontFamily: 'Noto Sans KR', fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
+                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
                       중간 마진과 정산 지연
                     </p>
-                    <p style={{ fontFamily: 'Noto Sans KR', fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
+                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
                       매체의 실질 수익 저하
                     </p>
                   </div>
@@ -131,10 +128,10 @@ export default function ReasonSection() {
                     <X size={16} color="#C33131" strokeWidth={3} />
                   </div>
                   <div>
-                    <p style={{ fontFamily: 'Noto Sans KR', fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
+                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
                       리스트형 광고 도배
                     </p>
-                    <p style={{ fontFamily: 'Noto Sans KR', fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
+                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
                       유저 피로도 상승, 참여율 하락
                     </p>
                   </div>
@@ -154,10 +151,10 @@ export default function ReasonSection() {
                     <X size={16} color="#C33131" strokeWidth={3} />
                   </div>
                   <div>
-                    <p style={{ fontFamily: 'Noto Sans KR', fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
+                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
                       인벤토리 편중
                     </p>
-                    <p style={{ fontFamily: 'Noto Sans KR', fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
+                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
                       대형 매체 위주의 불균형 구조
                     </p>
                   </div>
@@ -177,10 +174,10 @@ export default function ReasonSection() {
                     <X size={16} color="#C33131" strokeWidth={3} />
                   </div>
                   <div>
-                    <p style={{ fontFamily: 'Noto Sans KR', fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
+                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
                       정산 불투명성
                     </p>
-                    <p style={{ fontFamily: 'Noto Sans KR', fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
+                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
                       랭킹상승형 미션의 모호한 분배
                     </p>
                   </div>
@@ -197,7 +194,6 @@ export default function ReasonSection() {
               <h3 
                 className={`mb-6 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
                 style={{
-                  fontFamily: 'Noto Sans KR',
                   fontStyle: 'normal',
                   fontWeight: 500,
                   fontSize: 'clamp(20px, 2.5vw, 24px)',
@@ -224,10 +220,10 @@ export default function ReasonSection() {
                     <Check size={16} color="#059669" strokeWidth={2.5} />
                   </div>
                   <div>
-                    <p style={{ fontFamily: 'Noto Sans KR', fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
+                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
                       매체 우선 Rev-Share
                     </p>
-                    <p style={{ fontFamily: 'Noto Sans KR', fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
+                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
                       Net-7/14, 투명한 정산표
                     </p>
                   </div>
@@ -247,10 +243,10 @@ export default function ReasonSection() {
                     <Check size={16} color="#059669" strokeWidth={2.5} />
                   </div>
                   <div>
-                    <p style={{ fontFamily: 'Noto Sans KR', fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
+                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
                       브랜드 맞춤형 UI
                     </p>
-                    <p style={{ fontFamily: 'Noto Sans KR', fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
+                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
                       다양한 개인화된 미션
                     </p>
                   </div>
@@ -270,10 +266,10 @@ export default function ReasonSection() {
                     <Check size={16} color="#059669" strokeWidth={2.5} />
                   </div>
                   <div>
-                    <p style={{ fontFamily: 'Noto Sans KR', fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
+                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
                       균형 공급
                     </p>
-                    <p style={{ fontFamily: 'Noto Sans KR', fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
+                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
                       일일 500만 타 분배로 모든 매체 균형 공급
                     </p>
                   </div>
@@ -293,10 +289,10 @@ export default function ReasonSection() {
                     <Check size={16} color="#059669" strokeWidth={2.5} />
                   </div>
                   <div>
-                    <p style={{ fontFamily: 'Noto Sans KR', fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
+                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
                       완전 투명성
                     </p>
-                    <p style={{ fontFamily: 'Noto Sans KR', fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
+                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
                       규칙ID/TS/패턴 공개 + SLA 대응
                     </p>
                   </div>

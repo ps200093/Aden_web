@@ -52,10 +52,10 @@ export default function CounselSection() {
             {/* Left Side - Form */}
             <div className="p-[24px] sm:p-[36px] lg:p-[48px] bg-white order-2 lg:order-1">
               <div className="mb-[24px] sm:mb-[32px]">
-                <h2 className="text-[#111827] text-[24px] sm:text-[28px] lg:text-[30px] font-medium leading-[28px] sm:leading-[32px] lg:leading-[36px] mb-[12px] sm:mb-[16px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                <h2 className="text-[#111827] text-[24px] sm:text-[28px] lg:text-[30px] font-medium leading-[28px] sm:leading-[32px] lg:leading-[36px] mb-[12px] sm:mb-[16px]">
                   상담 신청하기
                 </h2>
-                <p className="text-[#4B5563] text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[20px] sm:leading-[22px] lg:leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                <p className="text-[#4B5563] text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[20px] sm:leading-[22px] lg:leading-[24px]">
                   전문 컨설턴트가 맞춤형 솔루션을 제안해드립니다
                 </p>
               </div>
@@ -63,7 +63,7 @@ export default function CounselSection() {
               <form onSubmit={handleSubmit} className="space-y-[20px] sm:space-y-[24px]">
                 {/* 문의 유형 */}
                 <div>
-                  <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[12px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                  <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[12px]">
                     문의 유형
                   </label>
                   <div className="flex gap-[12px]">
@@ -77,7 +77,7 @@ export default function CounselSection() {
                       }`}
                     >
                       <Building size={16} className="text-[#374151]" />
-                      <span className="text-[#374151] text-[16px] font-medium" style={{ fontFamily: 'Noto Sans KR' }}>
+                      <span className="text-[#374151] text-[16px] font-medium">
                         광고주
                       </span>
                     </button>
@@ -91,7 +91,7 @@ export default function CounselSection() {
                       }`}
                     >
                       <Smartphone size={16} className="text-[#374151]" />
-                      <span className="text-[#374151] text-[16px] font-medium" style={{ fontFamily: 'Noto Sans KR' }}>
+                      <span className="text-[#374151] text-[16px] font-medium">
                         매체사
                       </span>
                     </button>
@@ -101,7 +101,7 @@ export default function CounselSection() {
                 {/* 회사명 & 담당자명 */}
                 <div className="flex gap-[16px]">
                   <div className="flex-1">
-                    <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[8px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                    <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[8px]">
                       회사명 *
                     </label>
                     <input
@@ -115,7 +115,7 @@ export default function CounselSection() {
                     />
                   </div>
                   <div className="flex-1">
-                    <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[8px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                    <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[8px]">
                       담당자명 *
                     </label>
                     <input
@@ -133,7 +133,7 @@ export default function CounselSection() {
                 {/* 이메일 & 연락처 */}
                 <div className="flex gap-[16px]">
                   <div className="flex-1">
-                    <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[8px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                    <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[8px]">
                       이메일 *
                     </label>
                     <input
@@ -147,7 +147,7 @@ export default function CounselSection() {
                     />
                   </div>
                   <div className="flex-1">
-                    <label className="block text-[#374151] text-[#374151] text-[14px] font-medium leading-[17px] mb-[8px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                    <label className="block text-[#374151] text-[#374151] text-[14px] font-medium leading-[17px] mb-[8px]">
                       연락처 *
                     </label>
                     <input
@@ -165,7 +165,7 @@ export default function CounselSection() {
                 {/* 월 예산 / DAU */}
                 <div className="flex gap-[16px]">
                   <div className="flex-1">
-                    <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[8px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                    <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[8px]">
                       월 예산 (광고주)
                     </label>
                     <select
@@ -183,7 +183,7 @@ export default function CounselSection() {
                     </select>
                   </div>
                   <div className="flex-1">
-                    <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[8px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                    <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[8px]">
                       DAU (매체사)
                     </label>
                     <select
@@ -204,7 +204,7 @@ export default function CounselSection() {
 
                 {/* 문의 내용 */}
                 <div>
-                  <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[8px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                  <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[8px]">
                     문의 내용
                   </label>
                   <textarea
@@ -213,7 +213,6 @@ export default function CounselSection() {
                     placeholder="구체적인 문의사항이나 요청사항을 입력해주세요"
                     rows={4}
                     className="w-full px-[16px] py-[14px] border border-[#D1D5DB] rounded-lg text-[16px] placeholder:text-[#ADAEBC] resize-none"
-                    style={{ fontFamily: 'Noto Sans KR' }}
                   />
                 </div>
 
@@ -226,7 +225,7 @@ export default function CounselSection() {
                     onChange={(e) => setFormData({ ...formData, agreeToPrivacy: e.target.checked })}
                     className="mt-[2px] w-[16px] h-[16px] border-[0.5px] border-black rounded-sm"
                   />
-                  <label htmlFor="privacy" className="flex-1 text-[#4B5563] text-[14px] font-medium leading-[17px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                  <label htmlFor="privacy" className="flex-1 text-[#4B5563] text-[14px] font-medium leading-[17px]">
                     개인정보 수집 및 이용에 동의합니다.{' '}
                     <a href="#" className="text-[#059669] underline">
                       자세히보기
@@ -240,7 +239,7 @@ export default function CounselSection() {
                   className="w-full h-[56px] bg-gradient-to-r from-[#10B981] to-[#059669] rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
                 >
                   <Send size={16} className="text-white" />
-                  <span className="text-white text-[16px] font-medium" style={{ fontFamily: 'Noto Sans KR' }}>
+                  <span className="text-white text-[16px] font-medium">
                     상담 신청하기
                   </span>
                 </button>
@@ -250,10 +249,10 @@ export default function CounselSection() {
             {/* Right Side - Process Info */}
             <div className="bg-gradient-to-br from-[#10B981] to-[#059669] p-[24px] sm:p-[36px] lg:p-[48px] lg:rounded-r-2xl h-full order-1 lg:order-2">
               <div className="mb-[24px] sm:mb-[32px]">
-                <h3 className="text-white text-[20px] sm:text-[22px] lg:text-[24px] font-medium leading-[28px] sm:leading-[30px] lg:leading-[32px] mb-[12px] sm:mb-[16px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                <h3 className="text-white text-[20px] sm:text-[22px] lg:text-[24px] font-medium leading-[28px] sm:leading-[30px] lg:leading-[32px] mb-[12px] sm:mb-[16px]">
                   빠른 상담 프로세스
                 </h3>
-                <p className="text-[#D1FAE5] text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[20px] sm:leading-[22px] lg:leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                <p className="text-[#D1FAE5] text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[20px] sm:leading-[22px] lg:leading-[24px]">
                   전문 컨설턴트가 신속하게 연락드립니다
                 </p>
               </div>
@@ -272,15 +271,15 @@ export default function CounselSection() {
                     style={{ transitionDelay: `${index * 150}ms` }}
                   >
                     <div className="w-[28px] h-[28px] sm:w-[32px] sm:h-[32px] bg-white rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-[#059669] text-[12px] sm:text-[14px] font-medium" style={{ fontFamily: 'Noto Sans KR' }}>
+                      <span className="text-[#059669] text-[12px] sm:text-[14px] font-medium">
                         {item.step}
                       </span>
                     </div>
                     <div>
-                      <h4 className="text-white text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[20px] sm:leading-[22px] lg:leading-[24px] mb-[2px] sm:mb-[4px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                      <h4 className="text-white text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[20px] sm:leading-[22px] lg:leading-[24px] mb-[2px] sm:mb-[4px]">
                         {item.title}
                       </h4>
-                      <p className="text-[#D1FAE5] text-[12px] sm:text-[13px] lg:text-[14px] font-medium leading-[18px] sm:leading-[19px] lg:leading-[20px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                      <p className="text-[#D1FAE5] text-[12px] sm:text-[13px] lg:text-[14px] font-medium leading-[18px] sm:leading-[19px] lg:leading-[20px]">
                         {item.desc}
                       </p>
                     </div>
@@ -300,7 +299,7 @@ export default function CounselSection() {
               >
                 <div className="flex flex-col items-center text-center">
                   <Headphones size={20} className="text-white mb-[6px] sm:mb-[8px] sm:w-6 sm:h-6" />
-                  <p className="text-white text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[20px] sm:leading-[22px] lg:leading-[24px]" style={{ fontFamily: 'Noto Sans KR' }}>
+                  <p className="text-white text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-[20px] sm:leading-[22px] lg:leading-[24px]">
                     고객 지원
                   </p>
                 </div>

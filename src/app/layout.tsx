@@ -1,5 +1,13 @@
 import '../styles/index.css'
 import { Metadata, Viewport } from 'next'
+import { Figtree } from 'next/font/google'
+
+const figtree = Figtree({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-figtree',
+  display: 'swap',
+})
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -35,8 +43,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="ko" className={`${figtree.variable}`}>
+      <body className={figtree.className}>{children}</body>
     </html>
   )
 }

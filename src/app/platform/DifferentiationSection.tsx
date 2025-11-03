@@ -242,13 +242,11 @@ export default function DifferentiationSection() {
           <div className="text-center">
             <h2 
               className="text-[28px] sm:text-[32px] lg:text-[36px] font-medium leading-[34px] sm:leading-[38px] lg:leading-[44px] text-gray-800 mb-3"
-              style={{ fontFamily: 'Noto Sans KR' }}
             >
               ADEN의 차별화 포인트
             </h2>
             <p 
               className="text-base sm:text-lg lg:text-xl font-medium leading-6 text-gray-600"
-              style={{ fontFamily: 'Noto Sans KR' }}
             >
               매체 중심으로 설계된 4가지 핵심 강점
             </p>
@@ -261,14 +259,12 @@ export default function DifferentiationSection() {
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
                   <span 
                     className="text-lg font-medium text-white"
-                    style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     1
                   </span>
                 </div>
                 <h3 
                   className="text-xl sm:text-2xl font-medium leading-7 text-gray-800"
-                  style={{ fontFamily: 'Noto Sans KR' }}
                 >
                   브랜드 맞춤 '광고 같지 않은' UI/UX
                 </h3>
@@ -276,7 +272,6 @@ export default function DifferentiationSection() {
 
               <p 
                 className="text-base sm:text-lg lg:text-xl font-medium leading-[22px] sm:leading-[25px] lg:leading-[28px] text-gray-700"
-                style={{ fontFamily: 'Noto Sans KR' }}
               >
                 <span className="text-gray-600">ADEN은 매체의 앱/웹 디자인 언어를 그대로 반영해</span>
                 <span className="text-blue-600"> 광고가 아닌 서비스의 일부처럼 보이는 오퍼월</span>
@@ -298,7 +293,6 @@ export default function DifferentiationSection() {
                       )}
                       <span 
                         className="text-sm sm:text-base font-medium text-blue-800"
-                        style={{ fontFamily: 'Noto Sans KR' }}
                       >
                         {benefit}
                       </span>
@@ -309,14 +303,13 @@ export default function DifferentiationSection() {
 
               <p 
                 className="text-base sm:text-lg lg:text-xl font-medium leading-[22px] sm:leading-[25px] lg:leading-[28px] text-blue-600"
-                style={{ fontFamily: 'Noto Sans KR' }}
               >
                 매체의 브랜드 아이덴티티에 완벽히 녹아드는 커스터마이징.<br/>
                 ADEN의 오퍼월은 유저의 하루 루틴 안으로 자연스럽게 스며듭니다.
               </p>
 
               <div className="w-full max-w-[592px] h-[58px] bg-blue-50 border border-blue-200 rounded-lg flex items-center justify-center">
-                <p className="font-['Noto_Sans_KR'] font-medium text-[20px] leading-[24px] text-center text-blue-800">
+                <p className="font-medium text-[20px] leading-[24px] text-center text-blue-800">
                   "AD is embedded in your platform"
                 </p>
               </div>
@@ -328,7 +321,6 @@ export default function DifferentiationSection() {
                 <div className="text-center mb-6">
                   <h4 
                     className="text-lg sm:text-xl font-medium leading-6 text-gray-800"
-                    style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     Before & After 비교
                   </h4>
@@ -340,7 +332,6 @@ export default function DifferentiationSection() {
                     <div className="text-center mb-3">
                       <span 
                         className="text-sm font-medium text-red-600"
-                        style={{ fontFamily: 'Noto Sans KR' }}
                       >
                         일반 오퍼월
                       </span>
@@ -352,7 +343,6 @@ export default function DifferentiationSection() {
                             <div className="w-4 h-4 bg-red-400 rounded"></div>
                             <span 
                               className="text-xs font-medium text-black"
-                              style={{ fontFamily: 'Noto Sans KR' }}
                             >
                               {item}
                             </span>
@@ -367,7 +357,6 @@ export default function DifferentiationSection() {
                     <div className="text-center mb-3">
                       <span 
                         className="text-sm font-medium text-emerald-600"
-                        style={{ fontFamily: 'Noto Sans KR' }}
                       >
                         ADEN 커스텀
                       </span>
@@ -379,7 +368,6 @@ export default function DifferentiationSection() {
                             <div className="w-4 h-4 bg-emerald-400 rounded"></div>
                             <span 
                               className="text-xs font-medium text-black"
-                              style={{ fontFamily: 'Noto Sans KR' }}
                             >
                               {item}
                             </span>
@@ -400,19 +388,16 @@ export default function DifferentiationSection() {
                 <div className="text-center mb-8">
                   <h3 
                     className="text-[28px] sm:text-[32px] lg:text-[36px] font-medium leading-[34px] sm:leading-[38px] lg:leading-[44px] text-emerald-600 mb-2"
-                    style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     {missionCount.toLocaleString()}+
                   </h3>
                   <p 
                     className="text-lg sm:text-xl font-medium leading-6 text-gray-800 mb-1"
-                    style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     Daily Missions
                   </p>
                   <p 
                     className="text-sm sm:text-base font-medium leading-5 text-gray-600"
-                    style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     매일 참여 가능한 미션 물량
                   </p>
@@ -431,7 +416,6 @@ export default function DifferentiationSection() {
                       <div className="flex justify-between items-center">
                         <span 
                           className={`text-sm sm:text-base font-medium text-${item.color === 'emerald' ? 'emerald' : item.color === 'blue' ? 'blue' : 'purple'}-700`}
-                          style={{ fontFamily: 'Noto Sans KR' }}
                         >
                           {item.label}
                         </span>
@@ -444,7 +428,6 @@ export default function DifferentiationSection() {
                           </div>
                           <span 
                             className={`text-sm font-medium text-${item.color === 'emerald' ? 'emerald' : item.color === 'blue' ? 'blue' : 'purple'}-600`}
-                            style={{ fontFamily: 'Noto Sans KR' }}
                           >
                             {item.percentage}%
                           </span>
@@ -461,14 +444,12 @@ export default function DifferentiationSection() {
                 <div className="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center">
                   <span 
                     className="text-lg font-medium text-white"
-                    style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     2
                   </span>
                 </div>
                 <h3 
                   className="text-xl sm:text-2xl font-medium leading-7 text-gray-800"
-                  style={{ fontFamily: 'Noto Sans KR' }}
                 >
                   일일 5백만 타 인벤토리 보유
                 </h3>
@@ -476,7 +457,6 @@ export default function DifferentiationSection() {
 
               <p 
                 className="text-base sm:text-lg lg:text-xl font-medium leading-[22px] sm:leading-[25px] lg:leading-[28px]"
-                style={{ fontFamily: 'Noto Sans KR' }}
               >
                 <span className="text-emerald-600">일일 5,000,000회 이상 참여 가능한 미션 물량 확보.</span>
                 <span className="text-gray-700"> 매체의 DAU/MAU에 맞춰 최적화된 참여량을 자동 배분합니다.</span>
@@ -484,13 +464,12 @@ export default function DifferentiationSection() {
 
               <p 
                 className="text-base sm:text-lg lg:text-xl font-medium leading-[22px] sm:leading-[25px] lg:leading-[28px] text-gray-700"
-                style={{ fontFamily: 'Noto Sans KR' }}
               >
                 대형 매체에만 집중되는 기존 관행을 탈피해, 모든 제휴 매체가 균등하게 참여할 수 있도록 설계되었습니다.
               </p>
 
               <div className="w-full max-w-[592px] h-[58px] bg-emerald-50 border border-emerald-200 rounded-lg flex items-center justify-center">
-                <p className="font-['Noto_Sans_KR'] font-medium text-[20px] leading-[24px] text-center text-emerald-800">
+                <p className="font-medium text-[20px] leading-[24px] text-center text-emerald-800">
                   "Fair Distribution"
                 </p>
               </div>
@@ -504,14 +483,12 @@ export default function DifferentiationSection() {
                 <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
                   <span 
                     className="text-lg font-medium text-white"
-                    style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     3
                   </span>
                 </div>
                 <h3 
                   className="text-xl sm:text-2xl font-medium leading-7 text-gray-800"
-                  style={{ fontFamily: 'Noto Sans KR' }}
                 >
                   투명한 정산 구조
                 </h3>
@@ -519,14 +496,12 @@ export default function DifferentiationSection() {
 
               <p
                 className="text-base sm:text-lg lg:text-xl font-medium leading-[22px] sm:leading-[25px] lg:leading-[28px]"
-                style={{ fontFamily: 'Noto Sans KR' }}
               >
                 <span className="text-purple-600">기존 오퍼월들의 불리한 계약에서 벗어나세요.</span>
               </p>
 
               <p 
                 className="text-base sm:text-lg lg:text-xl font-medium leading-[22px] sm:leading-[25px] lg:leading-[28px] text-black"
-                style={{ fontFamily: 'Noto Sans KR' }}
               >
                 랭킹상승형에만 집중하여 미션 수익 분배율을 사전 공개하고,<br />
                 매체 전용 대시보드에서 실시간으로 열람할 수 있습니다.<br />
@@ -536,7 +511,6 @@ export default function DifferentiationSection() {
               <div className="bg-purple-50 border border-purple-200 rounded-base p-4 text-center">
                 <span 
                   className="text-lg sm:text-xl font-medium text-purple-700"
-                  style={{ fontFamily: 'Noto Sans KR' }}
                 >
                   "정산의 모든 단계가 투명히 열려 있습니다."
                 </span>
@@ -554,7 +528,7 @@ export default function DifferentiationSection() {
               <div className={`bg-white rounded-2xl p-8 shadow-[0px_4px_6px_rgba(0,0,0,0.1),0px_10px_15px_rgba(0,0,0,0.1)] max-w-[592px] transition-all duration-700 delay-300 ${isPoint4Visible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
                 <div className="text-center mb-[52px]">
                   <h4 
-                    className="font-['Noto_Sans_KR'] font-medium text-[20px] leading-[24px] text-center text-gray-900"
+                    className="font-medium text-[20px] leading-[24px] text-center text-gray-900"
                   >
                     4-Step Integration Flow
                   </h4>
@@ -570,19 +544,19 @@ export default function DifferentiationSection() {
                       <div className="flex items-center gap-4">
                         <div className={`w-8 h-8 ${step.stepColor} rounded-full flex items-center justify-center`}>
                           <span 
-                            className="font-['Noto_Sans_KR'] font-medium text-[14px] leading-[17px] text-white"
+                            className="font-medium text-[14px] leading-[17px] text-white"
                           >
                             {step.step}
                           </span>
                         </div>
                         <div className="flex-1">
                           <h5 
-                            className="font-['Noto_Sans_KR'] font-medium text-[16px] leading-[19px] text-gray-900 mb-1"
+                            className="font-medium text-[16px] leading-[19px] text-gray-900 mb-1"
                           >
                             {step.title}
                           </h5>
                           <p 
-                            className="font-['Noto_Sans_KR'] font-medium text-[14px] leading-[17px] text-gray-600"
+                            className="font-medium text-[14px] leading-[17px] text-gray-600"
                           >
                             {step.description}
                           </p>
@@ -599,14 +573,12 @@ export default function DifferentiationSection() {
                 <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center">
                   <span 
                     className="text-lg font-medium text-white"
-                    style={{ fontFamily: 'Noto Sans KR' }}
                   >
                     4
                   </span>
                 </div>
                 <h3 
                   className="text-xl sm:text-2xl font-medium leading-7 text-gray-800"
-                  style={{ fontFamily: 'Noto Sans KR' }}
                 >
                   도입이 쉬운 구조
                 </h3>
@@ -614,7 +586,6 @@ export default function DifferentiationSection() {
 
               <p 
                 className="text-base font-medium leading-6"
-                style={{ fontFamily: 'Noto Sans KR' }}
               >
                 <span className="text-orange-600">도입에 필요한 개발 리소스를 최소화 </span>
                 <span className="text-gray-700">했습니다.</span>
@@ -633,13 +604,11 @@ export default function DifferentiationSection() {
                     <div className="flex-1">
                       <h5 
                         className="text-base font-medium text-gray-800 mb-1"
-                        style={{ fontFamily: 'Noto Sans KR' }}
                       >
                         {feature.title}
                       </h5>
                       <p 
                         className="text-sm font-medium text-gray-600"
-                        style={{ fontFamily: 'Noto Sans KR' }}
                       >
                         {feature.description}
                       </p>
@@ -650,13 +619,12 @@ export default function DifferentiationSection() {
 
               <p 
                 className="text-base font-medium leading-5 text-orange-600"
-                style={{ fontFamily: 'Noto Sans KR' }}
               >
                 매체는 단 2주 만에 PoC 결과를 확인하고 즉시 정산까지 진행할 수 있습니다.
               </p>
 
               <div className="w-full max-w-[592px] h-[58px] bg-orange-50 border border-orange-200 rounded-lg flex items-center justify-center">
-                <p className="font-['Noto_Sans_KR'] font-medium text-[20px] leading-[24px] text-center text-orange-800">
+                <p className="font-medium text-[20px] leading-[24px] text-center text-orange-800">
                   "No Man-Hour for Platform"
                 </p>
               </div>
@@ -766,7 +734,6 @@ function TransparencyFlow({ isVisible }: { isVisible: boolean }) {
       <div className="text-center mb-6">
         <h4 
           className="text-lg sm:text-xl font-medium leading-6 text-gray-800"
-          style={{ fontFamily: 'Noto Sans KR' }}
         >
           Data Transparency Flow
         </h4>
@@ -776,13 +743,11 @@ function TransparencyFlow({ isVisible }: { isVisible: boolean }) {
         <div className="w-1/2 bg-emerald-50 rounded-base p-4 text-center">
           <div 
             className="text-xl sm:text-2xl font-medium text-emerald-600 mb-1"
-            style={{ fontFamily: 'Noto Sans KR' }}
           >
             ₩{dailyRevenue.toLocaleString()}
           </div>
           <div 
             className="text-sm font-medium text-gray-600"
-            style={{ fontFamily: 'Noto Sans KR' }}
           >
             오늘 매출
           </div>
@@ -790,13 +755,11 @@ function TransparencyFlow({ isVisible }: { isVisible: boolean }) {
         <div className="w-1/2 bg-blue-50 rounded-base p-4 text-center">
           <div 
             className="text-xl sm:text-2xl font-medium text-blue-600 mb-1"
-            style={{ fontFamily: 'Noto Sans KR' }}
           >
             {completionRate.toFixed(1)}%
           </div>
           <div 
             className="text-sm font-medium text-gray-600"
-            style={{ fontFamily: 'Noto Sans KR' }}
           >
             완료율
           </div>
@@ -807,13 +770,11 @@ function TransparencyFlow({ isVisible }: { isVisible: boolean }) {
         <div className="bg-emerald-50 p-3 flex justify-between items-center rounded-lg border-l-3 border-emerald-600">
           <span 
             className="text-sm font-medium text-emerald-700"
-            style={{ fontFamily: 'Noto Sans KR' }}
           >
             유효 참여
           </span>
           <span 
             className="text-base font-medium text-emerald-600"
-            style={{ fontFamily: 'Noto Sans KR' }}
           >
             {validParticipation.toLocaleString()}건
           </span>
@@ -821,13 +782,11 @@ function TransparencyFlow({ isVisible }: { isVisible: boolean }) {
         <div className="bg-red-50 p-3 flex justify-between items-center rounded-lg border-l-3 border-red-600">
           <span 
             className="text-sm font-medium text-red-700"
-            style={{ fontFamily: 'Noto Sans KR' }}
           >
             차감 내역
           </span>
           <span 
             className="text-base font-medium text-red-600"
-            style={{ fontFamily: 'Noto Sans KR' }}
           >
             {deductions}건
           </span>
@@ -835,13 +794,11 @@ function TransparencyFlow({ isVisible }: { isVisible: boolean }) {
         <div className="bg-purple-50 p-3 flex justify-between items-center rounded-lg border-l-3 border-purple-600">
           <span 
             className="text-sm font-medium text-purple-700"
-            style={{ fontFamily: 'Noto Sans KR' }}
           >
             유저 유입률 변화
           </span>
           <span 
             className="text-base font-medium text-purple-600"
-            style={{ fontFamily: 'Noto Sans KR' }}
           >
             +{rankingChange.toFixed(1)}%
           </span>

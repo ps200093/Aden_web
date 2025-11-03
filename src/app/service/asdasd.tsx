@@ -11,7 +11,6 @@ export default function ArchitectureSection() {
               <h2 
                 className="absolute w-full h-[44px] left-0 top-0 text-center"
                 style={{
-                  fontFamily: 'Noto Sans KR',
                   fontStyle: 'normal',
                   fontWeight: 500,
                   fontSize: '36px',
@@ -26,7 +25,6 @@ export default function ArchitectureSection() {
               <p 
                 className="absolute w-full max-w-[1154px] h-[56px] left-1/2 -translate-x-1/2 top-[56px] text-center"
                 style={{
-                  fontFamily: 'Noto Sans KR',
                   fontStyle: 'normal',
                   fontWeight: 500,
                   fontSize: '24px',

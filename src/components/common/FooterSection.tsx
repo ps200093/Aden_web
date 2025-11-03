@@ -39,7 +39,6 @@ export default function FooterSection() {
                     isActive ? "text-accent-emerald font-bold" : "text-[#838383]"
                   )}
                   style={{ 
-                    fontFamily: 'Noto Sans KR', 
                     letterSpacing: '0.005em',
                     fontSize: 'clamp(16px, 1.5vw + 4px, 20px)',
                     lineHeight: 'clamp(1.3, 1.2 + 0.1vw, 1.4)'
@@ -59,7 +58,6 @@ export default function FooterSection() {
               href="/" 
               className="font-medium text-accent-emerald hover:underline"
               style={{ 
-                fontFamily: 'Noto Sans KR',
                 fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
                 lineHeight: 'clamp(1.2, 1.21 + 0.05vw, 1.3)'
               }}
@@ -97,7 +95,6 @@ export default function FooterSection() {
               <span 
                 className="font-medium text-accent-emerald -ml-16 sm:-ml-20"
                 style={{ 
-                  fontFamily: 'Noto Sans KR',
                   fontSize: 'clamp(13px, 1.2vw + 2px, 16px)',
                   lineHeight: 'clamp(1.2, 1.21 + 0.05vw, 1.3)'
                 }}
@@ -113,7 +110,6 @@ export default function FooterSection() {
               <span 
                 className="font-medium text-[#838383] hidden sm:inline"
                 style={{ 
-                  fontFamily: 'Noto Sans KR',
                   fontSize: 'clamp(13px, 1.2vw + 2px, 16px)',
                   lineHeight: 'clamp(1.2, 1.21 + 0.05vw, 1.3)'
                 }}
@@ -123,7 +119,6 @@ export default function FooterSection() {
               <span 
                 className="font-medium text-[#838383]"
                 style={{ 
-                  fontFamily: 'Noto Sans KR',
                   fontSize: 'clamp(13px, 1.2vw + 2px, 16px)',
                   lineHeight: 'clamp(1.2, 1.21 + 0.05vw, 1.3)'
                 }}
@@ -138,7 +133,6 @@ export default function FooterSection() {
             <span 
               className="font-medium text-[#838383]"
               style={{ 
-                fontFamily: 'Noto Sans KR',
                 fontSize: 'clamp(11px, 1vw + 1px, 12px)',
                 lineHeight: 'clamp(1.2, 1.25 + 0.05vw, 1.3)'
               }}
