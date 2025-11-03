@@ -1,9 +1,11 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Button from '@/components/ui/Button';
 import { Handshake, Building2, Smartphone, Users, ArrowRight, ArrowDown } from 'lucide-react';
 
 export default function HeroSection() {
+  const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -16,7 +18,7 @@ export default function HeroSection() {
   }, []);
 
   const handleContactClick = () => {
-    // Handle contact form submission
+    router.push('/contact');
   };
   return (
     <section className="w-full bg-gradient-to-br from-[#169B68] from-15% to-[#F5F97F] to-85% relative">

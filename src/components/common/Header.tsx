@@ -28,12 +28,15 @@ const Header = ({ className, ...props }: HeaderProps) => {
   return (
     <header 
       className={twMerge(
-        'w-full bg-header-background relative',
-        'px-4 sm:px-6 md:px-8 lg:px-[38px]',
-        'py-4 sm:py-5 md:py-[22px]',
-        'border-b-[3px] border-gray-500',
+        'w-full bg-header-background relative border-b-[3px] border-gray-500',
         className
       )}
+      style={{
+        paddingLeft: 'clamp(16px, 3vw, 38px)',
+        paddingRight: 'clamp(16px, 3vw, 38px)',
+        paddingTop: 'clamp(16px, 2.5vw, 22px)',
+        paddingBottom: 'clamp(16px, 2.5vw, 22px)'
+      }}
       {...props}
     >
       <div className="w-full max-w-[1440px] mx-auto">
@@ -44,22 +47,32 @@ const Header = ({ className, ...props }: HeaderProps) => {
               <img 
                 src="/images/img_header_logo.svg" 
                 alt="ADEN Logo"
-                className="w-[120px] sm:w-[150px] md:w-[170px] lg:w-[190px] h-auto"
+                style={{
+                  width: 'clamp(120px, 15vw, 190px)',
+                  height: 'auto'
+                }}
               />
             </Link>
           </div>
 
           {/* Hamburger Menu Icon (Mobile only) */}
           <button 
-            className="block lg:hidden p-2" 
+            className="block lg:hidden" 
             aria-label="Open menu"
             onClick={() => setMenuOpen(!menuOpen)}
+            style={{
+              padding: 'clamp(6px, 1vw, 8px)'
+            }}
           >
             <svg 
-              className="w-6 h-6 text-header-text" 
+              className="text-header-text" 
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
+              style={{
+                width: 'clamp(22px, 3vw, 24px)',
+                height: 'clamp(22px, 3vw, 24px)'
+              }}
             >
               <path 
                 strokeLinecap="round" 
@@ -72,7 +85,11 @@ const Header = ({ className, ...props }: HeaderProps) => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:block">
-            <div className="flex items-center gap-[40px] xl:gap-[74px]">
+            <div className="flex items-center"
+              style={{
+                gap: 'clamp(40px, 6vw, 74px)'
+              }}
+            >
               {menuItems.map((item, index) => {
                 const isActive = pathname === item.href
                 return (
@@ -80,12 +97,16 @@ const Header = ({ className, ...props }: HeaderProps) => {
                     key={index}
                     href={item.href}
                     className={twMerge(
-                      'text-lg xl:text-2xl leading-lg xl:leading-3xl font-medium transition-colors duration-200',
+                      'font-medium transition-colors duration-200',
                       'hover:text-accent-emerald focus:outline-none focus:text-accent-emerald',
                       isActive 
                         ? 'text-accent-emerald font-bold' : 'text-header-text'
                     )}
-                    style={{ fontFamily: 'Noto Sans KR' }}
+                    style={{ 
+                      fontFamily: 'Noto Sans KR',
+                      fontSize: 'clamp(18px, 1.8vw + 2px, 24px)',
+                      lineHeight: 'clamp(1.3, 1.25 + 0.05vw, 1.4)'
+                    }}
                   >
                     {item.text}
                   </Link>
@@ -100,7 +121,12 @@ const Header = ({ className, ...props }: HeaderProps) => {
             'bg-header-background border-t border-border-primary shadow-lg',
             menuOpen ? 'block' : 'hidden'
           )}>
-            <div className="px-4 py-4 space-y-4">
+            <div style={{
+              padding: 'clamp(12px, 2vw, 16px)',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 'clamp(12px, 2vw, 16px)'
+            }}>
               {menuItems.map((item, index) => {
                 const isActive = pathname === item.href
                 return (
@@ -108,13 +134,18 @@ const Header = ({ className, ...props }: HeaderProps) => {
                     key={index}
                     href={item.href}
                     className={twMerge(
-                      'block text-base leading-base font-medium py-2 px-4 rounded-base',
+                      'block font-medium rounded-base',
                       'transition-colors duration-200',
                       'hover:bg-background-success focus:outline-none focus:bg-background-success',
                       isActive 
                         ? 'text-accent-emerald font-bold bg-background-success' : 'text-header-text'
                     )}
-                    style={{ fontFamily: 'Noto Sans KR' }}
+                    style={{ 
+                      fontFamily: 'Noto Sans KR',
+                      fontSize: 'clamp(15px, 2vw + 2px, 16px)',
+                      lineHeight: 'clamp(1.3, 1.25 + 0.05vw, 1.4)',
+                      padding: 'clamp(8px, 1.5vw, 10px) clamp(12px, 2vw, 16px)'
+                    }}
                     onClick={() => setMenuOpen(false)}
                   >
                     {item.text}

@@ -8,19 +8,24 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'ADEN CPA Marketing Platform',                           
-    template: 'ADEN CPA Marketing Platform | %s',                     
+    default: 'ADEN - 마케팅의 시작과 끝',                           
+    template: 'ADEN - 마케팅의 시작과 끝 | %s',                     
   },
-  description: 'Comprehensive CPA marketing platform offering advanced analytics, fraud prevention, SMB Fair Play Marketing, and 24/7 support to optimize your marketing campaigns and ROI.',
-  keywords: 'CPA marketing, performance analytics, fraud prevention, marketing platform, attribution analysis, data transparency, marketing solutions',
+  description: 'ADEN은 마케팅의 시작과 끝을 함께합니다. 최적의 마케팅 솔루션을 제공하여 성과를 극대화합니다.',
+  keywords: 'ADEN, 마케팅, 솔루션, 성과, 광고, 퍼포먼스, 마케팅 솔루션',
+  icons: {
+    icon: '/images/logo.svg',
+    shortcut: '/images/logo.svg',
+    apple: '/images/logo.svg',
+  },
   
   openGraph: {
     type: 'website',
     title: {
-      default: 'ADEN CPA Marketing Platform',                        
-      template: 'ADEN CPA Marketing Platform | %s',                 
+      default: 'ADEN - 마케팅의 시작과 끝',                        
+      template: 'ADEN - 마케팅의 시작과 끝 | %s',                 
     },
-    description: 'Transform your marketing performance with ADEN comprehensive CPA platform featuring advanced analytics, fraud prevention tools, and global market reach capabilities.',
+    description: 'ADEN은 마케팅의 시작과 끝을 함께합니다. 최적의 마케팅 솔루션을 제공하여 성과를 극대화합니다.',
   },
 }
   
