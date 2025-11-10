@@ -111,7 +111,7 @@ export default function SMBSection() {
               SMB를 위한<br className="sm:hidden" /> Fair Play Marketing
             </h2>
             <p 
-              className="w-full max-w-[690px] font-medium text-center text-[#4B5563] px-4"
+              className="w-full max-w-[760px] font-medium text-center text-[#4B5563] px-4"
               style={{ 
                 fontStyle: 'normal',
                 fontSize: 'clamp(15px, 1.2vw + 6px, 20px)',
@@ -119,8 +119,8 @@ export default function SMBSection() {
               }}
             >
               순위가 곧 노출이자, 매출.<br/>
-              ADEN은 광고주의 차별없이  모두가 참여할 수 있는<br className="hidden sm:block"/>
-              순위 특화형 광고를 제공합니다.
+              ADEN은 광고주의 차별없이 모두가 참여할 수 있는 <br className="sm:hidden"/>
+               순위 특화형 광고를 제공합니다.
             </p>
           </div>
 
