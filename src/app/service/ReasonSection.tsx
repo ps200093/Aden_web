@@ -106,10 +106,10 @@ export default function ReasonSection() {
                   </div>
                   <div>
                     <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
-                      중간 마진과 정산 지연
+                      광고판처럼 보이는 UX
                     </p>
                     <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
-                      매체의 실질 수익 저하
+                      사용자 경험을 저해하여 유저 이탈 유발
                     </p>
                   </div>
                 </div>
@@ -129,10 +129,10 @@ export default function ReasonSection() {
                   </div>
                   <div>
                     <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
-                      리스트형 광고 도배
+                      다단계 마진
                     </p>
                     <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
-                      유저 피로도 상승, 참여율 하락
+                      복잡한 유통 구조로 인해 매체 정산 금액 감소
                     </p>
                   </div>
                 </div>
@@ -152,10 +152,10 @@ export default function ReasonSection() {
                   </div>
                   <div>
                     <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
-                      인벤토리 편중
+                      대형매체 우선 공급
                     </p>
                     <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
-                      대형 매체 위주의 불균형 구조
+                      신규 및 중소형 매체는 양질의 광고 인벤토리 확보 어려움
                     </p>
                   </div>
                 </div>
@@ -175,10 +175,10 @@ export default function ReasonSection() {
                   </div>
                   <div>
                     <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
-                      정산 불투명성
+                      불투명한 차감
                     </p>
                     <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
-                      랭킹상승형 미션의 모호한 분배
+                      정산 과정의 불투명성으로 인해 매체와의 신뢰 문제 발생
                     </p>
                   </div>
                 </div>
@@ -221,10 +221,10 @@ export default function ReasonSection() {
                   </div>
                   <div>
                     <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
-                      매체 우선 Rev-Share
+                      매체 UI 그대로 적용
                     </p>
                     <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
-                      Net-7/14, 투명한 정산표
+                      매체의 기존 UI를 최대한 활용하여 자연스럽게 통합된 UI 제공
                     </p>
                   </div>
                 </div>
@@ -244,10 +244,10 @@ export default function ReasonSection() {
                   </div>
                   <div>
                     <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
-                      브랜드 맞춤형 UI
+                      매체 최우선 Rev-Share
                     </p>
                     <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
-                      개인화된 다양한 미션
+                      매체 중심의 수익 배분 구조로 정산 금액 최대화
                     </p>
                   </div>
                 </div>
@@ -267,10 +267,10 @@ export default function ReasonSection() {
                   </div>
                   <div>
                     <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
-                      균형 공급
+                      균형 있는 인벤토리 공급
                     </p>
                     <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
-                      일일 500만 타 분배로 모든 매체 균형 공급
+                      일일 5백만 타 균형 공급으로 모든 매체에게 기회 제공
                     </p>
                   </div>
                 </div>
@@ -290,10 +290,10 @@ export default function ReasonSection() {
                   </div>
                   <div>
                     <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
-                      완전 투명성
+                      정산 로그 & 증빙 공개
                     </p>
                     <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
-                      규칙ID/TS/패턴 공개 + SLA 대응
+                      투명한 정산 시스템으로 매체의 신뢰 구축
                     </p>
                   </div>
                 </div>

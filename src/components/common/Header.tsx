@@ -28,7 +28,7 @@ const Header = ({ className, ...props }: HeaderProps) => {
   return (
     <header 
       className={twMerge(
-        'w-full bg-header-background relative border-b-[3px] border-gray-500',
+        'w-full bg-header-background relative border-b-[1.5px] border-[#a9a9a9]',
         className
       )}
       style={{

@@ -37,13 +37,13 @@ export default function SMBSection() {
   useEffect(() => {
     if (!isVisible) return;
 
-    // 플레이스 노출 85%
+    // 플레이스 매출 137%
     const placeTimer = setTimeout(() => {
       const placeInterval = setInterval(() => {
         setPlaceExposure((prev) => {
-          if (prev >= 85) {
+          if (prev >= 137) {
             clearInterval(placeInterval);
-            return 85;
+            return 137;
           }
           return prev + 2;
         });
@@ -51,13 +51,13 @@ export default function SMBSection() {
       return () => clearInterval(placeInterval);
     }, 200);
 
-    // 쇼핑 검색 78%
+    // 쇼핑 매출 142%
     const searchTimer = setTimeout(() => {
       const searchInterval = setInterval(() => {
         setShoppingSearch((prev) => {
-          if (prev >= 78) {
+          if (prev >= 142) {
             clearInterval(searchInterval);
-            return 78;
+            return 142;
           }
           return prev + 2;
         });
@@ -301,7 +301,7 @@ export default function SMBSection() {
             {/* Right Content - Performance Card */}
             <div id="smb-performance-card" className="w-full max-w-[592px] flex-shrink-0"
               style={{
-                marginTop: 'clamp(0px, 10vw, 72px)'
+                marginTop: 'clamp(0px, 4vw, 32px)'
               }}
             >
               <div className="w-full bg-white rounded-xl sm:rounded-[16px] shadow-[0px_25px_50px_rgba(0,0,0,0.25)] animate-[fadeInUp_0.8s_ease-out]"
@@ -319,7 +319,8 @@ export default function SMBSection() {
                     marginBottom: 'clamp(24px, 4vw, 32px)'
                   }}
                 >
-                  한정된 예산으로도
+                  플레이스, 쇼핑 순위 상승 후<br />
+                  매출 평균 상승률<br />
                 </h3>
 
                 {/* Stats Container */}
@@ -327,104 +328,170 @@ export default function SMBSection() {
                   style={{
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: 'clamp(20px, 3vw, 24px)',
+                    gap: 'clamp(24px, 3.5vw, 32px)',
                     marginBottom: 'clamp(20px, 3vw, 24px)'
                   }}
                 >
                   {/* Place Exposure */}
-                  <div className="flex items-center justify-between animate-[fadeIn_0.6s_ease-out_0.2s_both]"
-                    style={{ gap: 'clamp(12px, 2vw, 16px)' }}
+                  <div className="flex flex-col animate-[fadeIn_0.6s_ease-out_0.2s_both]"
+                    style={{ gap: 'clamp(8px, 1.5vw, 12px)' }}
                   >
-                    <span 
-                      className="font-medium text-[#374151] whitespace-nowrap"
-                      style={{ 
-                        fontStyle: 'normal',
-                        fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
-                        lineHeight: 'clamp(1.3, 1.5 + 0.05vw, 1.6)'
-                      }}
-                    >
-                      플레이스 노출
-                    </span>
-                    <div className="flex items-center flex-1"
-                      style={{
-                        gap: 'clamp(6px, 1vw, 8px)',
-                        maxWidth: 'clamp(180px, 25vw, 200px)'
-                      }}
-                    >
-                      <div className="flex-1 bg-[#E5E7EB] rounded-[9999px] relative overflow-hidden"
-                        style={{
-                          height: 'clamp(6px, 1vw, 8px)'
-                        }}
-                      >
-                        <div 
-                          className="absolute left-0 top-0 bg-[#10B981] rounded-[9999px] transition-all duration-1000 ease-out"
-                          style={{ 
-                            width: `${placeExposure}%`,
-                            height: 'clamp(6px, 1vw, 8px)'
-                          }}
-                        ></div>
-                      </div>
+                    <div className="flex items-center justify-between">
                       <span 
-                        className="font-medium text-[#059669] whitespace-nowrap"
+                        className="font-medium text-[#374151]"
                         style={{ 
                           fontStyle: 'normal',
                           fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
                           lineHeight: 'clamp(1.3, 1.5 + 0.05vw, 1.6)'
                         }}
                       >
-                        {placeExposure}%
+                        플레이스 매출
                       </span>
+                      <span 
+                        className="font-bold text-[#059669]"
+                        style={{ 
+                          fontStyle: 'normal',
+                          fontSize: 'clamp(16px, 1.5vw + 2px, 20px)',
+                          lineHeight: 'clamp(1.3, 1.5 + 0.05vw, 1.6)',
+                          opacity: placeExposure > 0 ? 1 : 0,
+                          transition: 'opacity 0.3s ease-out'
+                        }}
+                      >
+                        +{placeExposure}%
+                      </span>
+                    </div>
+                    <div className="relative w-full">
+                      {/* 그래프 바 */}
+                      <div 
+                        className="relative bg-gradient-to-r from-[#10B981] to-[#059669] rounded-[9999px] shadow-lg"
+                        style={{ 
+                          width: `${(placeExposure / 150) * 100}%`,
+                          height: 'clamp(24px, 3vw, 32px)',
+                          transition: 'all 1.2s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                          transformOrigin: 'left',
+                          animation: placeExposure > 0 ? 'pulse 2s infinite' : 'none'
+                        }}
+                      >
+                        <div 
+                          className="absolute inset-0 bg-white/20 rounded-[9999px]"
+                          style={{
+                            animation: placeExposure >= 137 ? 'shimmer 2s infinite' : 'none'
+                          }}
+                        ></div>
+                      </div>
+                      {/* 100% 기준선 - 그래프 위에 표시 */}
+                      <div 
+                        className="absolute left-0 top-0 w-full flex items-center pointer-events-none"
+                        style={{ 
+                          height: 'clamp(24px, 3vw, 32px)',
+                          zIndex: 10
+                        }}
+                      >
+                        <div 
+                          className="relative h-full flex items-center"
+                          style={{ width: 'calc(100% / 1.5)' }}
+                        >
+                          <div 
+                            className="absolute right-0 top-0 h-full border-r-[3px] border-dashed border-[#FF6B6B]"
+                            style={{ 
+                              boxShadow: '0 0 8px rgba(255, 107, 107, 0.4)'
+                            }}
+                          ></div>
+                          <span 
+                            className="absolute -right-2 top-1/2 -translate-y-1/2 translate-x-full ml-2 text-[#FF6B6B] font-bold whitespace-nowrap bg-white px-1 rounded"
+                            style={{ 
+                              fontSize: 'clamp(11px, 1.1vw, 13px)',
+                              textShadow: '0 0 4px rgba(255, 255, 255, 0.8)'
+                            }}
+                          >
+                            100%
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
                   {/* Shopping Search */}
-                  <div className="flex items-center justify-between animate-[fadeIn_0.6s_ease-out_0.4s_both]"
-                    style={{ gap: 'clamp(12px, 2vw, 16px)' }}
+                  <div className="flex flex-col animate-[fadeIn_0.6s_ease-out_0.4s_both]"
+                    style={{ gap: 'clamp(8px, 1.5vw, 12px)' }}
                   >
-                    <span 
-                      className="font-medium text-[#374151] whitespace-nowrap"
-                      style={{ 
-                        fontStyle: 'normal',
-                        fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
-                        lineHeight: 'clamp(1.3, 1.5 + 0.05vw, 1.6)'
-                      }}
-                    >
-                      쇼핑 검색
-                    </span>
-                    <div className="flex items-center flex-1"
-                      style={{
-                        gap: 'clamp(6px, 1vw, 8px)',
-                        maxWidth: 'clamp(180px, 25vw, 200px)'
-                      }}
-                    >
-                      <div className="flex-1 bg-[#E5E7EB] rounded-[9999px] relative overflow-hidden"
-                        style={{
-                          height: 'clamp(6px, 1vw, 8px)'
-                        }}
-                      >
-                        <div 
-                          className="absolute left-0 top-0 bg-[#3B82F6] rounded-[9999px] transition-all duration-1000 ease-out"
-                          style={{ 
-                            width: `${shoppingSearch}%`,
-                            height: 'clamp(6px, 1vw, 8px)'
-                          }}
-                        ></div>
-                      </div>
+                    <div className="flex items-center justify-between">
                       <span 
-                        className="font-medium text-[#2563EB] whitespace-nowrap"
+                        className="font-medium text-[#374151]"
                         style={{ 
                           fontStyle: 'normal',
                           fontSize: 'clamp(14px, 1.2vw + 2px, 16px)',
                           lineHeight: 'clamp(1.3, 1.5 + 0.05vw, 1.6)'
                         }}
                       >
-                        {shoppingSearch}%
+                        쇼핑 매출
                       </span>
+                      <span 
+                        className="font-bold text-[#2563EB]"
+                        style={{ 
+                          fontStyle: 'normal',
+                          fontSize: 'clamp(16px, 1.5vw + 2px, 20px)',
+                          lineHeight: 'clamp(1.3, 1.5 + 0.05vw, 1.6)',
+                          opacity: shoppingSearch > 0 ? 1 : 0,
+                          transition: 'opacity 0.3s ease-out'
+                        }}
+                      >
+                        +{shoppingSearch}%
+                      </span>
+                    </div>
+                    <div className="relative w-full">
+                      {/* 그래프 바 */}
+                      <div 
+                        className="relative bg-gradient-to-r from-[#3B82F6] to-[#2563EB] rounded-[9999px] shadow-lg"
+                        style={{ 
+                          width: `${(shoppingSearch / 150) * 100}%`,
+                          height: 'clamp(24px, 3vw, 32px)',
+                          transition: 'all 1.2s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                          transformOrigin: 'left',
+                          animation: shoppingSearch > 0 ? 'pulse 2s infinite' : 'none'
+                        }}
+                      >
+                        <div 
+                          className="absolute inset-0 bg-white/20 rounded-[9999px]"
+                          style={{
+                            animation: shoppingSearch >= 142 ? 'shimmer 2s infinite' : 'none'
+                          }}
+                        ></div>
+                      </div>
+                      {/* 100% 기준선 - 그래프 위에 표시 */}
+                      <div 
+                        className="absolute left-0 top-0 w-full flex items-center pointer-events-none"
+                        style={{ 
+                          height: 'clamp(24px, 3vw, 32px)',
+                          zIndex: 10
+                        }}
+                      >
+                        <div 
+                          className="relative h-full flex items-center"
+                          style={{ width: 'calc(100% / 1.5)' }}
+                        >
+                          <div 
+                            className="absolute right-0 top-0 h-full border-r-[3px] border-dashed border-[#FF6B6B]"
+                            style={{ 
+                              boxShadow: '0 0 8px rgba(255, 107, 107, 0.4)'
+                            }}
+                          ></div>
+                          <span 
+                            className="absolute -right-2 top-1/2 -translate-y-1/2 translate-x-full ml-2 text-[#FF6B6B] font-bold whitespace-nowrap bg-white px-1 rounded"
+                            style={{ 
+                              fontSize: 'clamp(11px, 1.1vw, 13px)',
+                              textShadow: '0 0 4px rgba(255, 255, 255, 0.8)'
+                            }}
+                          >
+                            100%
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
                   {/* Shopping Inflow */}
-                  <div className="flex items-center justify-between animate-[fadeIn_0.6s_ease-out_0.6s_both]"
+                  {/* <div className="flex items-center justify-between animate-[fadeIn_0.6s_ease-out_0.6s_both]"
                     style={{ gap: 'clamp(12px, 2vw, 16px)' }}
                   >
                     <span 
@@ -467,11 +534,11 @@ export default function SMBSection() {
                         {shoppingInflow}%
                       </span>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* CTA Text */}
-                <div className="w-full bg-[#ECFDF5] rounded-[6px] sm:rounded-[8px] animate-[fadeIn_0.6s_ease-out_0.8s_both]"
+                {/* <div className="w-full bg-[#ECFDF5] rounded-[6px] sm:rounded-[8px] animate-[fadeIn_0.6s_ease-out_0.8s_both]"
                   style={{
                     padding: 'clamp(14px, 2vw, 16px)'
                   }}
@@ -486,7 +553,7 @@ export default function SMBSection() {
                   >
                     순위 상승으로 플레이스·쇼핑 노출 효과 극대화
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

@@ -85,7 +85,7 @@ export default function ArchitectureSection() {
                 <div 
                   className="absolute flex items-center justify-center left-1/2 transform -translate-x-1/2"
                   style={{
-                    width: '74px',
+                    width: '88px',
                     height: '36px',
                     top: '-16px',
                     background: '#10B981',
@@ -110,10 +110,10 @@ export default function ArchitectureSection() {
                 <div 
                   className="absolute flex items-center justify-center"
                   style={{
-                    width: '60px',
+                    width: '88px',
                     height: '36px',
                     right: '-10px',
-                    top: '16.7%',
+                    top: '19.7%',
                     background: '#3B82F6',
                     borderRadius: '8px'
                   }}
@@ -136,10 +136,10 @@ export default function ArchitectureSection() {
                 <div 
                   className="absolute flex items-center justify-center"
                   style={{
-                    width: '60px',
+                    width: '88px',
                     height: '36px',
                     right: '-10px',
-                    bottom: '16.7%',
+                    bottom: '17.7%',
                     background: '#A855F7',
                     borderRadius: '8px'
                   }}
@@ -162,7 +162,7 @@ export default function ArchitectureSection() {
                 <div 
                   className="absolute flex items-center justify-center left-1/2 transform -translate-x-1/2"
                   style={{
-                    width: '74px',
+                    width: '88px',
                     height: '36px',
                     bottom: '-16px',
                     background: '#F97316',
@@ -187,10 +187,10 @@ export default function ArchitectureSection() {
                 <div 
                   className="absolute flex items-center justify-center"
                   style={{
-                    width: '74px',
+                    width: '88px',
                     height: '36px',
                     left: '-16px',
-                    bottom: '16.7%',
+                    bottom: '17.7%',
                     background: '#EC4899',
                     borderRadius: '8px'
                   }}
@@ -216,7 +216,7 @@ export default function ArchitectureSection() {
                     width: '88px',
                     height: '36px',
                     left: '-16px',
-                    top: '16.7%',
+                    top: '19.7%',
                     background: '#22C55E',
                     borderRadius: '8px'
                   }}

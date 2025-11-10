@@ -427,7 +427,7 @@ export default function DifferentiationSection() {
                             ></div>
                           </div>
                           <span 
-                            className={`text-sm font-medium text-${item.color === 'emerald' ? 'emerald' : item.color === 'blue' ? 'blue' : 'purple'}-600`}
+                            className={`text-sm font-medium text-${item.color === 'emerald' ? 'emerald' : item.color === 'blue' ? 'blue' : 'purple'}-600 w-10 text-right`}
                           >
                             {item.percentage}%
                           </span>

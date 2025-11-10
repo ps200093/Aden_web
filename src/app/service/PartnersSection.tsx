@@ -18,7 +18,7 @@ export default function PartnersSection() {
     <section className="w-full bg-[#11192C] overflow-hidden" style={{ height: '568px' }}>
       <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-[40px] sm:py-[60px] md:py-[80px]">
-          <div className="relative w-full max-w-[1280px] mx-auto">
+          <div className="relative w-full max-w-[800px] mx-auto">
             {/* Header */}
             <div className="w-full h-[84px] mb-[66px]">
               {/* 제목 */}
@@ -51,7 +51,7 @@ export default function PartnersSection() {
             </div>
 
             {/* 무한 슬라이드 컨테이너 */}
-            <div className="w-full overflow-hidden mb-[27px]">
+            <div className="relative w-full overflow-hidden mb-[27px]">
               <style jsx>{`
                 @keyframes scroll {
                   0% {
@@ -65,6 +65,22 @@ export default function PartnersSection() {
                   animation: scroll 30s linear infinite;
                 }
               `}</style>
+              
+              {/* 왼쪽 그라데이션 */}
+              <div 
+                className="absolute left-0 top-0 bottom-0 w-[100px] z-10 pointer-events-none"
+                style={{
+                  background: 'linear-gradient(to right, #11192C 0%, transparent 100%)'
+                }}
+              />
+              
+              {/* 오른쪽 그라데이션 */}
+              <div 
+                className="absolute right-0 top-0 bottom-0 w-[100px] z-10 pointer-events-none"
+                style={{
+                  background: 'linear-gradient(to left, #11192C 0%, transparent 100%)'
+                }}
+              />
               
               <div className="flex gap-[24px] animate-scroll">
                 {/* 원본 */}
