@@ -64,13 +64,13 @@ export default function IntroSection() {
       return () => clearInterval(interval);
     }, 400);
 
-    // 9회 카운트업
+    // 8회 카운트업
     const participationTimer = setTimeout(() => {
       const interval = setInterval(() => {
         setParticipationCount((prev) => {
-          if (prev >= 9) {
+          if (prev >= 8) {
             clearInterval(interval);
-            return 9;
+            return 8;
           }
           return prev + 1;
         });
@@ -300,7 +300,7 @@ export default function IntroSection() {
                       stroke="#E5E7EB"
                       strokeWidth="6.4"
                     />
-                    {/* 진행 원 (9회) */}
+                    {/* 진행 원 (8회) */}
                     <circle
                       cx="48"
                       cy="48"
@@ -309,7 +309,7 @@ export default function IntroSection() {
                       stroke="#8B5CF6"
                       strokeWidth="6.4"
                       strokeDasharray="281.6"
-                      strokeDashoffset={isVisible ? "126.8" : "281.6"}
+                      strokeDashoffset={isVisible ? "140.8" : "281.6"}
                       transform="rotate(-90 48 48)"
                       style={{
                         transition: 'stroke-dashoffset 1.5s ease-out 0.6s'

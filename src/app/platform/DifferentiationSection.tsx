@@ -273,7 +273,7 @@ export default function DifferentiationSection() {
               <p 
                 className="text-base sm:text-lg lg:text-xl font-medium leading-[22px] sm:leading-[25px] lg:leading-[28px] text-gray-700"
               >
-                <span className="text-gray-600">ADEN은 매체의 앱/웹 디자인 언어를 그대로 반영해</span>
+                <span className="text-gray-600">ADEN은 매체의 앱/웹 디자인 언어를 그대로 반영해<br /></span>
                 <span className="text-blue-600"> 광고가 아닌 서비스의 일부처럼 보이는 오퍼월</span>
                 <span className="text-gray-600">을 제공합니다.</span>
               </p>
@@ -458,14 +458,14 @@ export default function DifferentiationSection() {
               <p 
                 className="text-base sm:text-lg lg:text-xl font-medium leading-[22px] sm:leading-[25px] lg:leading-[28px]"
               >
-                <span className="text-emerald-600">일일 5,000,000회 이상 참여 가능한 미션 물량 확보.</span>
+                <span className="text-emerald-600">일일 5,000,000회 이상 참여 가능한 미션 물량 확보.<br /></span>
                 <span className="text-gray-700"> 매체의 DAU/MAU에 맞춰 최적화된 참여량을 자동 배분합니다.</span>
               </p>
 
               <p 
                 className="text-base sm:text-lg lg:text-xl font-medium leading-[22px] sm:leading-[25px] lg:leading-[28px] text-gray-700"
               >
-                대형 매체에만 집중되는 기존 관행을 탈피해, 모든 제휴 매체가 균등하게 참여할 수 있도록 설계되었습니다.
+                대형 매체에만 집중되는 기존 관행을 탈피해,<br />모든 제휴 매체가 균등하게 참여할 수 있도록 설계되었습니다.
               </p>
 
               <div className="w-full max-w-[592px] h-[58px] bg-emerald-50 border border-emerald-200 rounded-lg flex items-center justify-center">

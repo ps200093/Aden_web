@@ -47,7 +47,8 @@ export default function TechnologySection() {
               <p 
                 className="text-[14px] sm:text-[16px] font-medium leading-[20px] sm:leading-[28px] text-left text-[#374151] w-full"
               >
-                리워드 광고의 고질적 문제인 부정 참여 및 중복 클 릭을 ADEN의 전용 방화벽 시스템으로 원천 차단
+                고질적인 문제인 부정 참여 및 중복 클릭,<br />
+                ADEN의 전용 방화벽 시스템으로 원천 차단<br />
                 비정상 IP, 매크로 탐지, 행동 패턴 분석까지
               </p>
             </div>
@@ -67,7 +68,8 @@ export default function TechnologySection() {
               <p 
                 className="text-[14px] sm:text-[16px] font-medium leading-[20px] sm:leading-[28px] text-left text-[#374151] w-full mb-[20px]"
               >
-                반복적으로 리워드만 취득하는 체리피커는 AI 행동 분석을 통해 실시간 필터링
+                반복적으로 리워드만 취득하는 체리피커는<br />
+                AI 행동 분석을 통해 실시간 필터링<br />
                 광고 예산이 "진짜 유저"에게만 집행
               </p>
             </div>
@@ -87,7 +89,8 @@ export default function TechnologySection() {
               <p 
                 className="text-[14px] sm:text-[16px] font-medium leading-[20px] sm:leading-[28px] text-left text-[#374151] w-full"
               >
-                빙고·룰렛·보물찾기 등 간단한 게임형 미션으로 참여율과 재미를 함께 향상
+                빙고·룰렛·보물찾기 등 간단한 게임형 미션으로<br />
+                참여율과 재미를 함께 향상하고,<br />
                 오퍼월 자체 비용으로 추가 리워드 제공
               </p>
             </div>

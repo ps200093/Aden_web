@@ -257,7 +257,7 @@ export default function StrengthsSection() {
                 }}
               >
                 <span className="text-[#059669]">절대 미달이 없는 구조</span><br />
-                <span className="text-black">광고 발주량 이상의 트래픽을 자체적으로 발생시켜 미달을 미연에 방지합니다.</span><br />
+                <span className="text-black">광고 발주량 이상의 트래픽을 자체적으로 발생시켜 미달을 방지합니다.</span><br />
                 <span className="text-black">모든 참여 데이터는 실시간 모니터링되며,</span><br />
                 <span className="text-black">부정 유입(Fraud) 및 자동화 트래픽은 방화벽 레벨에서 차단합니다.</span>
               </p>
@@ -729,7 +729,7 @@ export default function StrengthsSection() {
                 }}
               >
                 <span className="text-black">광고주는 전용 어드민을 통해 실시간 집행 현황, 참여 로그, 정산 금액을 확인할 수 있습니다.</span><br />
-                <span className="text-black">불투명한 "월 단위 보고서"가 아닌, 언제든 확인 가능한 체계적 정산 프로세스</span>
+                <span className="text-black">불투명한 "월 단위 보고서"가 아닌, 언제든 확인 가능한<br />체계적 정산 프로세스</span>
               </p>
               <div 
                 className="w-full bg-[#F3E8FF] border border-[#E9D5FF] rounded-[6px] sm:rounded-[8px]"
