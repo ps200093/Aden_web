@@ -58,7 +58,7 @@ export default function PartnersSection() {
                     transform: translateX(0);
                   }
                   100% {
-                    transform: translateX(calc(-179px * 9 - 24px * 9));
+                    transform: translateX(calc(-75px * 9 - 24px * 9));
                   }
                 }
                 .animate-scroll {
@@ -71,98 +71,32 @@ export default function PartnersSection() {
                 {partners.map((partner) => (
                   <div
                     key={partner.id}
-                    className="relative flex-shrink-0"
+                    className="flex-shrink-0"
                     style={{
-                      width: '179px',
-                      height: '155px',
-                      background: 'linear-gradient(180deg, #10B981 0%, #BFCAFF 100%)',
-                      boxShadow: '0px 1px 2px rgba(0, 0, 0, 0.05)',
-                      borderRadius: '8px'
+                      width: '75px',
+                      height: '75px',
+                      background: `url(${partner.logo})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      borderRadius: '10px'
                     }}
-                  >
-                    {/* 로고 */}
-                    <div
-                      className="absolute"
-                      style={{
-                        width: '75px',
-                        height: '75px',
-                        left: 'calc(50% - 75px/2)',
-                        top: '15px',
-                        background: `url(${partner.logo})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        borderRadius: '10px'
-                      }}
-                    />
-                    
-                    {/* 파트너 이름 */}
-                    <div
-                      className="absolute"
-                      style={{
-                        width: '179px',
-                        height: '28px',
-                        left: 'calc(50% - 179px/2)',
-                        top: '107px',
-                        fontStyle: 'normal',
-                        fontWeight: 700,
-                        fontSize: '24px',
-                        lineHeight: '29px',
-                        textAlign: 'center',
-                        color: '#11192C'
-                      }}
-                    >
-                      {partner.name}
-                    </div>
-                  </div>
+                  />
                 ))}
                 
                 {/* 복제본 (무한 루프용) */}
                 {partners.map((partner) => (
                   <div
                     key={`${partner.id}-clone`}
-                    className="relative flex-shrink-0"
+                    className="flex-shrink-0"
                     style={{
-                      width: '179px',
-                      height: '155px',
-                      background: 'linear-gradient(180deg, #10B981 0%, #BFCAFF 100%)',
-                      boxShadow: '0px 1px 2px rgba(0, 0, 0, 0.05)',
-                      borderRadius: '8px'
+                      width: '75px',
+                      height: '75px',
+                      background: `url(${partner.logo})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      borderRadius: '10px'
                     }}
-                  >
-                    {/* 로고 */}
-                    <div
-                      className="absolute"
-                      style={{
-                        width: '75px',
-                        height: '75px',
-                        left: 'calc(50% - 75px/2)',
-                        top: '15px',
-                        background: `url(${partner.logo})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        borderRadius: '10px'
-                      }}
-                    />
-                    
-                    {/* 파트너 이름 */}
-                    <div
-                      className="absolute"
-                      style={{
-                        width: '179px',
-                        height: '28px',
-                        left: 'calc(50% - 179px/2)',
-                        top: '107px',
-                        fontStyle: 'normal',
-                        fontWeight: 700,
-                        fontSize: '24px',
-                        lineHeight: '29px',
-                        textAlign: 'center',
-                        color: '#11192C'
-                      }}
-                    >
-                      {partner.name}
-                    </div>
-                  </div>
+                  />
                 ))}
               </div>
             </div>

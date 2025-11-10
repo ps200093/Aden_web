@@ -72,7 +72,7 @@ export default function HeroSection() {
                     marginBottom: 'clamp(12px, 1.5vw + 8px, 24px)'
                   }}
                 >
-                  SMB(중소사업자)부터 대형 브랜드까지 <br className="hidden sm:block" /> N사사 쇼핑·플레이스 순위에 직접 영향을 주는 <br className="hidden sm:block" /> 단 하나의 퍼포먼스 미션
+                  SMB(중소사업자)부터 대형 브랜드까지 <br className="hidden sm:block" /> N사 쇼핑·플레이스 순위에 직접 영향을 주는 <br className="hidden sm:block" /> 단 하나의 퍼포먼스 미션
                 </p>
                 <div className="w-full max-w-[541px] bg-[#ECFDF5] border border-[#A7F3D0] rounded-[6px] sm:rounded-[8px] px-[14px] sm:px-[17px] py-[14px] sm:py-[17px] flex items-center"
                   style={{

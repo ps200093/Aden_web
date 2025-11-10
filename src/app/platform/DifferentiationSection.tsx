@@ -43,13 +43,13 @@ export default function DifferentiationSection() {
 
   useEffect(() => {
     if (isPoint2Visible && largeMediaPercent === 0) {
-      // 대형 매체: 85%
+      // 대형 매체: 35%
       setTimeout(() => {
         let current = 0;
         const timer = setInterval(() => {
           current += 1;
-          if (current >= 85) {
-            setLargeMediaPercent(85);
+          if (current >= 35) {
+            setLargeMediaPercent(35);
             clearInterval(timer);
           } else {
             setLargeMediaPercent(current);
@@ -57,13 +57,13 @@ export default function DifferentiationSection() {
         }, 20);
       }, 300);
 
-      // 중형 매체: 82%
+      // 중형 매체: 34%
       setTimeout(() => {
         let current = 0;
         const timer = setInterval(() => {
           current += 1;
-          if (current >= 82) {
-            setMediumMediaPercent(82);
+          if (current >= 34) {
+            setMediumMediaPercent(34);
             clearInterval(timer);
           } else {
             setMediumMediaPercent(current);
@@ -71,13 +71,13 @@ export default function DifferentiationSection() {
         }, 20);
       }, 400);
 
-      // 소형 매체: 78%
+      // 소형 매체: 31%
       setTimeout(() => {
         let current = 0;
         const timer = setInterval(() => {
           current += 1;
-          if (current >= 78) {
-            setSmallMediaPercent(78);
+          if (current >= 31) {
+            setSmallMediaPercent(31);
             clearInterval(timer);
           } else {
             setSmallMediaPercent(current);
@@ -159,9 +159,9 @@ export default function DifferentiationSection() {
       title: "브랜드 맞춤 '광고 같지 않은' UI/UX",
       description: "ADEN은 매체의 앱/웹 디자인 언어를 그대로 반영해 광고가 아닌 서비스의 일부처럼 보이는 오퍼월을 제공합니다.",
       benefits: [
-        "광고 노출 시 거부감 ↓",
-        "유저 체류시간 ↑", 
-        "재방문율 ↑"
+        "광고 노출 시 거부감",
+        "유저 체류시간", 
+        "재방문율"
       ],
       quote: "Ad looks like your brand."
     },
@@ -283,19 +283,19 @@ export default function DifferentiationSection() {
                   {differentiationPoints[0].benefits?.map((benefit, index) => (
                     <div 
                       key={index} 
-                      className={`flex items-center gap-2 transition-all duration-500 ${isPoint1Visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+                      className={`flex items-center gap-0 transition-all duration-500 ${isPoint1Visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
                       style={{ transitionDelay: `${300 + index * 100}ms` }}
                     >
-                      {benefit.includes('↓') ? (
-                        <MoveDown className="w-4 h-4 text-red-500" strokeWidth={3.5}/>
-                      ) : (
-                        <MoveUp className="w-4 h-4 text-emerald-500" strokeWidth={3.5}/>
-                      )}
                       <span 
                         className="text-sm sm:text-base font-medium text-blue-800"
                       >
                         {benefit}
                       </span>
+                      {index === 0 ? (
+                        <MoveDown className="w-4 h-4 text-red-500" strokeWidth={3.5}/>
+                      ) : (
+                        <MoveUp className="w-4 h-4 text-emerald-500" strokeWidth={3.5}/>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -399,7 +399,7 @@ export default function DifferentiationSection() {
                   <p 
                     className="text-sm sm:text-base font-medium leading-5 text-gray-600"
                   >
-                    매일 참여 가능한 미션 물량
+                    구동중인 물량 분배 비율
                   </p>
                 </div>
 

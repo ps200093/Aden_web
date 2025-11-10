@@ -197,7 +197,7 @@ export default function IntroSection() {
                       color: '#4B5563'
                     }}
                   >
-                    매일 500만명의 활성 사용자
+                    매일 500만명의 활성 유저
                   </p>
                 </div>
               </div>
@@ -276,7 +276,7 @@ export default function IntroSection() {
                       color: '#4B5563'
                     }}
                   >
-                    높은 사용자 유지율
+                    높은 유저 유지율
                   </p>
                 </div>
               </div>

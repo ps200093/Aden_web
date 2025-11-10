@@ -188,7 +188,7 @@ export default function ReasonSection() {
             {/* 빈칸 4 */}
             <div className="w-full"></div>
 
-            {/* 5열: EDEN의 해법 */}
+            {/* 5열: ADEN의 해법 */}
             <div className="w-full">
               {/* 제목 */}
               <h3 
@@ -201,7 +201,7 @@ export default function ReasonSection() {
                   color: '#059669'
                 }}
               >
-                EDEN의 해법
+                ADEN의 해법
               </h3>
 
               {/* 해법 리스트 */}
@@ -247,7 +247,7 @@ export default function ReasonSection() {
                       브랜드 맞춤형 UI
                     </p>
                     <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
-                      다양한 개인화된 미션
+                      개인화된 다양한 미션
                     </p>
                   </div>
                 </div>

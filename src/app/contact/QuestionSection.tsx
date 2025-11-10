@@ -16,7 +16,7 @@ const faqDataByType: Record<UserType, FAQItem[]> = {
       answer: '비용 없이 추가 매출 창출, 앱/웹 체류시간·재방문율 증가, 매체 브랜드 톤 그대로 유지합니다. "No-Cost Growth : 세 마리 토끼 잡기"',
     },
     {
-      question: '사용자 경험을 해치지 않나요?',
+      question: '유저 경험을 해치지 않나요?',
       answer: '광고판 삽입 방식이 아닌, 매체 UI·톤 그대로 커스텀 적용됩니다. 출석형/게임형 UX로 참여율과 재방문율이 상승합니다.',
     },
     {
@@ -36,7 +36,7 @@ const faqDataByType: Record<UserType, FAQItem[]> = {
       answer: '도입 즉시 가능합니다. 초기 매체는 우선 인벤토리 공급으로 첫 달부터 유의미한 매출 창출이 가능합니다.',
     },
     {
-      question: '사용자 불만이나 CS는 어떻게 하나요?',
+      question: '유저 불만이나 CS는 어떻게 하나요?',
       answer: '전환 및 리워드 관련 CS는 Aden에서 직접 대응합니다. 매체 CS 부담은 없습니다.',
     },
   ],
@@ -47,7 +47,7 @@ const faqDataByType: Record<UserType, FAQItem[]> = {
     },
     {
       question: '광고 효율과 전환 품질은 어떻게 보장하나요?',
-      answer: '실수요 기반 사용자 참여, 실시간 인증(로그인·세션 기반), 어뷰징/체리피커 자동 차단, 오프라인 매장 기반 미션도 적용 가능합니다. "숫자가 아니라, 실제 고객을 유도합니다."',
+      answer: '실수요 기반 유저 참여, 실시간 인증(로그인·세션 기반), 어뷰징/체리피커 자동 차단, 오프라인 매장 기반 미션도 적용 가능합니다. "숫자가 아니라, 실제 고객을 유도합니다."',
     },
     {
       question: '어떤 매체에 노출되며, 직접 지정도 가능한가요?',
@@ -97,7 +97,7 @@ export default function QuestionSection() {
             </p>
           </div>
 
-          {/* 사용자 타입 토글 */}
+          {/* 유저 타입 토글 */}
           <div className="flex justify-center mb-8">
             <div 
               className="relative inline-flex bg-[#F3F4F6] rounded-lg p-1 cursor-pointer"

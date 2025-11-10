@@ -292,7 +292,7 @@ export default function SMBSection() {
                       fontSize: 'clamp(18px, 2vw + 4px, 24px)'
                     }}
                   >
-                    매출 증대가 필요한 모든 비즈니스를 대상
+                    매출 증대가 필요한 모든 브랜드를 대상
                   </span>
                 </div>
               </div>

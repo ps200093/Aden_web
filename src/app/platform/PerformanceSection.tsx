@@ -91,7 +91,7 @@ export default function PerformanceSection() {
       icon: RotateCw,
       value: revisitIncrease,
       title: "재방문율 증가",
-      description: "7일 내 재방문 사용자 비율",
+      description: "7일 내 재방문 유저 비율",
       color: "bg-gradient-to-br from-emerald-400 to-emerald-600",
       textColor: "text-emerald-600"
     },
