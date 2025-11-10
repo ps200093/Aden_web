@@ -320,7 +320,7 @@ export default function SMBSection() {
                   }}
                 >
                   플레이스, 쇼핑 순위 상승 후<br />
-                  매출 평균 상승률<br />
+                  매출 평균 상승률
                 </h3>
 
                 {/* Stats Container */}
@@ -348,7 +348,7 @@ export default function SMBSection() {
                         플레이스 매출
                       </span>
                       <span 
-                        className="font-bold text-[#059669]"
+                        className="font-bold text-[#2563EB]"
                         style={{ 
                           fontStyle: 'normal',
                           fontSize: 'clamp(16px, 1.5vw + 2px, 20px)',
@@ -363,7 +363,7 @@ export default function SMBSection() {
                     <div className="relative w-full">
                       {/* 그래프 바 */}
                       <div 
-                        className="relative bg-gradient-to-r from-[#10B981] to-[#059669] rounded-[9999px] shadow-lg"
+                        className="relative bg-gradient-to-r from-[#3B82F6] to-[#2563EB] rounded-[9999px] shadow-lg"
                         style={{ 
                           width: `${(placeExposure / 150) * 100}%`,
                           height: 'clamp(24px, 3vw, 32px)',
@@ -427,7 +427,7 @@ export default function SMBSection() {
                         쇼핑 매출
                       </span>
                       <span 
-                        className="font-bold text-[#2563EB]"
+                        className="font-bold text-[#059669]"
                         style={{ 
                           fontStyle: 'normal',
                           fontSize: 'clamp(16px, 1.5vw + 2px, 20px)',
@@ -442,7 +442,7 @@ export default function SMBSection() {
                     <div className="relative w-full">
                       {/* 그래프 바 */}
                       <div 
-                        className="relative bg-gradient-to-r from-[#3B82F6] to-[#2563EB] rounded-[9999px] shadow-lg"
+                        className="relative bg-gradient-to-r from-[#10B981] to-[#059669] rounded-[9999px] shadow-lg"
                         style={{ 
                           width: `${(shoppingSearch / 150) * 100}%`,
                           height: 'clamp(24px, 3vw, 32px)',

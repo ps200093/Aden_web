@@ -112,8 +112,8 @@ export default function ArchitectureSection() {
                   style={{
                     width: '88px',
                     height: '36px',
-                    right: '-10px',
-                    top: '19.7%',
+                    right: '-23px',
+                    top: '22.7%',
                     background: '#3B82F6',
                     borderRadius: '8px'
                   }}
@@ -138,8 +138,8 @@ export default function ArchitectureSection() {
                   style={{
                     width: '88px',
                     height: '36px',
-                    right: '-10px',
-                    bottom: '17.7%',
+                    right: '-23px',
+                    bottom: '20.7%',
                     background: '#A855F7',
                     borderRadius: '8px'
                   }}
@@ -189,8 +189,8 @@ export default function ArchitectureSection() {
                   style={{
                     width: '88px',
                     height: '36px',
-                    left: '-16px',
-                    bottom: '17.7%',
+                    left: '-23px',
+                    bottom: '20.7%',
                     background: '#EC4899',
                     borderRadius: '8px'
                   }}
@@ -215,8 +215,8 @@ export default function ArchitectureSection() {
                   style={{
                     width: '88px',
                     height: '36px',
-                    left: '-16px',
-                    top: '19.7%',
+                    left: '-23px',
+                    top: '22.7%',
                     background: '#22C55E',
                     borderRadius: '8px'
                   }}
