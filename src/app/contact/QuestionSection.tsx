@@ -84,15 +84,15 @@ export default function QuestionSection() {
   const currentFaqData = faqDataByType[userType];
 
   return (
-    <section className="w-full bg-[#F9FAFB] py-20">
+    <section className="w-full bg-gradient-to-br from-slate-800 to-slate-900 py-20">
       <div className="max-w-[1440px] mx-auto px-4">
         <div className="max-w-[896px] mx-auto">
           {/* 헤더 */}
           <div className="mb-[64px] text-center">
-            <h2 className="font-medium text-[36px] leading-[40px] text-[#111827] mb-4">
+            <h2 className="font-medium text-[36px] leading-[40px] text-white mb-4">
               자주 묻는 질문
             </h2>
-            <p className="font-medium text-[20px] leading-[28px] text-[#4B5563]">
+            <p className="font-medium text-[20px] leading-[28px] text-emerald-400">
               궁금한 점을 빠르게 확인해보세요
             </p>
           </div>
@@ -100,7 +100,7 @@ export default function QuestionSection() {
           {/* 유저 타입 토글 */}
           <div className="flex justify-center mb-8">
             <div 
-              className="relative inline-flex bg-[#F3F4F6] rounded-lg p-1 cursor-pointer"
+              className="relative inline-flex bg-[#F3F4F6] rounded-lg p-1 cursor-pointer border-2 border-emerald-400"
               onClick={handleToggle}
             >
               {/* 슬라이딩 배경 */}
@@ -115,7 +115,7 @@ export default function QuestionSection() {
               <div
                 className={`relative z-10 px-8 py-2.5 rounded-md font-semibold text-[15px] leading-[20px] transition-all duration-300 pointer-events-none ${
                   userType === '매체사'
-                    ? 'text-[#2563EB] scale-105'
+                    ? 'text-emerald-400 scale-105'
                     : 'text-[#9CA3AF]'
                 }`}
               >
@@ -124,7 +124,7 @@ export default function QuestionSection() {
               <div
                 className={`relative z-10 px-8 py-2.5 rounded-md font-semibold text-[15px] leading-[20px] transition-all duration-300 pointer-events-none ${
                   userType === '광고주'
-                    ? 'text-[#2563EB] scale-105'
+                    ? 'text-emerald-400 scale-105'
                     : 'text-[#9CA3AF]'
                 }`}
               >
@@ -138,13 +138,23 @@ export default function QuestionSection() {
             {currentFaqData.map((faq, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-[0px_1px_2px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-300"
+                className={`rounded-lg overflow-hidden transition-all duration-300 ${
+                  openIndex === index 
+                    ? 'bg-white shadow-[0px_1px_2px_rgba(0,0,0,0.05)]' 
+                    : 'bg-transparent border-2 border-emerald-400'
+                }`}
               >
                 <button
                   onClick={() => toggleAccordion(index)}
-                  className="w-full h-[56px] px-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                  className={`w-full h-[56px] px-6 flex items-center justify-between transition-colors ${
+                    openIndex === index 
+                      ? 'bg-emerald-400 hover:bg-emerald-300' 
+                      : 'hover:bg-emerald-400/10'
+                  }`}
                 >
-                  <span className="font-medium text-[16px] leading-[24px] text-[#111827]">
+                  <span className={`font-medium text-[16px] leading-[24px] ${
+                    openIndex === index ? 'text-[#111827]' : 'text-white'
+                  }`}>
                     {faq.question}
                   </span>
                   <div className="flex items-center justify-center w-4 h-4 transition-transform duration-300" 
@@ -158,7 +168,7 @@ export default function QuestionSection() {
                     >
                       <path
                         d="M4 6L8 10L12 6"
-                        stroke="#000000"
+                        stroke={openIndex === index ? "#000000" : "#ffffff"}
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -177,7 +187,7 @@ export default function QuestionSection() {
                 >
                   <div className="px-6 py-4 border-t border-gray-100">
                     <p 
-                      className="text-[14px] leading-[22px] text-[#6B7280]"
+                      className="text-[14px] leading-[22px] text-black"
                       dangerouslySetInnerHTML={{ __html: faq.answer }}
                     />
                   </div>
