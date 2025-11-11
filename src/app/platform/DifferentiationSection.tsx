@@ -465,7 +465,7 @@ export default function DifferentiationSection() {
               <p 
                 className="text-base sm:text-lg lg:text-xl font-medium leading-[22px] sm:leading-[25px] lg:leading-[28px] text-gray-700"
               >
-                대형 매체에만 집중되는 기존 관행을 탈피해,<br />모든 제휴 매체가 균등하게 참여할 수 있도록 설계되었습니다.
+                대형 매체에만 집중되는 기존 관행을 탈피해,<br /><span className="font-bold">모든 제휴 매체가 균등하게 참여</span>할 수 있도록 설계되었습니다.
               </p>
 
               <div className="w-full max-w-[592px] h-[58px] bg-emerald-50 border border-emerald-200 rounded-lg flex items-center justify-center">

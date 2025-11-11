@@ -654,7 +654,7 @@ export default function StrengthsSection() {
                 }}
               >
                 <span className="text-black">기존 오퍼월은 광고주가 본인의 광고가<br />어디에 노출되는지조차 알 수 없었습니다.</span><br />
-                <span className="text-black">ADEN은 광고 상품의 특성에 맞는 매체를 직접 지정하면<br />리워드 유저의 실제 회원 전환율을 극대화할 수 있습니다.</span><br />
+                <span className="text-black">ADEN은 광고 상품의 특성에 맞는 매체를 직접 지정하면<br />리워드 유저의 <span className="font-bold">실제 회원 전환율을 극대화할 수 있습니다.</span></span><br />
               </p>
               <div 
                 className="w-full bg-[#DBEAFE] border border-[#93C5FD] rounded-[6px] sm:rounded-[8px]"

@@ -166,7 +166,7 @@ export default function ServiceHeroSection() {
                 lineHeight: '1.75'
               }}
             >
-              광고의 가장 중요한 본질은 '공존'. 에덴은 광고주, 매체, 사용자 모두가 이익을 얻는 새로운 생태계를 만듭니다.
+              광고의 가장 중요한 본질은 '공존'. 에덴은 <span className="font-bold">광고주, 매체, 사용자 모두가 이익을 얻는</span> 새로운 생태계를 만듭니다.
             </p>
           </div>
         </div>

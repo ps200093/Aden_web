@@ -118,7 +118,7 @@ export default function SMBSection() {
                 lineHeight: 'clamp(1.5, 1.4 + 0.1vw, 1.6)'
               }}
             >
-              순위가 곧 노출이자, 매출.<br/>
+              <span className="font-bold">순위가 곧 노출이자, 매출.</span><br/>
               ADEN은 광고주의 차별없이 모두가 참여할 수 있는 <br className="sm:hidden"/>
                순위 특화형 광고를 제공합니다.
             </p>
