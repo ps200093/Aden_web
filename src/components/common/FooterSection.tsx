@@ -123,8 +123,8 @@ export default function FooterSection() {
                   lineHeight: 'clamp(1.2, 1.21 + 0.05vw, 1.3)'
                 }}
               >
-                {/* 서울특별시 강남구 논현로80길 7 &nbsp;&nbsp;7층 */}
-                경기도 광주시 태전중앙 1길 5, 1동 613호 (태전동)
+                서울특별시 강남구 논현로80길 7 &nbsp;&nbsp;7층
+                {/* 경기도 광주시 태전중앙 1길 5, 1동 613호 (태전동) */}
               </span>
             </div>
           </div>
