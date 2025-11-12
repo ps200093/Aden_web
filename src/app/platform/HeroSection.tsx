@@ -86,8 +86,8 @@ export default function HeroSection() {
                 <div className="flex flex-col items-center gap-4">
                   {/* Advertiser to ADEN */}
                   <div className={`flex items-center w-full max-w-[400px] transition-all duration-500 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                    <div className="flex items-center gap-3" style={{ minWidth: 'fit-content' }}>
-                      <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                    <div className="flex items-center gap-3 w-[130px]">
+                      <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                         <Building2 className="w-6 h-6 text-white" />
                       </div>
                       <span 
@@ -101,8 +101,8 @@ export default function HeroSection() {
                       <ArrowRight className="w-8 h-8 text-emerald-600" strokeWidth={2.5} />
                     </div>
                     
-                    <div className="flex items-center gap-3" style={{ minWidth: 'fit-content' }}>
-                      <div className="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center">
+                    <div className="flex items-center gap-3 w-[130px] pl-6">
+                      <div className="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center flex-shrink-0">
                         <span 
                           className="text-lg font-bold text-white"
                         >
@@ -124,8 +124,8 @@ export default function HeroSection() {
 
                   {/* Media to User */}
                   <div className={`flex items-center w-full max-w-[400px] transition-all duration-500 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                    <div className="flex items-center gap-3" style={{ minWidth: 'fit-content' }}>
-                      <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
+                    <div className="flex items-center gap-3 w-[130px]">
+                      <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
                         <Smartphone className="w-6 h-6 text-white" />
                       </div>
                       <span 
@@ -139,8 +139,8 @@ export default function HeroSection() {
                       <ArrowRight className="w-8 h-8 text-emerald-600" strokeWidth={2.5} />
                     </div>
                     
-                    <div className="flex items-center gap-3" style={{ minWidth: 'fit-content' }}>
-                      <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center">
+                    <div className="flex items-center gap-3 w-[130px] pl-6">
+                      <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
                         <Users className="w-6 h-6 text-white" />
                       </div>
                       <span 
