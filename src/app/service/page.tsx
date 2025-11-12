@@ -6,6 +6,7 @@ import ArchitectureSection from '@/app/service/ArchitectureSection';
 import ReasonSection from '@/app/service/ReasonSection';
 import PartnersSection from '@/app/service/PartnersSection';
 import FooterSection from '@/components/common/FooterSection';
+import FloatingContact from '@/components/common/FloatingContact';
 
 export default function ServicePage() {
   return (
@@ -19,6 +20,7 @@ export default function ServicePage() {
         <PartnersSection />
       </main>
       <FooterSection />
+      <FloatingContact />
     </>
   )
 }

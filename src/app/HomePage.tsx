@@ -6,6 +6,7 @@ import IntroSection from '@/app/service/IntroSection';
 import ArchitectureSection from '@/app/service/ArchitectureSection';
 import ReasonSection from '@/app/service/ReasonSection';
 import PartnersSection from '@/app/service/PartnersSection';
+import FloatingContact from '@/components/common/FloatingContact';
 
 export default function HomePage() {
   return (
@@ -19,6 +20,7 @@ export default function HomePage() {
         <PartnersSection />
       </main>
       <FooterSection />
+      <FloatingContact />
     </>
   )
 }

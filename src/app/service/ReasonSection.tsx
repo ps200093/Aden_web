@@ -66,22 +66,19 @@ export default function ReasonSection() {
           </div>
 
           {/* 비교 컨텐츠 */}
-          <div id="reason-comparison" className="w-full grid grid-cols-1 lg:grid-cols-5 gap-1 lg:gap-1">
-            {/* 빈칸 1 */}
-            <div className="w-full"></div>
+          <div id="reason-comparison" className="w-full grid grid-cols-1 lg:grid-cols-[1.2fr_2.5fr_0.5fr_2.5fr_0.1fr] gap-8 lg:gap-1">
+            {/* 빈칸 1 - 데스크탑에서만 표시 */}
+            <div className="hidden lg:block w-full"></div>
             
-            {/* 빈칸 2 */}
-            {/* <div className="w-full"></div> */}
-            
-            {/* 3열: 기존 구조의 문제점 */}
+            {/* 기존 구조의 문제점 */}
             <div className="w-full">
               {/* 제목 */}
               <h3 
-                className={`mb-6 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
+                className={`mb-4 sm:mb-6 text-center lg:text-left transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
                 style={{
                   fontStyle: 'normal',
                   fontWeight: 500,
-                  fontSize: 'clamp(20px, 2.5vw, 24px)',
+                  fontSize: 'clamp(18px, 2.5vw, 24px)',
                   lineHeight: '32px',
                   color: '#111827'
                 }}
@@ -90,94 +87,94 @@ export default function ReasonSection() {
               </h3>
 
               {/* 문제점 리스트 */}
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {/* 문제점 1 */}
-                <div className={`flex items-start gap-4 transition-all duration-500 delay-100 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+                <div className={`flex items-start gap-3 sm:gap-4 transition-all duration-500 delay-100 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                   <div 
                     className="flex items-center justify-center flex-shrink-0"
                     style={{
-                      width: '32px',
-                      height: '32px',
+                      width: '28px',
+                      height: '28px',
                       background: '#FEE2E2',
                       borderRadius: '9999px'
                     }}
                   >
-                    <X size={16} color="#C33131" strokeWidth={3} />
+                    <X size={14} color="#C33131" strokeWidth={3} className="sm:w-4 sm:h-4" />
                   </div>
-                  <div>
-                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
+                  <div className="flex-1 min-w-0">
+                    <p className="break-words" style={{ fontWeight: 500, fontSize: 'clamp(14px, 2vw, 16px)', lineHeight: '24px', color: '#111827' }}>
                       광고판처럼 보이는 UX
                     </p>
-                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
+                    <p className="break-words" style={{ fontWeight: 500, fontSize: 'clamp(13px, 1.8vw, 16px)', lineHeight: '24px', color: '#4B5563' }}>
                       사용자 경험을 저해하여 유저 이탈 유발
                     </p>
                   </div>
                 </div>
 
                 {/* 문제점 2 */}
-                <div className={`flex items-start gap-4 transition-all duration-500 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+                <div className={`flex items-start gap-3 sm:gap-4 transition-all duration-500 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                   <div 
                     className="flex items-center justify-center flex-shrink-0"
                     style={{
-                      width: '32px',
-                      height: '32px',
+                      width: '28px',
+                      height: '28px',
                       background: '#FEE2E2',
                       borderRadius: '9999px'
                     }}
                   >
-                    <X size={16} color="#C33131" strokeWidth={3} />
+                    <X size={14} color="#C33131" strokeWidth={3} className="sm:w-4 sm:h-4" />
                   </div>
-                  <div>
-                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
+                  <div className="flex-1 min-w-0">
+                    <p className="break-words" style={{ fontWeight: 500, fontSize: 'clamp(14px, 2vw, 16px)', lineHeight: '24px', color: '#111827' }}>
                       다단계 마진
                     </p>
-                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
+                    <p className="break-words" style={{ fontWeight: 500, fontSize: 'clamp(13px, 1.8vw, 16px)', lineHeight: '24px', color: '#4B5563' }}>
                       복잡한 유통 구조로 인해 매체 정산 금액 감소
                     </p>
                   </div>
                 </div>
 
                 {/* 문제점 3 */}
-                <div className={`flex items-start gap-4 transition-all duration-500 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+                <div className={`flex items-start gap-3 sm:gap-4 transition-all duration-500 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                   <div 
                     className="flex items-center justify-center flex-shrink-0"
                     style={{
-                      width: '32px',
-                      height: '32px',
+                      width: '28px',
+                      height: '28px',
                       background: '#FEE2E2',
                       borderRadius: '9999px'
                     }}
                   >
-                    <X size={16} color="#C33131" strokeWidth={3} />
+                    <X size={14} color="#C33131" strokeWidth={3} className="sm:w-4 sm:h-4" />
                   </div>
-                  <div>
-                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
+                  <div className="flex-1 min-w-0">
+                    <p className="break-words" style={{ fontWeight: 500, fontSize: 'clamp(14px, 2vw, 16px)', lineHeight: '24px', color: '#111827' }}>
                       대형매체 우선 공급
                     </p>
-                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
+                    <p className="break-words" style={{ fontWeight: 500, fontSize: 'clamp(13px, 1.8vw, 16px)', lineHeight: '24px', color: '#4B5563' }}>
                       신규 및 중소형 매체는 양질의 광고 인벤토리 확보 어려움
                     </p>
                   </div>
                 </div>
 
                 {/* 문제점 4 */}
-                <div className={`flex items-start gap-4 transition-all duration-500 delay-[400ms] ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+                <div className={`flex items-start gap-3 sm:gap-4 transition-all duration-500 delay-[400ms] ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                   <div 
                     className="flex items-center justify-center flex-shrink-0"
                     style={{
-                      width: '32px',
-                      height: '32px',
+                      width: '28px',
+                      height: '28px',
                       background: '#FEE2E2',
                       borderRadius: '9999px'
                     }}
                   >
-                    <X size={16} color="#C33131" strokeWidth={3} />
+                    <X size={14} color="#C33131" strokeWidth={3} className="sm:w-4 sm:h-4" />
                   </div>
-                  <div>
-                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
+                  <div className="flex-1 min-w-0">
+                    <p className="break-words" style={{ fontWeight: 500, fontSize: 'clamp(14px, 2vw, 16px)', lineHeight: '24px', color: '#111827' }}>
                       불투명한 차감
                     </p>
-                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
+                    <p className="break-words" style={{ fontWeight: 500, fontSize: 'clamp(13px, 1.8vw, 16px)', lineHeight: '24px', color: '#4B5563' }}>
                       정산 과정의 불투명성으로 인해 매체와의 신뢰 문제 발생
                     </p>
                   </div>
@@ -185,18 +182,18 @@ export default function ReasonSection() {
               </div>
             </div>
 
-            {/* 빈칸 4 */}
-            <div className="w-full"></div>
+            {/* 빈칸 4 - 데스크탑에서만 표시 */}
+            <div className="hidden lg:block w-full"></div>
 
-            {/* 5열: ADEN의 해법 */}
+            {/* ADEN의 해법 */}
             <div className="w-full">
               {/* 제목 */}
               <h3 
-                className={`mb-6 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
+                className={`mb-4 sm:mb-6 text-center lg:text-left transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
                 style={{
                   fontStyle: 'normal',
                   fontWeight: 500,
-                  fontSize: 'clamp(20px, 2.5vw, 24px)',
+                  fontSize: 'clamp(18px, 2.5vw, 24px)',
                   lineHeight: '32px',
                   color: '#059669'
                 }}
@@ -205,94 +202,94 @@ export default function ReasonSection() {
               </h3>
 
               {/* 해법 리스트 */}
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {/* 해법 1 */}
-                <div className={`flex items-start gap-4 transition-all duration-500 delay-100 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+                <div className={`flex items-start gap-3 sm:gap-4 transition-all duration-500 delay-100 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
                   <div 
                     className="flex items-center justify-center flex-shrink-0"
                     style={{
-                      width: '32px',
-                      height: '32px',
+                      width: '28px',
+                      height: '28px',
                       background: '#D1FAE5',
                       borderRadius: '9999px'
                     }}
                   >
-                    <Check size={16} color="#059669" strokeWidth={2.5} />
+                    <Check size={14} color="#059669" strokeWidth={2.5} className="sm:w-4 sm:h-4" />
                   </div>
-                  <div>
-                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
+                  <div className="flex-1 min-w-0">
+                    <p className="break-words" style={{ fontWeight: 500, fontSize: 'clamp(14px, 2vw, 16px)', lineHeight: '24px', color: '#111827' }}>
                       매체 UI 그대로 적용
                     </p>
-                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
-                      매체의 기존 UI를 최대한 활용하여 자연스럽게 통합된 UI 제공
+                    <p className="break-words" style={{ fontWeight: 500, fontSize: 'clamp(13px, 1.8vw, 16px)', lineHeight: '24px', color: '#4B5563' }}>
+                      매체의 기존 UI를 최대한 활용하여<br className="md:hidden" /> 자연스럽게 통합된 UI 제공
                     </p>
                   </div>
                 </div>
 
                 {/* 해법 2 */}
-                <div className={`flex items-start gap-4 transition-all duration-500 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+                <div className={`flex items-start gap-3 sm:gap-4 transition-all duration-500 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
                   <div 
                     className="flex items-center justify-center flex-shrink-0"
                     style={{
-                      width: '32px',
-                      height: '32px',
+                      width: '28px',
+                      height: '28px',
                       background: '#D1FAE5',
                       borderRadius: '9999px'
                     }}
                   >
-                    <Check size={16} color="#059669" strokeWidth={2.5} />
+                    <Check size={14} color="#059669" strokeWidth={2.5} className="sm:w-4 sm:h-4" />
                   </div>
-                  <div>
-                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
+                  <div className="flex-1 min-w-0">
+                    <p className="break-words" style={{ fontWeight: 500, fontSize: 'clamp(14px, 2vw, 16px)', lineHeight: '24px', color: '#111827' }}>
                       매체 최우선 Rev-Share
                     </p>
-                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
+                    <p className="break-words" style={{ fontWeight: 500, fontSize: 'clamp(13px, 1.8vw, 16px)', lineHeight: '24px', color: '#4B5563' }}>
                       매체 중심의 수익 배분 구조로 정산 금액 최대화
                     </p>
                   </div>
                 </div>
 
                 {/* 해법 3 */}
-                <div className={`flex items-start gap-4 transition-all duration-500 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+                <div className={`flex items-start gap-3 sm:gap-4 transition-all duration-500 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
                   <div 
                     className="flex items-center justify-center flex-shrink-0"
                     style={{
-                      width: '32px',
-                      height: '32px',
+                      width: '28px',
+                      height: '28px',
                       background: '#D1FAE5',
                       borderRadius: '9999px'
                     }}
                   >
-                    <Check size={16} color="#059669" strokeWidth={2.5} />
+                    <Check size={14} color="#059669" strokeWidth={2.5} className="sm:w-4 sm:h-4" />
                   </div>
-                  <div>
-                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
+                  <div className="flex-1 min-w-0">
+                    <p className="break-words" style={{ fontWeight: 500, fontSize: 'clamp(14px, 2vw, 16px)', lineHeight: '24px', color: '#111827' }}>
                       균형 있는 인벤토리 공급
                     </p>
-                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
+                    <p className="break-words" style={{ fontWeight: 500, fontSize: 'clamp(13px, 1.8vw, 16px)', lineHeight: '24px', color: '#4B5563' }}>
                       일일 5백만 타 균형 공급으로 모든 매체에게 기회 제공
                     </p>
                   </div>
                 </div>
 
                 {/* 해법 4 */}
-                <div className={`flex items-start gap-4 transition-all duration-500 delay-[400ms] ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+                <div className={`flex items-start gap-3 sm:gap-4 transition-all duration-500 delay-[400ms] ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
                   <div 
                     className="flex items-center justify-center flex-shrink-0"
                     style={{
-                      width: '32px',
-                      height: '32px',
+                      width: '28px',
+                      height: '28px',
                       background: '#D1FAE5',
                       borderRadius: '9999px'
                     }}
                   >
-                    <Check size={16} color="#059669" strokeWidth={2.5} />
+                    <Check size={14} color="#059669" strokeWidth={2.5} className="sm:w-4 sm:h-4" />
                   </div>
-                  <div>
-                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#111827', whiteSpace: 'nowrap' }}>
+                  <div className="flex-1 min-w-0">
+                    <p className="break-words" style={{ fontWeight: 500, fontSize: 'clamp(14px, 2vw, 16px)', lineHeight: '24px', color: '#111827' }}>
                       정산 로그 & 증빙 공개
                     </p>
-                    <p style={{ fontWeight: 500, fontSize: '16px', lineHeight: '24px', color: '#4B5563', whiteSpace: 'nowrap' }}>
+                    <p className="break-words" style={{ fontWeight: 500, fontSize: 'clamp(13px, 1.8vw, 16px)', lineHeight: '24px', color: '#4B5563' }}>
                       투명한 정산 시스템으로 매체의 신뢰 구축
                     </p>
                   </div>
@@ -300,11 +297,8 @@ export default function ReasonSection() {
               </div>
             </div>
 
-            {/* 빈칸 6 */}
-            {/* <div className="w-full"></div> */}
-
-            {/* 빈칸 7 */}
-            <div className="w-full"></div>
+            {/* 빈칸 7 - 데스크탑에서만 표시 */}
+            <div className="hidden lg:block w-full"></div>
           </div>
         </div>
       </div>

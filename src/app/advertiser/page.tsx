@@ -6,6 +6,7 @@ import StrengthsSection from '@/app/advertiser/StrengthsSection';
 import TechnologySection from '@/app/advertiser/TechnologySection';
 import CTASection from '@/app/advertiser/CTASection';
 import FooterSection from '@/components/common/FooterSection';
+import FloatingContact from '@/components/common/FloatingContact';
 
 export default function AdvertiserPage() {
   return (
@@ -19,6 +20,7 @@ export default function AdvertiserPage() {
         <CTASection />
       </main>
       <FooterSection />
+      <FloatingContact />
     </>
   )
 }

@@ -7,6 +7,7 @@ import ComparisonSection from '@/app/platform/ComparisonSection';
 import PartnershipSection from '@/app/platform/PartnershipSection';
 import CTASection from '@/app/platform/CTASection';
 import FooterSection from '@/components/common/FooterSection';
+import FloatingContact from '@/components/common/FloatingContact';
 
 export default function AdvertiserPage() {
   return (
@@ -21,6 +22,7 @@ export default function AdvertiserPage() {
         <CTASection />
       </main>
       <FooterSection />
+      <FloatingContact />
     </>
   )
 }

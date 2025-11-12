@@ -5,6 +5,7 @@ import HeroSection from '@/app/contact/HeroSection';
 import CounselSection from '@/app/contact/CounselSection';
 import ContactSection from '@/app/contact/ContactSection';
 import QuestionSection from '@/app/contact/QuestionSection';
+// import FloatingContact from '@/components/common/FloatingContact';
 
 export default function ContactPage() {
   return (
@@ -17,6 +18,7 @@ export default function ContactPage() {
         <QuestionSection />
       </main>
       <FooterSection />
+      {/* <FloatingContact /> */}
     </>
   )
 }

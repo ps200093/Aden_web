@@ -52,8 +52,8 @@ export default function ArchitectureSection() {
             <div 
               className="relative"
               style={{
-                width: 'min(384px, 90vw)',
-                height: 'min(384px, 90vw)',
+                width: 'min(384px, 75vw)',
+                height: 'min(384px, 75vw)',
                 maxWidth: '384px',
                 maxHeight: '384px'
               }}
