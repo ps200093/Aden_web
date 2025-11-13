@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 export default function FloatingContact() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const phoneNumber = '02-1234-5678'; // 실제 전화번호로 변경하세요
+  const phoneNumber = '010-9585-9350';
 
   useEffect(() => {
     // 모바일 기기 감지
