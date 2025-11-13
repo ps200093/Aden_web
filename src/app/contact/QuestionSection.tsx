@@ -70,14 +70,14 @@ const faqDataByType: Record<UserType, FAQItem[]> = {
 
 export default function QuestionSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const [userType, setUserType] = useState<UserType>('매체사');
+  const [userType, setUserType] = useState<UserType>('광고주');
 
   const toggleAccordion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   const handleToggle = () => {
-    setUserType(prevType => prevType === '매체사' ? '광고주' : '매체사');
+    setUserType(prevType => prevType === '광고주' ? '매체사' : '광고주');
     setOpenIndex(null); // 타입 변경 시 열린 아코디언 닫기
   };
 
@@ -107,20 +107,11 @@ export default function QuestionSection() {
               <div
                 className="absolute top-1 bottom-1 w-[calc(50%-4px)] bg-white rounded-md shadow-md transition-all duration-300 ease-out"
                 style={{
-                  left: userType === '매체사' ? '4px' : 'calc(50% + 0px)',
+                  left: userType === '광고주' ? '4px' : 'calc(50% + 0px)',
                 }}
               />
               
               {/* 버튼들 */}
-              <div
-                className={`relative z-10 px-8 py-2.5 rounded-md font-semibold text-[15px] leading-[20px] transition-all duration-300 pointer-events-none ${
-                  userType === '매체사'
-                    ? 'text-emerald-400 scale-105'
-                    : 'text-[#9CA3AF]'
-                }`}
-              >
-                매체사
-              </div>
               <div
                 className={`relative z-10 px-8 py-2.5 rounded-md font-semibold text-[15px] leading-[20px] transition-all duration-300 pointer-events-none ${
                   userType === '광고주'
@@ -129,6 +120,15 @@ export default function QuestionSection() {
                 }`}
               >
                 광고주
+              </div>
+              <div
+                className={`relative z-10 px-8 py-2.5 rounded-md font-semibold text-[15px] leading-[20px] transition-all duration-300 pointer-events-none ${
+                  userType === '매체사'
+                    ? 'text-emerald-400 scale-105'
+                    : 'text-[#9CA3AF]'
+                }`}
+              >
+                매체사
               </div>
             </div>
           </div>
