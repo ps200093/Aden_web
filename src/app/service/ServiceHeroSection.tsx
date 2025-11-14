@@ -112,8 +112,8 @@ export default function ServiceHeroSection() {
                     className="w-full max-w-[280px] sm:max-w-[320px] md:max-w-[390px] lg:max-w-[260px] xl:max-w-[320px] 2xl:max-w-none 2xl:flex-1 h-[48px] sm:h-[52px] md:h-[56px] lg:h-[42px] xl:h-[54px] bg-[#169B68] hover:bg-[#138558] transition-colors rounded-[6px] sm:rounded-[8px] flex items-center justify-center gap-2 sm:gap-2.5 lg:gap-3 px-4 sm:px-5 lg:px-6"
                     onClick={() => {
                       const link = document.createElement('a');
-                      link.href = '/documents/ADEN_매체제휴제안서.pdf';
-                      link.download = 'ADEN_매체제휴제안서.pdf';
+                      link.href = '/documents/ADEN_오퍼월_매체제휴제안서.pdf';
+                      link.download = 'ADEN_오퍼월_매체제휴제안서.pdf';
                       document.body.appendChild(link);
                       link.click();
                       document.body.removeChild(link);
