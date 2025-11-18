@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="ko" className={`${figtree.variable}`}>
       <head>
-        <meta name="naver-site-verification" content="2e02982e9e38b445d394d7d63d43478f9838d02f" />
+        <meta name="naver-site-verification" content="8e9126bd33794e7d68161cd194edbce45ac2a8c9" />
       </head>
       <body className={figtree.className}>{children}</body>
     </html>
