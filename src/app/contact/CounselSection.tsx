@@ -33,6 +33,7 @@ export default function CounselSection() {
     email: '',
     phone: '',
     monthlyBudget: '',
+    categories: [] as string[], // 광고주 카테고리 (중복 선택 가능)
     dau: '',
     message: '',
     agreeToPrivacy: false,
@@ -76,6 +77,7 @@ export default function CounselSection() {
           email: '',
           phone: '',
           monthlyBudget: '',
+          categories: [],
           dau: '',
           message: '',
           agreeToPrivacy: false,
@@ -118,7 +120,7 @@ export default function CounselSection() {
                   <div className="flex gap-[12px]">
                     <button
                       type="button"
-                      onClick={() => setFormData({ ...formData, inquiryType: 'advertiser' })}
+                      onClick={() => setFormData({ ...formData, inquiryType: 'advertiser', categories: [], dau: '' })}
                       className={`flex-1 h-[50px] rounded-lg border flex items-center justify-center gap-2 transition-colors ${
                         formData.inquiryType === 'advertiser'
                           ? 'border-[#10B981] bg-[#10B981]/5'
@@ -132,7 +134,7 @@ export default function CounselSection() {
                     </button>
                     <button
                       type="button"
-                      onClick={() => setFormData({ ...formData, inquiryType: 'publisher' })}
+                      onClick={() => setFormData({ ...formData, inquiryType: 'publisher', categories: [], monthlyBudget: '' })}
                       className={`flex-1 h-[50px] rounded-lg border flex items-center justify-center gap-2 transition-colors ${
                         formData.inquiryType === 'publisher'
                           ? 'border-[#10B981] bg-[#10B981]/5'
@@ -207,43 +209,102 @@ export default function CounselSection() {
                   </div>
                 </div>
 
-                {/* 월 예산 / DAU */}
-                <div className="flex gap-[16px]">
-                  <div className="flex-1">
-                    <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[8px]">
-                      월 예산 (광고주)
-                    </label>
-                    <select
-                      value={formData.monthlyBudget}
-                      onChange={(e) => setFormData({ ...formData, monthlyBudget: e.target.value })}
-                      className="w-full h-[48px] px-[12px] border border-[#D1D5DB] rounded-lg text-[12px] appearance-none bg-white"
-                    >
-                      <option value="">선택해주세요</option>
-                      <option value="under-1000">100만원 미만</option>
-                      <option value="1000-3000">100만원 - 300만원</option>
-                      <option value="3000-5000">300만원 - 500만원</option>
-                      <option value="5000-10000">500만원 - 1,000만원</option>
-                      <option value="over-10000">1,000만원 이상</option>
-                    </select>
+                {/* 광고주 전용 필드 */}
+                {formData.inquiryType === 'advertiser' && (
+                  <>
+                    {/* 월 예산 */}
+                    <div>
+                      <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[8px]">
+                        월 예산
+                      </label>
+                      <select
+                        value={formData.monthlyBudget}
+                        onChange={(e) => setFormData({ ...formData, monthlyBudget: e.target.value })}
+                        className="w-full h-[48px] px-[12px] border border-[#D1D5DB] rounded-lg text-[12px] appearance-none bg-white"
+                      >
+                        <option value="">선택해주세요</option>
+                        <option value="under-1000">100만원 미만</option>
+                        <option value="1000-3000">100만원 - 300만원</option>
+                        <option value="3000-5000">300만원 - 500만원</option>
+                        <option value="5000-10000">500만원 - 1,000만원</option>
+                        <option value="over-10000">1,000만원 이상</option>
+                      </select>
+                    </div>
+
+                    {/* 카테고리 (중복 선택) */}
+                    <div>
+                      <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[12px]">
+                        카테고리 (중복 선택 가능)
+                      </label>
+                      <div className="flex flex-wrap gap-[12px]">
+                        {['N사 쇼핑', 'N사 플레이스', '기타'].map((category) => (
+                          <button
+                            key={category}
+                            type="button"
+                            onClick={() => {
+                              const isSelected = formData.categories.includes(category);
+                              setFormData({
+                                ...formData,
+                                categories: isSelected
+                                  ? formData.categories.filter((c) => c !== category)
+                                  : [...formData.categories, category]
+                              });
+                            }}
+                            className={`px-[20px] h-[44px] rounded-lg border transition-colors ${
+                              formData.categories.includes(category)
+                                ? 'border-[#10B981] bg-[#10B981]/5 text-[#059669]'
+                                : 'border-[#D1D5DB] bg-white text-[#374151]'
+                            }`}
+                          >
+                            <span className="text-[14px] font-medium">
+                              {category}
+                            </span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                {/* 매체사 전용 필드 */}
+                {formData.inquiryType === 'publisher' && (
+                  <div className="flex gap-[16px]">
+                    <div className="flex-1">
+                      <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[8px]">
+                        월 예산
+                      </label>
+                      <select
+                        value={formData.monthlyBudget}
+                        onChange={(e) => setFormData({ ...formData, monthlyBudget: e.target.value })}
+                        className="w-full h-[48px] px-[12px] border border-[#D1D5DB] rounded-lg text-[12px] appearance-none bg-white"
+                      >
+                        <option value="">선택해주세요</option>
+                        <option value="under-1000">100만원 미만</option>
+                        <option value="1000-3000">100만원 - 300만원</option>
+                        <option value="3000-5000">300만원 - 500만원</option>
+                        <option value="5000-10000">500만원 - 1,000만원</option>
+                        <option value="over-10000">1,000만원 이상</option>
+                      </select>
+                    </div>
+                    <div className="flex-1">
+                      <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[8px]">
+                        DAU
+                      </label>
+                      <select
+                        value={formData.dau}
+                        onChange={(e) => setFormData({ ...formData, dau: e.target.value })}
+                        className="w-full h-[48px] px-[12px] border border-[#D1D5DB] rounded-lg text-[12px] appearance-none bg-white"
+                      >
+                        <option value="">선택해주세요</option>
+                        <option value="under-10k">1만 미만</option>
+                        <option value="10k-50k">1만 - 5만</option>
+                        <option value="50k-100k">5만 - 10만</option>
+                        <option value="100k-500k">10만 - 50만</option>
+                        <option value="over-500k">50만 이상</option>
+                      </select>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <label className="block text-[#374151] text-[14px] font-medium leading-[17px] mb-[8px]">
-                      DAU (매체사)
-                    </label>
-                    <select
-                      value={formData.dau}
-                      onChange={(e) => setFormData({ ...formData, dau: e.target.value })}
-                      className="w-full h-[48px] px-[12px] border border-[#D1D5DB] rounded-lg text-[12px] appearance-none bg-white"
-                    >
-                      <option value="">선택해주세요</option>
-                      <option value="under-10k">1만 미만</option>
-                      <option value="10k-50k">1만 - 5만</option>
-                      <option value="50k-100k">5만 - 10만</option>
-                      <option value="100k-500k">10만 - 50만</option>
-                      <option value="over-500k">50만 이상</option>
-                    </select>
-                  </div>
-                </div>
+                )}
 
                 {/* 문의 내용 */}
                 <div>

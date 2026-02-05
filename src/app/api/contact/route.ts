@@ -11,6 +11,7 @@ export async function POST(request: NextRequest) {
       email,
       phone,
       monthlyBudget,
+      categories,
       dau,
       message,
     } = body;
@@ -100,6 +101,13 @@ export async function POST(request: NextRequest) {
       <div class="field">
         <div class="field-label">💰 월 예산</div>
         <div class="field-value">${budgetOptions[monthlyBudget] || monthlyBudget}</div>
+      </div>
+      ` : ''}
+      
+      ${categories && categories.length > 0 ? `
+      <div class="field">
+        <div class="field-label">🏷️ 카테고리</div>
+        <div class="field-value">${categories.join(', ')}</div>
       </div>
       ` : ''}
       
