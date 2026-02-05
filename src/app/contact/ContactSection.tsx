@@ -41,7 +41,7 @@ export default function ContactSection() {
 
             {/* 연락처 */}
             <div className="absolute left-4 right-4 sm:left-8 sm:right-8 top-[156px] sm:top-[172px] lg:top-[188px] text-sm sm:text-base font-medium text-blue-600 text-center leading-[17px] sm:leading-[19px]">
-              contact@eden-ads.com
+              contact@info-planet.co.kr
             </div>
 
             {/* 응답 시간 */}

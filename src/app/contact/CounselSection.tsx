@@ -38,10 +38,59 @@ export default function CounselSection() {
     agreeToPrivacy: false,
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+
+    // 개인정보 동의 확인
+    if (!formData.agreeToPrivacy) {
+      alert('개인정보 수집 및 이용에 동의해주세요.');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setSubmitStatus('success');
+        alert('✅ 상담 신청이 완료되었습니다!\n담당자가 빠른 시일 내에 연락드리겠습니다.');
+        
+        // 폼 초기화
+        setFormData({
+          inquiryType: 'advertiser',
+          companyName: '',
+          contactName: '',
+          email: '',
+          phone: '',
+          monthlyBudget: '',
+          dau: '',
+          message: '',
+          agreeToPrivacy: false,
+        });
+      } else {
+        setSubmitStatus('error');
+        alert('❌ ' + (result.message || '문의 전송에 실패했습니다. 다시 시도해주세요.'));
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+      alert('❌ 네트워크 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -230,12 +279,24 @@ export default function CounselSection() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full h-[56px] bg-gradient-to-r from-[#10B981] to-[#059669] rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
+                  disabled={isSubmitting}
+                  className="w-full h-[56px] bg-gradient-to-r from-[#10B981] to-[#059669] rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <Send size={16} className="text-white" />
-                  <span className="text-white text-[16px] font-medium">
-                    상담 신청하기
-                  </span>
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      <span className="text-white text-[16px] font-medium">
+                        전송 중...
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      <Send size={16} className="text-white" />
+                      <span className="text-white text-[16px] font-medium">
+                        상담 신청하기
+                      </span>
+                    </>
+                  )}
                 </button>
               </form>
             </div>
