@@ -26,9 +26,9 @@ export const metadata: Metadata = {
   creator: '인포플래닛',
   publisher: '인포플래닛',
   icons: {
-    icon: '/images/logo.svg',
-    shortcut: '/images/logo.svg',
-    apple: '/images/logo.svg',
+    icon: '/images/logo.ico',
+    shortcut: '/images/logo.png',
+    apple: '/images/logo.png',
   },
   metadataBase: new URL('https://aden.ai.kr'),
   alternates: {
